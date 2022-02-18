@@ -133,6 +133,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e15006018bf605b47aece34289efd49b, type: 3}
   m_PrefabInstance: {fileID: 951826768}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &184586218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184586215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07535243d54e6d4cac6bbc683d204b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &184586219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184586215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04fee199970e9cd41bfc654a592745c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dodgeButtonName: Dodge
 --- !u!114 &184586220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f4b0f41cbd1de4eac85a143c547110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickParticleObject: {fileID: 7408548690435337863, guid: 12993b7d5ba91a546a363d58664a5751, type: 3}
   WalkSpeed: 5
 --- !u!195 &184586221
 NavMeshAgent:
@@ -674,7 +700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e15006018bf605b47aece34289efd49b, type: 3}
       propertyPath: m_Name
-      value: Character
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: e15006018bf605b47aece34289efd49b, type: 3}
       propertyPath: m_Controller

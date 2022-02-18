@@ -8,11 +8,12 @@ public class ClickMovement : MonoBehaviour
     private Camera camera;
     private Animator animator;
     private NavMeshAgent agent;
-
     private bool isMove;
+    private bool isClick = false;
     private Vector3 destination;
 
-    public float WalkSpeed = 5f;
+    public GameObject clickParticleObject;
+    public float WalkSpeed = 4f;
 
     private void Awake()
     {
@@ -24,30 +25,41 @@ public class ClickMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        agent.acceleration = 20;
+        agent.speed = WalkSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(1))
+        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Dodge"))
         {
-            RaycastHit hit;
-            if(Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit))
+            if (Input.GetMouseButton(0))
             {
-                SetDestination(hit.point);
+                RaycastHit hit;
+                if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit))
+                {
+                    SetDestination(hit.point);
+                    if(isClick == false)
+                        Instantiate(clickParticleObject, hit.point, Quaternion.identity);
+                }
+                isClick = true;
             }
+            else if(Input.GetMouseButtonUp(0))
+            {
+                isClick = false;
+            }
+            LookMoveDirection();
         }
-
-        LookMoveDirection();
     }
+
 
     private void SetDestination(Vector3 dest)
     {
         agent.SetDestination(dest);
         destination = dest;
         isMove = true;
-        animator.SetBool("isMove", true);
+        animator.SetBool("IsMove", true);
     }
 
     private void LookMoveDirection()
@@ -57,14 +69,12 @@ public class ClickMovement : MonoBehaviour
             if (agent.velocity.magnitude == 0f)
             {
                 isMove = false;
-                animator.SetBool("isMove", false);
+                animator.SetBool("IsMove", false);
                 return;
             }
             var dir = new Vector3(agent.steeringTarget.x, transform.position.y, agent.steeringTarget.z) - transform.position;
             animator.transform.forward = dir;
             //transform.position += dir.normalized * Time.deltaTime * WalkSpeed;
         }
-
-
     }
 }
