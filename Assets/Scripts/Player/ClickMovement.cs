@@ -32,7 +32,8 @@ public class ClickMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Dodge"))
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Dodge") == false &&
+            animator.GetCurrentAnimatorStateInfo(0).IsName("NormalAttack") == false)
         {
             if (Input.GetMouseButton(0))
             {
@@ -45,7 +46,7 @@ public class ClickMovement : MonoBehaviour
                 }
                 isClick = true;
             }
-            else if(Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0))
             {
                 isClick = false;
             }
@@ -73,7 +74,8 @@ public class ClickMovement : MonoBehaviour
                 return;
             }
             var dir = new Vector3(agent.steeringTarget.x, transform.position.y, agent.steeringTarget.z) - transform.position;
-            animator.transform.forward = dir;
+            if(dir != Vector3.zero)
+                animator.transform.forward = dir;
             //transform.position += dir.normalized * Time.deltaTime * WalkSpeed;
         }
     }

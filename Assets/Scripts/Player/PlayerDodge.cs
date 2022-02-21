@@ -29,7 +29,10 @@ public class PlayerDodge : MonoBehaviour
     {
         if(playerInput.dodge)
         {
-            Dodge();
+            if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Dodge") == false)
+            {
+               Dodge();
+            }
         }
     }
 
@@ -49,7 +52,8 @@ public class PlayerDodge : MonoBehaviour
         agent.SetDestination(dest);
         // 마우스 방향 보기
         var dir = new Vector3(agent.steeringTarget.x, transform.position.y, agent.steeringTarget.z) - transform.position;
-        transform.forward = dir;
+        if (dir != Vector3.zero)
+            transform.forward = dir;
         //transform.LookAt(dir);
     }
 
