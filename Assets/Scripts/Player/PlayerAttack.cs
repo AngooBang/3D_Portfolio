@@ -5,9 +5,14 @@ using UnityEngine.AI;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public Weapon EquipWeapon;
 
     private PlayerInput playerInput;
     private Animator playerAnimator;
+
+    private float fireDelay;
+    private bool isFireReady;
+    
 
     
 
@@ -19,7 +24,12 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerInput.normalAttack)
+        if (EquipWeapon == null)
+            return;
+        fireDelay += Time.deltaTime;
+        isFireReady = EquipWeapon.rate < fireDelay;
+
+        if (playerInput.normalAttack && isFireReady )
         {
             NormalAttack();
         }
@@ -27,5 +37,7 @@ public class PlayerAttack : MonoBehaviour
     private void NormalAttack()
     {
         playerAnimator.SetTrigger("DoNormalAttack");
+        EquipWeapon.Use();
+        fireDelay = 0f;
     }
 }
