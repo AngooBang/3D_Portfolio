@@ -123,6 +123,22 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 59049bf547509464db811a42a42c6c4b, type: 2}
+--- !u!1 &130899381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1385124323689208, guid: e7489574cca6d4645a7019414b8288e8, type: 3}
+  m_PrefabInstance: {fileID: 543210531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!154 &130899384
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130899381}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 0}
+  m_EnableTreeColliders: 1
 --- !u!1 &162775126
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,8 +152,9 @@ GameObject:
   - component: {fileID: 162775129}
   - component: {fileID: 162775128}
   - component: {fileID: 162775127}
+  - component: {fileID: 162775132}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Test Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +174,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &162775128
 BoxCollider:
@@ -235,6 +252,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &162775132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162775126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93187e408e6f284db8a04cbea359f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &193930470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -491,8 +520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04fee199970e9cd41bfc654a592745c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dodgeButtonName: Dodge
-  normalAtkButton: Fire2
 --- !u!114 &446338366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipWeapon: {fileID: 430760254}
+  colldownTime: 0.8
 --- !u!1001 &543210531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -569,6 +597,10 @@ PrefabInstance:
     - target: {fileID: 1385124323689208, guid: e7489574cca6d4645a7019414b8288e8, type: 3}
       propertyPath: m_Name
       value: rpgpp_lt_terrain_sand_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1385124323689208, guid: e7489574cca6d4645a7019414b8288e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1385124323689208, guid: e7489574cca6d4645a7019414b8288e8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -663,6 +695,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 877211630137213864, guid: 20df8a79b70eb554b80b3a0bdf9bf60b, type: 3}
+      propertyPath: m_TagString
+      value: MeleeWeapon
+      objectReference: {fileID: 0}
     - target: {fileID: 946151874504142979, guid: 20df8a79b70eb554b80b3a0bdf9bf60b, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -675,6 +711,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 430a55498205076429d57972763f670c, type: 2}
+    - target: {fileID: 1352204516863336950, guid: 20df8a79b70eb554b80b3a0bdf9bf60b, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1389803583117795371, guid: 20df8a79b70eb554b80b3a0bdf9bf60b, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -1115,8 +1155,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5698242
-        value: 0.018875122
+        time: 0.8268109
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1421,6 +1461,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 446338370}
   Offset: {x: 7, y: 10, z: -7}
+--- !u!1 &986394439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1740273473050372, guid: 63ce2b31e16acab4d8a41f884c36333c, type: 3}
+  m_PrefabInstance: {fileID: 1370354687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!154 &986394442
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986394439}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 0}
+  m_EnableTreeColliders: 1
 --- !u!1001 &1003574853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1507,6 +1563,10 @@ PrefabInstance:
     - target: {fileID: 1740273473050372, guid: 63ce2b31e16acab4d8a41f884c36333c, type: 3}
       propertyPath: m_Name
       value: rpgpp_lt_terrain_path_01b
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740273473050372, guid: 63ce2b31e16acab4d8a41f884c36333c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1740273473050372, guid: 63ce2b31e16acab4d8a41f884c36333c, type: 3}
       propertyPath: m_StaticEditorFlags

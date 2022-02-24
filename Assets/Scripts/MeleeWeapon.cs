@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class MeleeWeapon : MonoBehaviour
 {
     public enum WeaponType { Sword, GreatSword };
     public WeaponType type;
@@ -18,19 +18,19 @@ public class Weapon : MonoBehaviour
         {
             if(atkCount == 1)
             {
-                StopCoroutine(Swing(0f, 0f, 0f, 0f));
+                StopCoroutine(Swing(0.3f, 0f, 0.3f, 0.2f));
                 StartCoroutine(Swing(0.3f, 0f, 0.3f, 0.2f));
             }
             
             if(atkCount == 2)
             {
-                StopCoroutine(Swing(0f, 0f, 0f, 0f));
+                StopCoroutine(Swing(0.3f, 0f, 0.3f, 0.4f));
                 StartCoroutine(Swing(0.3f, 0f, 0.3f, 0.4f));
             }
 
             if (atkCount == 3)
             {
-                StopCoroutine(Swing(0f, 0f, 0f, 0f));
+                StopCoroutine(Swing(0.8f, 0.1f, 0.3f, 0.5f));
                 StartCoroutine(Swing(0.8f, 0.1f, 0.3f, 0.5f));
             }
         }

@@ -5,10 +5,11 @@ using UnityEngine.AI;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public Weapon EquipWeapon;
+    public MeleeWeapon EquipWeapon;
 
     private PlayerInput playerInput;
     private Animator playerAnimator;
+    private Camera camera;
 
     //private float fireDelay;
     //private bool isFireReady;
@@ -25,6 +26,7 @@ public class PlayerAttack : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
         playerAnimator = GetComponent<Animator>();
+        camera = Camera.main;
     }
     // Update is called once per frame
     void Update()
@@ -51,7 +53,7 @@ public class PlayerAttack : MonoBehaviour
         }
         if(Time.time > nextFireTime)
         {
-            if(playerInput.normalAttack)
+            if(Input.GetMouseButtonDown(1))
             {
                 OnClick();
             }
@@ -66,24 +68,39 @@ public class PlayerAttack : MonoBehaviour
         noOfClicks++;
         if(noOfClicks == 1)
         {
+            LookMousePosition();
             playerAnimator.SetBool("SwordAtk1", true);
             EquipWeapon.Use(1);
         }
         noOfClicks = Mathf.Clamp(noOfClicks, 0, 3);
 
-        if(noOfClicks >= 2 && playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f &&
+        if(noOfClicks >= 2 && playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.6f &&
             playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack01"))
         {
+            LookMousePosition();
             playerAnimator.SetBool("SwordAtk1", false);
             playerAnimator.SetBool("SwordAtk2", true);
             EquipWeapon.Use(2);
         }
-        if (noOfClicks >= 3 && playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f &&
+        if (noOfClicks >= 3 && playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.6f &&
              playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack02"))
         {
+            LookMousePosition();
             playerAnimator.SetBool("SwordAtk2", false);
             playerAnimator.SetBool("SwordAtk3", true);
             EquipWeapon.Use(3);
+        }
+    }
+
+    void LookMousePosition()
+    {
+        RaycastHit hit;
+        Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit);
+
+        var dir = new Vector3(hit.point.x, playerAnimator.transform.position.y, hit.point.z) - playerAnimator.transform.position;
+        if (dir != Vector3.zero)
+        {
+            playerAnimator.transform.forward = dir;
         }
     }
 }

@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
 
-    public string dodgeButtonName = "Dodge";
-    public string normalAtkButton = "Fire2";
     public bool dodge { get; private set; }
     public bool normalAttack { get; private set; }
 
+    private string dodgeButtonName = "Dodge";
+    private string normalAtkButton = "Fire2";
     // Update is called once per frame
     void Update()
     {
