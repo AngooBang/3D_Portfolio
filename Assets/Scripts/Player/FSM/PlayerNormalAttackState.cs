@@ -5,12 +5,12 @@ using UnityEngine.AI;
 
 public class PlayerNormalAttackState : StateMachineBehaviour
 {
-    private NavMeshAgent playerAgent;
+    //private NavMeshAgent playerAgent;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerAgent = animator.GetComponent<NavMeshAgent>();
-        playerAgent.ResetPath();
+        //playerAgent = animator.GetComponent<NavMeshAgent>();
+        //playerAgent.ResetPath();
 
     }
 

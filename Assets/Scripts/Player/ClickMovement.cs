@@ -37,7 +37,7 @@ public class ClickMovement : MonoBehaviour
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack02") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03") == false)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(1))
             {
                 RaycastHit hit;
                 if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit))
@@ -51,21 +51,30 @@ public class ClickMovement : MonoBehaviour
                 }
                 isClick = true;
             }
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(1))
             {
                 isClick = false;
             }
             LookMoveDirection();
         }
-    }
 
+        if(isMove)
+        {
+            animator.SetFloat("MoveBlend", 1f, 0.1f, Time.deltaTime);
+        }
+        else
+        {
+            animator.SetFloat("MoveBlend", 0f, 0.1f, Time.deltaTime);
+        }
+    }
+    
 
     private void SetDestination(Vector3 dest)
     {
         agent.SetDestination(dest);
         destination = dest;
         isMove = true;
-        animator.SetFloat("MoveBlend", 1f);
+        //animator.SetFloat("MoveBlend", 1f);
     }
 
     private void LookMoveDirection()
@@ -75,7 +84,7 @@ public class ClickMovement : MonoBehaviour
             if (agent.velocity.magnitude == 0f)
             {
                 isMove = false;
-                animator.SetFloat("MoveBlend", 0f);
+                //animator.SetFloat("MoveBlend", 0f);
                 return;
             }
             var dir = new Vector3(agent.steeringTarget.x, transform.position.y, agent.steeringTarget.z) - transform.position;
