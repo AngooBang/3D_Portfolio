@@ -5,15 +5,19 @@ using UnityEngine.AI;
 
 public class ClickMovement : MonoBehaviour
 {
+
+    public GameObject ClickParticleObject;
+    public float WalkSpeed = 4f;
+    public LayerMask WorldLayerMask;
+
     private Camera camera;
     private Animator animator;
     private NavMeshAgent agent;
+    [SerializeField]
     private bool isMove;
     private bool isClick = false;
     private Vector3 destination;
 
-    public GameObject clickParticleObject;
-    public float WalkSpeed = 4f;
 
     private void Awake()
     {
@@ -21,6 +25,7 @@ public class ClickMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
+
     }
     // Start is called before the first frame update
     void Start()
@@ -39,15 +44,16 @@ public class ClickMovement : MonoBehaviour
         {
             if (Input.GetMouseButton(1))
             {
+                Ray ray = camera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
-                if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit))
+                if (Physics.Raycast(ray, out hit, 100f, WorldLayerMask))
                 {
+                    Debug.DrawRay(hit.point, Vector3.down, Color.red);
                     SetDestination(hit.point);
 
-                    Vector3 initPoint = hit.point + new Vector3(0, 0.2f, 0);
 
                     if (isClick == false)
-                        Instantiate(clickParticleObject, initPoint, Quaternion.identity);
+                        Instantiate(ClickParticleObject, agent.destination, Quaternion.identity);
                 }
                 isClick = true;
             }
@@ -71,9 +77,11 @@ public class ClickMovement : MonoBehaviour
 
     private void SetDestination(Vector3 dest)
     {
-        agent.SetDestination(dest);
-        destination = dest;
-        isMove = true;
+        if(agent.SetDestination(dest))
+        {
+            destination = dest;
+            isMove = true;
+        }
         //animator.SetFloat("MoveBlend", 1f);
     }
 
@@ -81,7 +89,11 @@ public class ClickMovement : MonoBehaviour
     {
         if(isMove)
         {
-            if (agent.velocity.magnitude == 0f)
+            Vector3 dist = transform.position - agent.destination;
+            //Debug.Log($"{agent.velocity.magnitude}");
+            //Debug.Log("남은 거리 : " + dist);
+            //if (agent.velocity.magnitude == 0f)
+            if (dist.magnitude == 0f)
             {
                 isMove = false;
                 //animator.SetFloat("MoveBlend", 0f);
@@ -93,4 +105,5 @@ public class ClickMovement : MonoBehaviour
             //transform.position += dir.normalized * Time.deltaTime * WalkSpeed;
         }
     }
+
 }

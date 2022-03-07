@@ -45,7 +45,7 @@ public class PlayerAttack : MonoBehaviour
             playerAnimator.SetBool("SwordAtk2", false);
             noOfClicks = 0;
         }
-        if (playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7 &&
+        if (playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.6f &&
              playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03"))
         {
             playerAnimator.SetBool("SwordAtk3", false);
@@ -61,7 +61,7 @@ public class PlayerAttack : MonoBehaviour
         }
         if(Time.time > nextFireTime)
         {
-            if(Input.GetMouseButton(0))
+            if(Input.GetMouseButton(0) && !playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03"))
             {
                 OnClick();
             }
@@ -75,7 +75,8 @@ public class PlayerAttack : MonoBehaviour
         lastClickedTime = Time.time;
         noOfClicks++;
         noOfClicks = Mathf.Clamp(noOfClicks, 0, 3);
-        if (noOfClicks == 1 && !playerAnimator.GetBool("SwordAtk2") && !playerAnimator.GetBool("SwordAtk3"))
+        //if (noOfClicks == 1 && !playerAnimator.GetBool("SwordAtk2") && !playerAnimator.GetBool("SwordAtk3"))
+        if (noOfClicks == 1 && playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
         {
             if(!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03"))
             {

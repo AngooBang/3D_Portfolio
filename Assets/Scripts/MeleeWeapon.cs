@@ -18,20 +18,20 @@ public class MeleeWeapon : MonoBehaviour
         {
             if(atkCount == 1)
             {
-                StopCoroutine(Swing(0.3f, 0f, 0.3f, 0.2f));
-                StartCoroutine(Swing(0.3f, 0f, 0.3f, 0.2f));
+                StopCoroutine(Swing(0.2f, 0f, 0.2f, 0.0f));
+                StartCoroutine(Swing(0.2f, 0f, 0.2f, 0.0f));
             }
             
             if(atkCount == 2)
             {
-                StopCoroutine(Swing(0.3f, 0f, 0.3f, 0.2f));
-                StartCoroutine(Swing(0.3f, 0f, 0.3f, 0.2f));
+                StopCoroutine(Swing(0.15f, 0.1f, 0.2f, 0.0f));
+                StartCoroutine(Swing(0.15f, 0.1f, 0.2f, 0.0f));
             }
 
             if (atkCount == 3)
             {
-                StopCoroutine(Swing(0.4f, 0.1f, 0.4f, 0.0f));
-                StartCoroutine(Swing(0.4f, 0.1f, 0.4f, 0.0f));
+                StopCoroutine(Swing(0.3f, 0.2f, 0.2f, 0.0f));
+                StartCoroutine(Swing(0.3f, 0.2f, 0.2f, 0.0f));
             }
         }
     }

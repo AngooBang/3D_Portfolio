@@ -39,7 +39,7 @@ public class Dummy : MonoBehaviour
 
         reactVec = reactVec.normalized;
         reactVec += Vector3.up;
-        //rigid.AddForce(reactVec * 5, ForceMode.Impulse);
+        rigid.AddForce(reactVec * 5, ForceMode.Impulse);
 
         material.color = Color.white;
     }
