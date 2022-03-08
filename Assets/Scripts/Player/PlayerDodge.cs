@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class PlayerDodge : MonoBehaviour
 {
+    public LayerMask WorldLayerMask;
+
     private Camera camera;
     private PlayerInput playerInput;
     private Animator playerAnimator;
@@ -39,7 +41,7 @@ public class PlayerDodge : MonoBehaviour
     void Dodge()
     {
         RaycastHit hit;
-        if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit))
+        if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit, 100f, WorldLayerMask))
         {
             DodgeDestination(hit.point);
         }

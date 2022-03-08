@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class PlayerAttack : MonoBehaviour
 {
     public MeleeWeapon EquipWeapon;
+    public LayerMask WorldLayerMask;
 
     private PlayerInput playerInput;
     private Animator playerAnimator;
@@ -113,7 +114,7 @@ public class PlayerAttack : MonoBehaviour
     void LookMousePosition()
     {
         RaycastHit hit;
-        Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit);
+        Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit, 100f, WorldLayerMask);
 
         agent.ResetPath();
 
