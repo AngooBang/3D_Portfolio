@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class TuttleShell : MonoBehaviour
+public class TurtleShell : MonoBehaviour
 {
     public GameObject Target;
 
     private bool isMove;
-    [SerializeField]
-    private bool isDetect = false;
     private bool isAttack;
 
     private float atkDelay = 2f;
@@ -19,11 +17,11 @@ public class TuttleShell : MonoBehaviour
     private Animator animator;
     private LivingEntity livingEntity;
 
+    private TurtleShellDetect turtleShellDetect;
 
     private Rigidbody rigid;
     private Material material;
 
-    private SphereCollider detectCol;
 
     private void Awake()
     {
@@ -32,8 +30,7 @@ public class TuttleShell : MonoBehaviour
         
         animator = GetComponent<Animator>();
         livingEntity = GetComponent<LivingEntity>();
-
-        detectCol = GetComponent<SphereCollider>();
+        turtleShellDetect = GetComponentInParent<TurtleShellDetect>();
 
         rigid = GetComponent<Rigidbody>();
         material = GetComponentInChildren<SkinnedMeshRenderer>().material;
@@ -53,15 +50,8 @@ public class TuttleShell : MonoBehaviour
     {
         if (livingEntity.isDead)
             return;
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            if(!isDetect)
-                isDetect = true;
-            else
-                isDetect = false;
-        }
 
-        if (isDetect)
+        if (turtleShellDetect.isDetect)
         {
             FollowPlayer();
             CheckTargetDist();
@@ -116,45 +106,31 @@ public class TuttleShell : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (livingEntity.isDead)
         {
-            isDetect = true;
-            animator.SetBool("IsDetect", true);
+            enemyAgent.enabled = false;
+            return;
         }
         if (other.CompareTag("MeleeWeapon"))
-        {
+        {            
             Debug.Log("거북이가 아파요!!!");
             Vector3 reactVec = transform.position - other.transform.position;
-            animator.SetTrigger("GetHit");
             livingEntity.GetDamage(other.GetComponent<MeleeWeapon>().damage);
+            animator.SetTrigger("GetHit");
             StartCoroutine(OnDamage(reactVec));
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isDetect = false;
-            animator.SetBool("IsDetect", false);
-            enemyAgent.ResetPath();
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("거북이 콜리전 검사 됨?");
-
-    }
     IEnumerator OnDamage(Vector3 reactVec)
     {
         material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
-
+        enemyAgent.enabled = false;
         reactVec = reactVec.normalized;
         reactVec += Vector3.up;
         rigid.AddForce(reactVec * 5, ForceMode.Impulse);
 
+        enemyAgent.enabled = true;
         material.color = Color.white;
     }
 }
