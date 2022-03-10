@@ -12,6 +12,12 @@ public class MeleeWeapon : MonoBehaviour
     public BoxCollider meleeArea;
     public TrailRenderer trailEffect;
 
+    private PlayerStatus pStatus;
+
+    private void Start()
+    {
+        pStatus = GetComponentInParent<PlayerStatus>();
+    }
     public void Use(int atkCount)
     {
         if (type == WeaponType.Sword)
@@ -49,5 +55,13 @@ public class MeleeWeapon : MonoBehaviour
 
         yield return new WaitForSeconds(effectDisTime);
         trailEffect.enabled = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Enemy"))
+        {
+            pStatus.HitEnemy();
+        }
     }
 }

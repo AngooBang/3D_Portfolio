@@ -5,19 +5,22 @@ using UnityEngine.AI;
 
 public class LivingEntity : MonoBehaviour
 {
-    public Animator animator;
 
-
-    public int HP;
+    public int MaxHP;
+    public int CurrentHP;
 
     public bool isDead = false;
+    private Animator animator;
+
 
 
     private NavMeshAgent agent;
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponentInChildren<Animator>();
+        CurrentHP = MaxHP;
     }
 
     // Update is called once per frame
@@ -27,12 +30,12 @@ public class LivingEntity : MonoBehaviour
     }
 
     
-    public void GetDamage(int damage)
+    virtual public void GetDamage(int damage)
     {
         if (isDead)
             return;
-        HP -= damage;
-        if (HP <= 0)
+        CurrentHP -= damage;
+        if (CurrentHP <= 0)
         {
             isDead = true;
             animator.SetTrigger("IsDead");

@@ -77,6 +77,7 @@ public class ClickMovement : MonoBehaviour
 
     private void SetDestination(Vector3 dest)
     {
+        agent.ResetPath();
         if(agent.SetDestination(dest))
         {
             destination = dest;

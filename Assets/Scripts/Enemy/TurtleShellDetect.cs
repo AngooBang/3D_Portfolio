@@ -10,11 +10,13 @@ public class TurtleShellDetect : MonoBehaviour
 
     private Animator animator;
     private NavMeshAgent agent;
+    private EnemyLiving enemyLiving;
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
-        agent = GetComponentInChildren<NavMeshAgent>();
+        animator = transform.parent.GetComponentInChildren<Animator>();
+        agent = GetComponentInParent<NavMeshAgent>();
+        enemyLiving = GetComponentInParent<EnemyLiving>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,8 @@ public class TurtleShellDetect : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+        if (enemyLiving.isDead)
+            return;
         if (other.CompareTag("Player"))
         {
             animator.SetBool("IsDetect", false);
