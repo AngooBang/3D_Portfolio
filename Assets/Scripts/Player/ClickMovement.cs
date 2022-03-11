@@ -9,6 +9,7 @@ public class ClickMovement : MonoBehaviour
     public GameObject ClickParticleObject;
     public float WalkSpeed = 4f;
     public LayerMask WorldLayerMask;
+    public GameManager gameManager;
 
     private Camera camera;
     private Animator animator;
@@ -40,7 +41,8 @@ public class ClickMovement : MonoBehaviour
         if(animator.GetCurrentAnimatorStateInfo(0).IsName("Dodge") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack01") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack02") == false &&
-            animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03") == false)
+            animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03") == false &&
+            gameManager.isAction == false)
         {
             if (Input.GetMouseButton(1))
             {

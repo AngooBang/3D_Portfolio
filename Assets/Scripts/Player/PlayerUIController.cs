@@ -7,6 +7,7 @@ public class PlayerUIController : MonoBehaviour
 {
     public GameObject HPprefab;
     public GameObject SPprefab;
+    public GameObject InteractiveImg;
 
     private Slider hpSlider;
     private Slider spSlider;
@@ -35,5 +36,15 @@ public class PlayerUIController : MonoBehaviour
     public void SetSPBarValue()
     {
         spSlider.value = (float)pStatus.CurrentSP / pStatus.MaxSP;
+    }
+
+    public void ShowInteractiveImg()
+    {
+        InteractiveImg.SetActive(true);
+    }
+
+    public void HideInteractiveImg()
+    {
+        InteractiveImg.SetActive(false);
     }
 }

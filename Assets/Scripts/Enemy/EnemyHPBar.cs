@@ -42,6 +42,5 @@ public class EnemyHPBar : MonoBehaviour
         hpSlider.value = (float)enemyLiving.CurrentHP / enemyLiving.MaxHP;
         if (enemyLiving.isDead)
             Destroy(hpSlider.gameObject, 5);
-        Debug.Log(hpSlider.value);
     }
 }
