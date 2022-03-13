@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerCollider : MonoBehaviour
 {
+    private PlayerStatus pStatus;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        
+        pStatus = GetComponent<PlayerStatus>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,7 +23,8 @@ public class PlayerCollider : MonoBehaviour
     {
         if (other.CompareTag("EnemyAttack"))
         {
-            Debug.Log("으악! 플레이어 쳐맞음!!");
+            pStatus.GetDamage(other.gameObject.GetComponent<TurtleShellAttack>().Damage);
+            animator.SetTrigger("GetHit");
         }
     }
 }

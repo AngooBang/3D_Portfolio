@@ -9,6 +9,7 @@ public class TurtleShellAttack : MonoBehaviour
     public bool isAttack;
 
     public bool isInAtkRange;
+    public int Damage = 5;
 
     private NavMeshAgent agent;
     private TurtleShellDetect tDetect;
