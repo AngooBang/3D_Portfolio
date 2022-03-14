@@ -24,18 +24,22 @@ public class EnemyHPSlider : MonoBehaviour
     // Update is called once per frame
     private void LateUpdate()
     {
-        var screenPosition = Camera.main.WorldToScreenPoint(target.position + offset);
-        if(screenPosition.z < 0.0f)
+        if(Camera.main != null)
         {
-            screenPosition *= -1.0f;
+
+            var screenPosition = Camera.main.WorldToScreenPoint(target.position + offset);
+            if (screenPosition.z < 0.0f)
+            {
+                screenPosition *= -1.0f;
+            }
+
+            Vector2 localPos = Vector2.zero;
+
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPosition, hpCamera, out localPos);
+
+
+            rectHP.localPosition = localPos;
         }
-
-        Vector2 localPos = Vector2.zero;
-
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPosition, hpCamera, out localPos);
-
-
-        rectHP.localPosition = localPos;
 
     }
 }

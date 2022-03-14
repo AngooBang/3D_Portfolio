@@ -78,7 +78,7 @@ public class PlayerAttack : MonoBehaviour
         noOfClicks++;
         noOfClicks = Mathf.Clamp(noOfClicks, 0, 3);
         //if (noOfClicks == 1 && !playerAnimator.GetBool("SwordAtk2") && !playerAnimator.GetBool("SwordAtk3"))
-        if (noOfClicks == 1 && playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
+        if (noOfClicks >= 1 && playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
         {
             if(!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03"))
             {

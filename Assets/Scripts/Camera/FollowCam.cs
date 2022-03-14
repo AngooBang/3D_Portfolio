@@ -6,11 +6,15 @@ public class FollowCam : MonoBehaviour
 {
     public Transform Target;
     public Vector3 Offset;
+    public bool IsFollow = true;
 
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Target.position + Offset;
+        if(IsFollow)
+        {
+            transform.position = Target.position + Offset;
+        }
     }
 }

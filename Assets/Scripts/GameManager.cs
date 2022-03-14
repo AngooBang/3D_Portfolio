@@ -11,6 +11,15 @@ public class GameManager : MonoBehaviour
     public GameObject interactionObject;
     public bool isAction;
 
+    public Camera UICamera;
+
+    private Camera mainCamera;
+
+    private void Start()
+    {
+        mainCamera = Camera.main;
+    }
+
     public void ActionWithObject(GameObject interactObj)
     {
         if(isAction)
@@ -25,5 +34,11 @@ public class GameManager : MonoBehaviour
         }
         playerUI.SetActive(!isAction);
         talkPanel.SetActive(isAction);
+        //UICamera.targetDisplay
+        mainCamera.enabled = !isAction;
+        interactionObject.GetComponentInChildren<Camera>().enabled = isAction;
+        UICamera.enabled = false;
+        UICamera.enabled = true;
+
     }
 }
