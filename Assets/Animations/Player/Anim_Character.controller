@@ -17,9 +17,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.24999994
-  m_TransitionOffset: 0.098169334
-  m_ExitTime: 0.6
+  m_TransitionDuration: 0.19881973
+  m_TransitionOffset: 0
+  m_ExitTime: 0.6294217
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -183,7 +183,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: NormalAttack02
-  m_Speed: 3
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -709913502303921808}
@@ -350,9 +350,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0.16365929
-  m_ExitTime: 0.7
+  m_TransitionDuration: 0.32377028
+  m_TransitionOffset: 0.019598134
+  m_ExitTime: 0.97300065
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -625,8 +625,8 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.1048186
-  m_TransitionOffset: 0.011242034
+  m_TransitionDuration: 0.17271423
+  m_TransitionOffset: 0.011242035
   m_ExitTime: 0.7
   m_HasExitTime: 1
   m_HasFixedDuration: 1

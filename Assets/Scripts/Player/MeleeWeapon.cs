@@ -30,8 +30,8 @@ public class MeleeWeapon : MonoBehaviour
             
             if(atkCount == 2)
             {
-                StopCoroutine(Swing(0.3f, 0f, 0.15f, 0.0f));
-                StartCoroutine(Swing(0.3f, 0f, 0.15f, 0.0f));
+                StopCoroutine(Swing(0.25f, 0f, 0.25f, 0.0f));
+                StartCoroutine(Swing(0.25f, 0f, 0.25f, 0.0f));
             }
 
             if (atkCount == 3)
