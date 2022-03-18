@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public TalkManager talkManager;
+    public QuestManager questManager;
     public GameObject playerUI;
     public GameObject talkPanel;
     public Text talkText;
     public GameObject interactionObject;
     public bool isAction;
+    public int talkIndex = 0;
 
     public Camera UICamera;
 
@@ -22,23 +25,45 @@ public class GameManager : MonoBehaviour
 
     public void ActionWithObject(GameObject interactObj)
     {
-        if(isAction)
-        {
-            isAction = false;
-        }
-        else
-        {
-            isAction = true;
-            interactionObject = interactObj;
-            talkText.text = "이것의 이름은 " + interactionObject.name + "이라고 한다.";
-        }
+
+        interactionObject = interactObj;
+        ObjectData objData = interactionObject.GetComponent<ObjectData>();
+        //TalkWithObject(objData.ObjectID);
+
+        UIInteractSetting();
+        CameraInteractSetting();
+    }
+
+    //private void TalkWithObject(int objectID)
+    //{
+    //    int questTalkIndex = questManager.GetQuestTalkIndex(objectID);
+    //    string talkData = talkManager.GetTalk(objectID + questTalkIndex, talkIndex);
+
+
+    //    if (talkData == null)
+    //    {
+    //        isAction = false;
+    //        talkIndex = 0;
+    //        questManager.CheckQuest(objectID);
+    //        return;
+    //    }
+
+    //    talkText.text = talkData;
+
+    //    isAction = true;
+    //    talkIndex++;
+
+    //}
+    private void UIInteractSetting()
+    {
         playerUI.SetActive(!isAction);
         talkPanel.SetActive(isAction);
-        //UICamera.targetDisplay
+    }
+    private void CameraInteractSetting()
+    {
         mainCamera.enabled = !isAction;
         interactionObject.GetComponentInChildren<Camera>().enabled = isAction;
         UICamera.enabled = false;
         UICamera.enabled = true;
-
     }
 }
