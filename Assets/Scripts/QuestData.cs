@@ -25,7 +25,8 @@ public class QuestData
         {
             QuestID = questID;
             QuestName = "새 마을 방문";
-            QuestDescription = "모험의 시작이다. 마을의 소녀에게 이동해 퀘스트를 진행하라.";
+            QuestDescription = "모험의 시작이다.\n마을의 소녀와 대화하라.";
+            QuestProgressNum = 0;
             QuestProgressNum = 0;
 
             qCurrentNum = 0;
@@ -39,9 +40,27 @@ public class QuestData
             objectID = new int[] { 1000 };
         }
 
-        if(questID == 50)
+        if (questID == 20)
         {
-            QuestID = 50;
+            QuestID = questID;
+            QuestName = "파란 거북이 사냥";
+            QuestDescription = "소녀의 부탁이다. \n파란 거북이를 사냥해 등껍질 3개를 모아오자!";
+            QuestProgressNum = 0;
+
+            qCurrentNum = 0;
+            qFinishNum = 3;
+
+            isStartReady = false;
+            isReceive = false;
+            isFinish = false;
+            isComplete = false;
+
+            objectID = new int[] { 1000, 1000, 1000 };
+        }
+
+        if (questID == 50)
+        {
+            QuestID = questID;
             QuestName = "테스트 퀘스트";
             QuestDescription = "퀘스트 시스템 테스트 중입니다.";
             QuestProgressNum = 0;
@@ -57,8 +76,4 @@ public class QuestData
         }
     }
 
-    public void ReceiveQuest()
-    {
-        isReceive = true;
-    }
 }

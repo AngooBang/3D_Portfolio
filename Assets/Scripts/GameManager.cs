@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     public QuestManager questManager;
     public GameObject playerUI;
     public GameObject talkPanel;
-    public Text talkText;
+    public Text talkText;                       
     public GameObject interactionObject;
     public bool isAction;
-    public int talkIndex = 0;
+    public int talkIndex = 0;              // 대화이벤트에서 내용이 여러번에 걸쳐 출력될때 (string[])을 참조하기 위해 사용하는 카운트
 
     public Camera UICamera;
 
@@ -28,32 +28,39 @@ public class GameManager : MonoBehaviour
 
         interactionObject = interactObj;
         ObjectData objData = interactionObject.GetComponent<ObjectData>();
-        //TalkWithObject(objData.ObjectID);
+        TalkWithObject(objData.ObjectID);
 
         UIInteractSetting();
         CameraInteractSetting();
     }
 
-    //private void TalkWithObject(int objectID)
-    //{
-    //    int questTalkIndex = questManager.GetQuestTalkIndex(objectID);
-    //    string talkData = talkManager.GetTalk(objectID + questTalkIndex, talkIndex);
+    private void TalkWithObject(int objectID)
+    {
+        int questTalkIndex = questManager.GetQuestTalkIndex(objectID);
+        string talkData = talkManager.GetTalk(objectID + questTalkIndex, talkIndex);
 
 
-    //    if (talkData == null)
-    //    {
-    //        isAction = false;
-    //        talkIndex = 0;
-    //        questManager.CheckQuest(objectID);
-    //        return;
-    //    }
+        if (talkData == null)
+        {
+            isAction = false;
+            talkIndex = 0;
+            // npc에 퀘스트대화가 있을때
+            if(questTalkIndex != 0)
+            {
+                if (questTalkIndex != 21)
+                {
+                    questManager.NextQuestProcess(questTalkIndex - (questTalkIndex % 10));
+                }
+                questManager.CheckQuestFinish(questTalkIndex - (questTalkIndex % 10));
+            }
+            return;
+        }
 
-    //    talkText.text = talkData;
+        talkText.text = talkData;
 
-    //    isAction = true;
-    //    talkIndex++;
-
-    //}
+        isAction = true;
+        talkIndex++;
+    }
     private void UIInteractSetting()
     {
         playerUI.SetActive(!isAction);

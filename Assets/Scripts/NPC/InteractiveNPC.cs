@@ -6,13 +6,18 @@ using UnityEngine.UI;
 public class InteractiveNPC : MonoBehaviour
 {
     public GameManager gameManager;
+    public QuestManager questManager;
     public GameObject player;
 
+    public bool isQuestStart = false;
     private bool isRangeIn;
+    private ObjectData objectData;
+
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        objectData = GetComponent<ObjectData>();
     }
 
     // Update is called once per frame
@@ -23,6 +28,15 @@ public class InteractiveNPC : MonoBehaviour
             if (Input.GetButtonDown("Interact"))
             {
                 player.GetComponent<PlayerUIController>().HideInteractiveImg();
+                if(isQuestStart)
+                {
+                    int tempQuestID = questManager.GetQuestStartIndex(objectData.ObjectID);
+                    if (tempQuestID != 0)
+                    {
+                        questManager.ReceiveQuest(tempQuestID);
+                        isQuestStart = false;
+                    }
+                }
                 gameManager.ActionWithObject(gameObject);
             }
         }
