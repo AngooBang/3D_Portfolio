@@ -59,6 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAttack: 0
   isInAtkRange: 0
+  Damage: 5
 --- !u!1 &7245983312318643159
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +83,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7245983312318643159}
-  m_LocalRotation: {x: -0.43952665, y: -0.55391, z: -0.43952665, w: 0.55391}
+  m_LocalRotation: {x: 0.53822297, y: 0.45860228, z: 0.53822297, w: -0.45860228}
   m_LocalPosition: {x: -0.13390945, y: 2.432437e-17, z: 4.1713996e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -681,7 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6eafa25d2fccd14aaef128f4d767501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 10
+  MaxHP: 100
   CurrentHP: 0
   isDead: 0
 --- !u!1 &7245983313381988052
