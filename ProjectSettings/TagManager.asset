@@ -9,6 +9,19 @@ TagManager:
   - EnemyDetectArea
   - EnemyAttack
   - NPC
+  - Slot
+  - Slots
+  - Hotbar
+  - EquipmentSystem
+  - Panel
+  - Tooltip
+  - DraggingItem
+  - ItemIcon
+  - Item
+  - ResultSlot
+  - Canvas
+  - EventSystem
+  - MainInventory
   layers:
   - Default
   - TransparentFX

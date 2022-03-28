@@ -62,7 +62,7 @@ public class PlayerAttack : MonoBehaviour
         }
         if(Time.time > nextFireTime)
         {
-            if(Input.GetMouseButton(0) && !playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03") &&
+            if(playerInput.normalAttack && !playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03") &&
                 !playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
             {
                 OnClick();

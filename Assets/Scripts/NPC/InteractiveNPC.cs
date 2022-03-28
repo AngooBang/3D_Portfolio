@@ -10,6 +10,8 @@ public class InteractiveNPC : MonoBehaviour
     public GameObject player;
 
     public bool isQuestStart = false;
+
+    private PlayerInput playerInput;
     private bool isRangeIn;
     private ObjectData objectData;
 
@@ -18,6 +20,7 @@ public class InteractiveNPC : MonoBehaviour
     void Start()
     {
         objectData = GetComponent<ObjectData>();
+        playerInput = player.GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
@@ -25,7 +28,7 @@ public class InteractiveNPC : MonoBehaviour
     {
         if(isRangeIn)
         {
-            if (Input.GetButtonDown("Interact"))
+            if (playerInput.interaction)
             {
                 player.GetComponent<PlayerUIController>().HideInteractiveImg();
                 if(isQuestStart)

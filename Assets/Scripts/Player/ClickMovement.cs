@@ -11,6 +11,7 @@ public class ClickMovement : MonoBehaviour
     public LayerMask WorldLayerMask;
     public GameManager gameManager;
 
+    private PlayerInput playerInput;
     private Camera camera;
     private Animator animator;
     private NavMeshAgent agent;
@@ -25,6 +26,7 @@ public class ClickMovement : MonoBehaviour
         camera = Camera.main;
         animator = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        playerInput = GetComponent<PlayerInput>();
         agent.updateRotation = false;
 
     }
@@ -44,7 +46,7 @@ public class ClickMovement : MonoBehaviour
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03") == false &&
             gameManager.isAction == false)
         {
-            if (Input.GetMouseButton(1))
+            if (playerInput.move)
             {
                 Ray ray = camera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;

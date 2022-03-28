@@ -15,11 +15,11 @@ C:/Users/qudal/Desktop/KGA/Unity/3D_Portfolio/3D_Portfolio
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-3104
+12791
 Successfully changed project path to: C:/Users/qudal/Desktop/KGA/Unity/3D_Portfolio/3D_Portfolio
 C:/Users/qudal/Desktop/KGA/Unity/3D_Portfolio/3D_Portfolio
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 126.33 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 46.98 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -35,208 +35,328 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56300
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56652
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001829 seconds.
+Registered in 0.002748 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 43.59 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 44.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.493 seconds
+- Completed reload, in  0.451 seconds
 Domain Reload Profiling:
-	ReloadAssembly (493ms)
-		BeginReloadAssembly (52ms)
+	ReloadAssembly (452ms)
+		BeginReloadAssembly (63ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (322ms)
-			LoadAssemblies (50ms)
+		EndReloadAssembly (332ms)
+			LoadAssemblies (61ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (92ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (138ms)
+			SetupLoadedEditorAssemblies (142ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (44ms)
-				BeforeProcessingInitializeOnLoad (11ms)
-				ProcessInitializeOnLoadAttributes (58ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
+				RefreshPlugins (45ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (61ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.055355 seconds.
+Registered in 0.007059 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.790 seconds
+Domain Reload Profiling:
+	ReloadAssembly (791ms)
+		BeginReloadAssembly (121ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (618ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (189ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (258ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (158ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2079 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 182.2 MB.
+System memory in use after: 182.3 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2538.
+Total: 2.687600 ms (FindLiveObjects: 0.120000 ms CreateObjectMapping: 0.040100 ms MarkObjects: 2.446000 ms  DeleteObjects: 0.081000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/FreeAsset/Fantasy Wooden GUI  Free/normal_ui_set A
+  artifactKey: Guid(fb0793ba43ead8c4a89d62e19ce3e04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Fantasy Wooden GUI  Free/normal_ui_set A using Guid(fb0793ba43ead8c4a89d62e19ce3e04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7569aa016201c5b7250d6736c84d377') in 0.007716 seconds 
+  Import took 0.009984 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/FreeAsset/Fantasy Wooden GUI  Free/Scene
+  artifactKey: Guid(1d4ddc8cb3190b749bc2878cae95700e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Fantasy Wooden GUI  Free/Scene using Guid(1d4ddc8cb3190b749bc2878cae95700e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f820650b6151a838eab2ed83bed77cd0') in 0.004843 seconds 
+  Import took 0.006979 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005684 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.983 seconds
+Domain Reload Profiling:
+	ReloadAssembly (984ms)
+		BeginReloadAssembly (133ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (794ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (216ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (347ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (103ms)
+				ProcessInitializeOnLoadAttributes (214ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 181.0 MB.
+
+Unloading 53 unused Assets to reduce memory usage. Loaded Objects now: 2504.
+Total: 2.450700 ms (FindLiveObjects: 0.162200 ms CreateObjectMapping: 0.075900 ms MarkObjects: 2.190100 ms  DeleteObjects: 0.021800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005481 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.735 seconds
 Domain Reload Profiling:
 	ReloadAssembly (735ms)
-		BeginReloadAssembly (107ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (584ms)
-			LoadAssemblies (82ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (179ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (241ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (66ms)
-				ProcessInitializeOnLoadAttributes (155ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2079 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 182.3 MB.
-System memory in use after: 182.3 MB.
-
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2538.
-Total: 2.276000 ms (FindLiveObjects: 0.139700 ms CreateObjectMapping: 0.048300 ms MarkObjects: 2.011600 ms  DeleteObjects: 0.075800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap
-  artifactKey: Guid(c89ec052d33e7754688965f632d7d59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap using Guid(c89ec052d33e7754688965f632d7d59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95121a2d3205f94e23187759976e7152') in 0.007251 seconds 
-  Import took 0.010866 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004798 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.742 seconds
-Domain Reload Profiling:
-	ReloadAssembly (742ms)
-		BeginReloadAssembly (105ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (25ms)
-		EndReloadAssembly (593ms)
-			LoadAssemblies (81ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (196ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (218ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (61ms)
-				ProcessInitializeOnLoadAttributes (139ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2069 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 181.7 MB.
-System memory in use after: 181.8 MB.
-
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2540.
-Total: 2.361600 ms (FindLiveObjects: 0.139700 ms CreateObjectMapping: 0.057300 ms MarkObjects: 2.152000 ms  DeleteObjects: 0.011900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004775 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.704 seconds
-Domain Reload Profiling:
-	ReloadAssembly (705ms)
-		BeginReloadAssembly (108ms)
+		BeginReloadAssembly (106ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (554ms)
-			LoadAssemblies (81ms)
+		EndReloadAssembly (583ms)
+			LoadAssemblies (85ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (174ms)
+			SetupTypeCache (180ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (220ms)
+			SetupLoadedEditorAssemblies (238ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (61ms)
-				ProcessInitializeOnLoadAttributes (142ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (148ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2069 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 181.7 MB.
-System memory in use after: 181.9 MB.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.7 MB.
+System memory in use after: 180.8 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2542.
-Total: 2.237300 ms (FindLiveObjects: 0.143500 ms CreateObjectMapping: 0.060400 ms MarkObjects: 2.021900 ms  DeleteObjects: 0.010800 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2506.
+Total: 2.234700 ms (FindLiveObjects: 0.127800 ms CreateObjectMapping: 0.038700 ms MarkObjects: 2.056500 ms  DeleteObjects: 0.010900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005930 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.741 seconds
+Domain Reload Profiling:
+	ReloadAssembly (741ms)
+		BeginReloadAssembly (113ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (582ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (177ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (235ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (145ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.7 MB.
+System memory in use after: 180.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2508.
+Total: 2.355000 ms (FindLiveObjects: 0.134300 ms CreateObjectMapping: 0.062400 ms MarkObjects: 2.146300 ms  DeleteObjects: 0.011300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005234 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.696 seconds
+Domain Reload Profiling:
+	ReloadAssembly (696ms)
+		BeginReloadAssembly (100ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (551ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (169ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (225ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (142ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.7 MB.
+System memory in use after: 180.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2510.
+Total: 2.295600 ms (FindLiveObjects: 0.128800 ms CreateObjectMapping: 0.046500 ms MarkObjects: 2.107500 ms  DeleteObjects: 0.012300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -250,969 +370,1137 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 265.223699 seconds.
-  path: ProjectSettings/TagManager.asset
-  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a536814ff9225770e2f95df18b6b0ab') in 0.040756 seconds 
-  Import took 0.044011 seconds .
+  Time since last request: 991.755209 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Examples
+  artifactKey: Guid(a283259eeddbd6346a9a8a45562a1aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Examples using Guid(a283259eeddbd6346a9a8a45562a1aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a71f8318b95688515c9d51b00360479') in 0.008090 seconds 
+  Import took 0.011179 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 99.022410 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Currency/Currency_1.png
-  artifactKey: Guid(67efee7b82672134eb05954225a7e9f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Currency/Currency_1.png using Guid(67efee7b82672134eb05954225a7e9f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba9d16b9a572651c54c559fffca27881') in 0.094288 seconds 
-  Import took 0.097776 seconds .
+  Time since last request: 1.045313 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Examples/Example.unity
+  artifactKey: Guid(a2f811dfcbbd60744a806d639f42f04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Examples/Example.unity using Guid(a2f811dfcbbd60744a806d639f42f04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eec47b6644a93167a250eca9d6d497a') in 0.036407 seconds 
+  Import took 0.039112 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/E_Wood02.png
-  artifactKey: Guid(0b6460ae87591cc4384e37a63fe38158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/E_Wood02.png using Guid(0b6460ae87591cc4384e37a63fe38158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb547d97845b743b676879b6fa4a48ee') in 0.015106 seconds 
-  Import took 0.017722 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Amethist.png
-  artifactKey: Guid(d3bbd41ffd2d38e47a568bcb83986428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Amethist.png using Guid(d3bbd41ffd2d38e47a568bcb83986428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd184dc928f8f7e709b75c0eac4843c9f') in 0.013812 seconds 
-  Import took 0.016933 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/E_Gold02.png
-  artifactKey: Guid(90672fa6e9c9b0e448c0c07e3977b996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/E_Gold02.png using Guid(90672fa6e9c9b0e448c0c07e3977b996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aca8545aa395f443e83f3fda6fff78cd') in 0.012294 seconds 
-  Import took 0.015212 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_BronzeCoin.png
-  artifactKey: Guid(69eeb54ccac4ed64cbe883fa8bdc2726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_BronzeCoin.png using Guid(69eeb54ccac4ed64cbe883fa8bdc2726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b8be885934ca35324e86573526abe5f') in 0.011815 seconds 
-  Import took 0.014892 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000171 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Scroll02.png
-  artifactKey: Guid(244e770b45793af4cbf465147020fee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Scroll02.png using Guid(244e770b45793af4cbf465147020fee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef97fca42ed4271040faa8706bdbaa4e') in 0.012712 seconds 
-  Import took 0.015861 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_GreenPepper.png
-  artifactKey: Guid(83f82b0d7009ae14bb439a9bfa494fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_GreenPepper.png using Guid(83f82b0d7009ae14bb439a9bfa494fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fae7824a259628293121b75e73b89fb') in 0.012658 seconds 
-  Import took 0.015654 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Rock03.png
-  artifactKey: Guid(52c6a9be40490924888609546bc97412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Rock03.png using Guid(52c6a9be40490924888609546bc97412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd0a8b67d3a84959704e3b30079ee81e') in 0.011866 seconds 
-  Import took 0.014928 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_63.png
-  artifactKey: Guid(daba717c3afdfdf46b33e47de6c079df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_63.png using Guid(daba717c3afdfdf46b33e47de6c079df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c975c8903b3b45a2571bad311c51d82e') in 0.014431 seconds 
-  Import took 0.017252 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_11.png
-  artifactKey: Guid(6790469672e775442a3bedae3b9d81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_11.png using Guid(6790469672e775442a3bedae3b9d81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e68456cfe0de8b63ed7952e174ae42') in 0.015080 seconds 
-  Import took 0.017793 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_9.png
-  artifactKey: Guid(4f08c2f98dd6ebb4981da7146808dbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_9.png using Guid(4f08c2f98dd6ebb4981da7146808dbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b9dcfb643400c008a1be6bd7791f48') in 0.014016 seconds 
-  Import took 0.016888 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_RawFish.png
-  artifactKey: Guid(c33f83d2a5c75bf479ac0e85a9376223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_RawFish.png using Guid(c33f83d2a5c75bf479ac0e85a9376223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '965de352210330da138e55c3cc7345c6') in 0.012007 seconds 
-  Import took 0.014777 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000127 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Shadow06.png
-  artifactKey: Guid(c5c46985fe981514889bd48784afc136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Shadow06.png using Guid(c5c46985fe981514889bd48784afc136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d8eca18344bff2948a12de2b79e9453') in 0.013454 seconds 
-  Import took 0.016572 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Sword07.png
-  artifactKey: Guid(bee52ceb1b78ba643a1fdec1f0a112f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Sword07.png using Guid(bee52ceb1b78ba643a1fdec1f0a112f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb8999f6f5fef4dc96bdec2664479c8c') in 0.011955 seconds 
-  Import took 0.014817 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_94.png
-  artifactKey: Guid(58703a3d3ff1aee4da03ae828f98883c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_94.png using Guid(58703a3d3ff1aee4da03ae828f98883c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0682902ca7fa2163d6bebed513b90395') in 0.017002 seconds 
-  Import took 0.019893 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_11.png
-  artifactKey: Guid(96795092639a0d9459b620e0996dacf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_11.png using Guid(96795092639a0d9459b620e0996dacf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2f6402e93aac5deb4d3769e2604e289') in 0.015344 seconds 
-  Import took 0.017976 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000149 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_9.png
-  artifactKey: Guid(b98274165daedaf4ca6b7cb7edabb94f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_9.png using Guid(b98274165daedaf4ca6b7cb7edabb94f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfcf5fdb8988ff17b9884b1818fe17c3') in 0.014634 seconds 
-  Import took 0.017279 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Antidote.png
-  artifactKey: Guid(a074e913df2a9d847ad114564ff156c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Antidote.png using Guid(a074e913df2a9d847ad114564ff156c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '733b131b87cb4dff4dc33fa1352ad4cc') in 0.013009 seconds 
-  Import took 0.015889 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_60.png
-  artifactKey: Guid(c204adba5fb351645ba3f245519edfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_60.png using Guid(c204adba5fb351645ba3f245519edfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f01acbbf38755cdf016cc22fa162d005') in 0.013954 seconds 
-  Import took 0.016677 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_62.png
-  artifactKey: Guid(8cf64c0023f1d704e8b6acbd41c6a490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_62.png using Guid(8cf64c0023f1d704e8b6acbd41c6a490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75ce15f9f76606dd1823e2de3ca7f682') in 0.013239 seconds 
-  Import took 0.016039 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Egg.png
-  artifactKey: Guid(d21bc9ae36fb1f04fb443466fec004cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Egg.png using Guid(d21bc9ae36fb1f04fb443466fec004cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42509c2c856968d2dc5cffb1c70f674d') in 0.011846 seconds 
-  Import took 0.015122 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/E_Metal04.png
-  artifactKey: Guid(0abfe84141e6fbe41a4c34fbfe6670a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/E_Metal04.png using Guid(0abfe84141e6fbe41a4c34fbfe6670a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a99492a5f73dda8570a82e47fc24796e') in 0.011858 seconds 
-  Import took 0.015048 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Agate.png
-  artifactKey: Guid(ebac4c1771ca6d845a1319f658c1eb69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Agate.png using Guid(ebac4c1771ca6d845a1319f658c1eb69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2972d441bba40830057f4493d2fba9ed') in 0.012520 seconds 
-  Import took 0.015452 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Pie.png
-  artifactKey: Guid(5dac1d635cb0baf4292608e0ca519144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Pie.png using Guid(5dac1d635cb0baf4292608e0ca519144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1cab0551261d6942a23f9b66fedca5a') in 0.012852 seconds 
-  Import took 0.015698 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Pineapple.png
-  artifactKey: Guid(199bdb6e408a22a47af84ce92e3e9d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Pineapple.png using Guid(199bdb6e408a22a47af84ce92e3e9d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb21ccf21e3d82df36bafb2284cf9abc') in 0.012362 seconds 
-  Import took 0.015273 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000135 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Fish.png
-  artifactKey: Guid(13ff6d9115912c34b9fd03472bb03734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Fish.png using Guid(13ff6d9115912c34b9fd03472bb03734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '209e68fa092bde01778f4b06af56b7c1') in 0.012642 seconds 
-  Import took 0.015521 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Rock01.png
-  artifactKey: Guid(f6be9406de42a8b41bfc363137e59773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Rock01.png using Guid(f6be9406de42a8b41bfc363137e59773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ae84cc0aff897406a9ab463c35d8be1') in 0.011977 seconds 
-  Import took 0.014962 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_4.png
-  artifactKey: Guid(4c7c66e08bfdd1541b8ece3160e9eecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_4.png using Guid(4c7c66e08bfdd1541b8ece3160e9eecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b337bcf0e7d6d3b64281b0a28d370e0d') in 0.014210 seconds 
-  Import took 0.017175 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Rock05.png
-  artifactKey: Guid(e4d81e2a4d2207144a23b274437d7bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Rock05.png using Guid(e4d81e2a4d2207144a23b274437d7bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8647159cd001c3d42ad4cfea8550f12') in 0.013021 seconds 
-  Import took 0.015789 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/E_Wood04.png
-  artifactKey: Guid(da4485cf717130847bc69dcdfa8ac824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/E_Wood04.png using Guid(da4485cf717130847bc69dcdfa8ac824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39534906e96f23f6e468465b28258c44') in 0.012883 seconds 
-  Import took 0.015913 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_16.png
-  artifactKey: Guid(13dc35a7491743f4b938557b25f4dbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_16.png using Guid(13dc35a7491743f4b938557b25f4dbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '377bf196d4f6913fa03f4c1239e51de0') in 0.015452 seconds 
-  Import took 0.018306 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_84.png
-  artifactKey: Guid(b442c5306190e60438a9019aa32580e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_84.png using Guid(b442c5306190e60438a9019aa32580e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bfa4ec895a13232509fc1212b02bdca') in 0.015774 seconds 
-  Import took 0.018881 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/E_Wood01.png
-  artifactKey: Guid(c8e5c40abbfc5984c8fc245572dd93a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/E_Wood01.png using Guid(c8e5c40abbfc5984c8fc245572dd93a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af5a221032f87017930f207dc23402af') in 0.012903 seconds 
-  Import took 0.015944 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_65.png
-  artifactKey: Guid(163ae46d93c4d184d926dc8fb4db7aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_65.png using Guid(163ae46d93c4d184d926dc8fb4db7aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c0764bf335a6125c3d81ac20273273c') in 0.016228 seconds 
-  Import took 0.019124 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000149 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Radish.png
-  artifactKey: Guid(f5e3cda33bf476b4087cba80fc4154f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Radish.png using Guid(f5e3cda33bf476b4087cba80fc4154f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f85690c5f14904bf8445024a0bb0bafb') in 0.012727 seconds 
-  Import took 0.015510 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/Example Inventory/1/Hotbar_B.png
-  artifactKey: Guid(241f624502754e74f8663fe592412f93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/Example Inventory/1/Hotbar_B.png using Guid(241f624502754e74f8663fe592412f93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afbd7754d3f59536476a1f5e7db56be5') in 0.017084 seconds 
-  Import took 0.019804 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Sword05.png
-  artifactKey: Guid(bce761d7bb2d48f419a96187fc3abfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Sword05.png using Guid(bce761d7bb2d48f419a96187fc3abfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76680ea82d4a0783dc9e31031775157c') in 0.012575 seconds 
-  Import took 0.015291 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_5.png
-  artifactKey: Guid(6c0657f0fbba05647aa86cdebd25502f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_5.png using Guid(6c0657f0fbba05647aa86cdebd25502f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5628598b2966cc1b964e25c68a4c3089') in 0.014868 seconds 
-  Import took 0.018092 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_66.png
-  artifactKey: Guid(864b26cff5e4fdd40a708f93578c5df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_66.png using Guid(864b26cff5e4fdd40a708f93578c5df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6546871bf620339e92c0d971015ba84') in 0.016509 seconds 
-  Import took 0.019848 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Shadow05.png
-  artifactKey: Guid(ec4d83448ebdca6439353ff066ca19d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Shadow05.png using Guid(ec4d83448ebdca6439353ff066ca19d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95522b84956152cb1c1a053b62df4669') in 0.013204 seconds 
-  Import took 0.015817 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Rock02.png
-  artifactKey: Guid(40a7bed7eb637d4489dd4342e5bbaa39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Rock02.png using Guid(40a7bed7eb637d4489dd4342e5bbaa39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a348f23e8135bbac6bb3f9d94056da9a') in 0.015373 seconds 
-  Import took 0.018202 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/E_Metal01.png
-  artifactKey: Guid(c928c51f414df7448970abd725dc6a51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/E_Metal01.png using Guid(c928c51f414df7448970abd725dc6a51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd6ff187057ef6062380e8e35afce4c') in 0.013325 seconds 
-  Import took 0.016201 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Shadow04.png
-  artifactKey: Guid(f1779f3ccbb108848952b8d177ec243d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Shadow04.png using Guid(f1779f3ccbb108848952b8d177ec243d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5cc6e8d3aa4644a30487af3f8c8fa77') in 0.012504 seconds 
-  Import took 0.015343 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_14.png
-  artifactKey: Guid(b3a12f13633a05f43b4c7b57427234c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_14.png using Guid(b3a12f13633a05f43b4c7b57427234c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a32464ed0005bb33bcd40772df5c3239') in 0.014958 seconds 
-  Import took 0.018014 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_13.png
-  artifactKey: Guid(4cccf7c2c4b29614e9b4809b4327ac09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_13.png using Guid(4cccf7c2c4b29614e9b4809b4327ac09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3976f17c016705430e0da3d0219670f2') in 0.016190 seconds 
-  Import took 0.018946 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_70.png
-  artifactKey: Guid(2509ec4593e4f6a4d8521cf543329b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_70.png using Guid(2509ec4593e4f6a4d8521cf543329b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c63c7a277eaaaf21a6a1ccbcbb827a5f') in 0.015385 seconds 
-  Import took 0.018467 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Emblem/Emblem_1.png
-  artifactKey: Guid(e36525a5a662dbc48bb49ee748e526fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Emblem/Emblem_1.png using Guid(e36525a5a662dbc48bb49ee748e526fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee086a173a3a652f13ac46667f1a36ec') in 0.017463 seconds 
-  Import took 0.020401 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Rubi.png
-  artifactKey: Guid(a2dc374c2642bc844afc22a445e521e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Rubi.png using Guid(a2dc374c2642bc844afc22a445e521e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '414d114ff44ee165825049fbf35ae12f') in 0.013414 seconds 
-  Import took 0.016534 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_99.png
-  artifactKey: Guid(95675e0e2c60f004f827935b66f157a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_99.png using Guid(95675e0e2c60f004f827935b66f157a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb566914f686eb03aea0f38cf8877675') in 0.016195 seconds 
-  Import took 0.018850 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_9.png
-  artifactKey: Guid(625e5ec0211bd754095d13f61ff904b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_9.png using Guid(625e5ec0211bd754095d13f61ff904b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5467ba2942983f922eb131e093f2cdcd') in 0.015502 seconds 
-  Import took 0.018774 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000155 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/E_Metal03.png
-  artifactKey: Guid(9120f624ae0e05e4488b87d2ba6ac652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/E_Metal03.png using Guid(9120f624ae0e05e4488b87d2ba6ac652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fe17d963bf6bd41e6d374c49783af66') in 0.013997 seconds 
-  Import took 0.017023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000138 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Pear.png
-  artifactKey: Guid(431b4e3b012cc304f9647ac6a0129def) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Pear.png using Guid(431b4e3b012cc304f9647ac6a0129def) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd11a6436ef45b219a6fc4f3d7d0e94d') in 0.013508 seconds 
-  Import took 0.016105 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_14.png
-  artifactKey: Guid(54fbccb0a31d933439ce5b51dca793cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_14.png using Guid(54fbccb0a31d933439ce5b51dca793cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e63146246b71913b102241542ac00000') in 0.016076 seconds 
-  Import took 0.019277 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Shadow07.png
-  artifactKey: Guid(bdff65d4c2963614fb3d908742167b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Shadow07.png using Guid(bdff65d4c2963614fb3d908742167b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50950182f372ae27626a515f347c50e6') in 0.013135 seconds 
-  Import took 0.016005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Sword06.png
-  artifactKey: Guid(6f151bad5e39d5e4a8dc5ec8da2403cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Sword06.png using Guid(6f151bad5e39d5e4a8dc5ec8da2403cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd217a5d80665c8a1cae38d8c4a3c8c64') in 0.013821 seconds 
-  Import took 0.016565 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_17.png
-  artifactKey: Guid(674af820a918906459f9d3a5531d5968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_17.png using Guid(674af820a918906459f9d3a5531d5968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ee9a0faa75a741daab914349965d393') in 0.015175 seconds 
-  Import took 0.018275 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_12.png
-  artifactKey: Guid(1020566b4e4a1584a8d89619878d775b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_12.png using Guid(1020566b4e4a1584a8d89619878d775b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e89ff0d1e84456a96a896b00571ad381') in 0.014365 seconds 
-  Import took 0.017138 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Banana.png
-  artifactKey: Guid(e8ea722a782cda34bba562b493bed147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Banana.png using Guid(e8ea722a782cda34bba562b493bed147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2061ecb72ef6d08fbf7167fcd978e6e5') in 0.013307 seconds 
-  Import took 0.015784 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Rock04.png
-  artifactKey: Guid(66f806cf9d2c3b04d8665d52b16da937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Rock04.png using Guid(66f806cf9d2c3b04d8665d52b16da937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e53940b894e246e6a2b4dbc769d1468') in 0.012734 seconds 
-  Import took 0.015321 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Currency/Currency_4.png
-  artifactKey: Guid(c3d0911eef0d2a0448adb3f696c2ad87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Currency/Currency_4.png using Guid(c3d0911eef0d2a0448adb3f696c2ad87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39f996ec96481f66b752f6d48a7a55da') in 0.015883 seconds 
-  Import took 0.018899 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000138 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/E_Metal02.png
-  artifactKey: Guid(ec46437b8fc08d74ca2c8d096f5a3e62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/E_Metal02.png using Guid(ec46437b8fc08d74ca2c8d096f5a3e62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11cd74deea5b0f9a71e811c066689f15') in 0.012806 seconds 
-  Import took 0.015610 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_8.png
-  artifactKey: Guid(514cbbfaa513e2d45b2e075f6dad0bed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_8.png using Guid(514cbbfaa513e2d45b2e075f6dad0bed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11854726fec31228e1ec14116988022a') in 0.018804 seconds 
-  Import took 0.022035 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_1.png
-  artifactKey: Guid(8f2cd5e0af151f04fb43cf6bd1037b10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_1.png using Guid(8f2cd5e0af151f04fb43cf6bd1037b10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2d1a820733515beca720fd6ce325143') in 0.016565 seconds 
-  Import took 0.019652 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_8.png
-  artifactKey: Guid(f9554510b3d8ed5489c988d05cced8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_8.png using Guid(f9554510b3d8ed5489c988d05cced8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed2a9e78b7712674c4c71c33bf9cdbb7') in 0.018635 seconds 
-  Import took 0.021728 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Bottle04.png
-  artifactKey: Guid(a9893eef89a9a0742b835e8296428609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Bottle04.png using Guid(a9893eef89a9a0742b835e8296428609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d617e03566f9ce4eca8a0f6012ae8f') in 0.014376 seconds 
-  Import took 0.017100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Scroll.png
-  artifactKey: Guid(7974e44204555c448801e67bf4f588d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Scroll.png using Guid(7974e44204555c448801e67bf4f588d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb8443e357312db92b077f6aacb972bd') in 0.013236 seconds 
-  Import took 0.016097 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_64.png
-  artifactKey: Guid(52ba512ad73a18d4ab21f3f372f6af5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_64.png using Guid(52ba512ad73a18d4ab21f3f372f6af5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63f28d16719fc568b5fcf805c8824f35') in 0.015228 seconds 
-  Import took 0.018229 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Sword02.png
-  artifactKey: Guid(e9c33fd941d98444fb2b069ac8c9fa94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Sword02.png using Guid(e9c33fd941d98444fb2b069ac8c9fa94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbbb18973f52d5a850adea98cda67879') in 0.012650 seconds 
-  Import took 0.015207 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Bottle03.png
-  artifactKey: Guid(40c0544742cafa147882381221ff228a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Bottle03.png using Guid(40c0544742cafa147882381221ff228a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '557744866aa11dbe830ab6aad66d045a') in 0.012673 seconds 
-  Import took 0.015521 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_67.png
-  artifactKey: Guid(30d736d97d5892d4ca7b151f383c8e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_67.png using Guid(30d736d97d5892d4ca7b151f383c8e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccecbee9c6bab8d5533094269ef1dcbc') in 0.015522 seconds 
-  Import took 0.018369 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/W_Sword003.png
-  artifactKey: Guid(3b73b7280fa1b434c9fd968c6923295d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/W_Sword003.png using Guid(3b73b7280fa1b434c9fd968c6923295d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bf7e4f1e5b7759b6ceba6e73c9d17dd') in 0.011887 seconds 
-  Import took 0.014768 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_6.png
-  artifactKey: Guid(0b27d65efbc8d9d4a827fb4312bbbb96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_6.png using Guid(0b27d65efbc8d9d4a827fb4312bbbb96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca39b6c02efb196df120cdb1b3c8ba1e') in 0.014830 seconds 
-  Import took 0.017647 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_7.png
-  artifactKey: Guid(a6a529f6a9b683e4eaf595929f6092f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_7.png using Guid(a6a529f6a9b683e4eaf595929f6092f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55dee336f89359e5a2c2085f7df61898') in 0.014893 seconds 
-  Import took 0.017681 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000152 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Sword04.png
-  artifactKey: Guid(a6a92f26c68ae894ab8d9810f13240cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Sword04.png using Guid(a6a92f26c68ae894ab8d9810f13240cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8349958010b3a12df24cf99dc5ee7e47') in 0.012829 seconds 
-  Import took 0.015479 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_15.png
-  artifactKey: Guid(986a14bc5d7523248b9efb0c98de41ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_15.png using Guid(986a14bc5d7523248b9efb0c98de41ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f16f31cf5b1680d3cf04a5bec0addc15') in 0.014397 seconds 
-  Import took 0.017270 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_95.png
-  artifactKey: Guid(e64ba350ac5b1ba429c813de82403fb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_95.png using Guid(e64ba350ac5b1ba429c813de82403fb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba41b3b4fa8bcd2a7c350c261e41ed12') in 0.016803 seconds 
-  Import took 0.019498 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000172 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/W_Sword004.png
-  artifactKey: Guid(150981152df3f0648870ac9f778192b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/W_Sword004.png using Guid(150981152df3f0648870ac9f778192b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a105ed89355df2854c09ce5b92690d79') in 0.012002 seconds 
-  Import took 0.014868 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Bread.png
-  artifactKey: Guid(0288dbaa9a46b7a4fa8f0b0b773b6024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Bread.png using Guid(0288dbaa9a46b7a4fa8f0b0b773b6024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2d5b8e8d9d1fcae02d3526950853160') in 0.012749 seconds 
-  Import took 0.015504 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_3.png
-  artifactKey: Guid(efb533631fe1de644a48deaac6e77558) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_3.png using Guid(efb533631fe1de644a48deaac6e77558) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1087db06370b9590045f28998aec5e6') in 0.015718 seconds 
-  Import took 0.018545 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_2.png
-  artifactKey: Guid(cab056559fe02ff4583e5e9a70ddfd4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_2.png using Guid(cab056559fe02ff4583e5e9a70ddfd4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f73d5fad8cb28b413cb2cedffa2109f') in 0.019388 seconds 
-  Import took 0.022382 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000128 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Lemon.png
-  artifactKey: Guid(28fcf070a8554c744ac1b423a8d0429e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Lemon.png using Guid(28fcf070a8554c744ac1b423a8d0429e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71be3321220650c954523274c8f3cfb7') in 0.012980 seconds 
-  Import took 0.015820 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_RawMeat.png
-  artifactKey: Guid(b29cbbd10ecf3fd40991d4734d556c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_RawMeat.png using Guid(b29cbbd10ecf3fd40991d4734d556c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c07ba7febc64fafdb6ace096eea2dbf') in 0.011353 seconds 
-  Import took 0.013796 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_96.png
-  artifactKey: Guid(ce8a59c763eb088468c0e3cb566e55cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_96.png using Guid(ce8a59c763eb088468c0e3cb566e55cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0edf2ef44594e6025585bc56a64581f3') in 0.016958 seconds 
-  Import took 0.019344 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_8.png
-  artifactKey: Guid(51d1bb511699b9b49bf82116642034a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_8.png using Guid(51d1bb511699b9b49bf82116642034a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f2b6ee946b5c209063a4298efc378ee') in 0.015122 seconds 
-  Import took 0.017873 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Sword01.png
-  artifactKey: Guid(4771a8e8ab080834395005843d0d09ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Sword01.png using Guid(4771a8e8ab080834395005843d0d09ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f83080ad63633ffe733c662ed837b3cd') in 0.012551 seconds 
-  Import took 0.015340 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/S_Sword03.png
-  artifactKey: Guid(8906362e4f586354d9b45c2c745149be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/S_Sword03.png using Guid(8906362e4f586354d9b45c2c745149be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89ea59a031fcf3325419b7f821a61075') in 0.012490 seconds 
-  Import took 0.015161 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_98.png
-  artifactKey: Guid(3eff98aa5cc9fc849b4e07cac0b1f32e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_98.png using Guid(3eff98aa5cc9fc849b4e07cac0b1f32e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c909c2817702bf4de21b73783429cf74') in 0.015048 seconds 
-  Import took 0.017681 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_7.png
-  artifactKey: Guid(3e449f6cb17bc8e44809b6cd46edfb2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_7.png using Guid(3e449f6cb17bc8e44809b6cd46edfb2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2769f24c8c80f50644db113887729a12') in 0.016813 seconds 
-  Import took 0.019800 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000129 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_BronzeBar.png
-  artifactKey: Guid(736b26980e1088c4da11ad9a01ce5ad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_BronzeBar.png using Guid(736b26980e1088c4da11ad9a01ce5ad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc0b8bfdcbdf6867f5bd80188178c534') in 0.012599 seconds 
-  Import took 0.015325 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_13.png
-  artifactKey: Guid(88011df49af0b944eaf0602847f10a60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_13.png using Guid(88011df49af0b944eaf0602847f10a60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9990c37ef47598207cd6b56830f385ee') in 0.014894 seconds 
-  Import took 0.017739 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_69.png
-  artifactKey: Guid(dd9123acfcce4784ca8d0323383c2503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_69.png using Guid(dd9123acfcce4784ca8d0323383c2503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e08f0959c4cbcdafd667fb13b8dede8f') in 0.014259 seconds 
-  Import took 0.017138 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000210 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/W_Dagger008.png
-  artifactKey: Guid(0e80cd7df39d66f41b29277ee14d82a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/W_Dagger008.png using Guid(0e80cd7df39d66f41b29277ee14d82a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90d498ca5b56867c8ad01eb515283a78') in 0.012898 seconds 
-  Import took 0.015618 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/W_Dagger009.png
-  artifactKey: Guid(61c189a97fd484b40bbad96886c215c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/W_Dagger009.png using Guid(61c189a97fd484b40bbad96886c215c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bc0c8941d6a92a9af1d3b38cdd070ad') in 0.012246 seconds 
-  Import took 0.014985 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/E_Metal05.png
-  artifactKey: Guid(632f7d9e62cdd0d499c67e06f3630ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/E_Metal05.png using Guid(632f7d9e62cdd0d499c67e06f3630ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bb3c8eec2a58421933928ac6e5fc769') in 0.011961 seconds 
-  Import took 0.014719 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_ScorpionClaw.png
-  artifactKey: Guid(3df4989900a94434290819e2c8c0018d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_ScorpionClaw.png using Guid(3df4989900a94434290819e2c8c0018d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ad6bc0c01aa2b64c25c68a9bf64058f') in 0.012242 seconds 
-  Import took 0.014792 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000135 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_10.png
-  artifactKey: Guid(ae50bbb0314022248b837fb87021ce17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_10.png using Guid(ae50bbb0314022248b837fb87021ce17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0d467b1d772e6cd6210687833100047') in 0.014129 seconds 
-  Import took 0.016823 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/Example Inventory/1/Hotbar.png
-  artifactKey: Guid(1ff95f2299e75ce4c9449ae93d394b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/Example Inventory/1/Hotbar.png using Guid(1ff95f2299e75ce4c9449ae93d394b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e45b5b84c8aeb1e07c8aa3b67e1d37ee') in 0.014178 seconds 
-  Import took 0.017023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Apple.png
-  artifactKey: Guid(a4d3f378d1a88f346af15ee906321f2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Apple.png using Guid(a4d3f378d1a88f346af15ee906321f2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc7d7f5c72557914aae3e6614a2f47fd') in 0.012467 seconds 
-  Import took 0.015246 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_68.png
-  artifactKey: Guid(7fe958e189f7dcd47a564e7f97b6ac7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_68.png using Guid(7fe958e189f7dcd47a564e7f97b6ac7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edaf1d06626dad9e460f78c220ba2edb') in 0.013901 seconds 
-  Import took 0.016770 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_10.png
-  artifactKey: Guid(b868104d65bebe942a84ef341c0e5ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Ring/Ring_10.png using Guid(b868104d65bebe942a84ef341c0e5ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2f01b09539ece24a1eb0837a34a8814') in 0.015992 seconds 
-  Import took 0.018825 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/E_Wood03.png
-  artifactKey: Guid(38811686effe18748a489835a572ab2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/E_Wood03.png using Guid(38811686effe18748a489835a572ab2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42bafcefb3f5e0b148b2fb3c4a30f246') in 0.015053 seconds 
-  Import took 0.017715 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Drawing/Drawing_8.png
-  artifactKey: Guid(e0dc0116a65356947a358e3b06edec9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Drawing/Drawing_8.png using Guid(e0dc0116a65356947a358e3b06edec9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c975df5744972227e187a2342f025e02') in 0.014445 seconds 
-  Import took 0.017107 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Bottle02.png
-  artifactKey: Guid(394d71b6f8239294f86cecceacc926c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Bottle02.png using Guid(394d71b6f8239294f86cecceacc926c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e62a0daef347e4ed96ca77a23a8c97b2') in 0.011939 seconds 
-  Import took 0.014370 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Saphire.png
-  artifactKey: Guid(3720cad3c50103642bd904d9295ac193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Saphire.png using Guid(3720cad3c50103642bd904d9295ac193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd473c25803ff03c231fe4f9234be50e3') in 0.011973 seconds 
-  Import took 0.015012 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Grapes.png
-  artifactKey: Guid(8d619db6d6b07f647a8410f948f398a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Grapes.png using Guid(8d619db6d6b07f647a8410f948f398a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '221f6c30873b52fa1d5c3e974b64c08b') in 0.012191 seconds 
-  Import took 0.014969 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_97.png
-  artifactKey: Guid(ed86cc04a59f98d44a77d475ba604c42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Scroll/Scroll_97.png using Guid(ed86cc04a59f98d44a77d475ba604c42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b26ab15d9a91374fdacb3e2541ac4e9') in 0.016976 seconds 
-  Import took 0.019663 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_Opal.png
-  artifactKey: Guid(f33667ee68a803f439dcb26748711b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_Opal.png using Guid(f33667ee68a803f439dcb26748711b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc603b42d64a1145de031bfa65f8d35c') in 0.011779 seconds 
-  Import took 0.014495 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Currency/Currency_5.png
-  artifactKey: Guid(8bc12019ae7e1eb4bb1fd1b36d209589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Currency/Currency_5.png using Guid(8bc12019ae7e1eb4bb1fd1b36d209589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08e1f3562a0f9fb5a3ca8a70c6f2c237') in 0.017849 seconds 
-  Import took 0.020915 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_10.png
-  artifactKey: Guid(59e02b6499450b543b0622e79695f696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_10.png using Guid(59e02b6499450b543b0622e79695f696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af7e3013e8ee3065ce81cb94dadd0782') in 0.015293 seconds 
-  Import took 0.018030 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_7.png
-  artifactKey: Guid(7300375d85f0a564a8f393fe38c26d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Material/Food/Food_7.png using Guid(7300375d85f0a564a8f393fe38c26d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9e5c17a9274a9c1451ef04bda5248cc') in 0.014129 seconds 
-  Import took 0.016874 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_61.png
-  artifactKey: Guid(9028dafe9ea04824aa2f4c84d30d1bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Precious/Necklace/Necklace_61.png using Guid(9028dafe9ea04824aa2f4c84d30d1bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd629291df64efc61f707afe8bd20f278') in 0.015041 seconds 
-  Import took 0.017685 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000155 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_GreenGrapes.png
-  artifactKey: Guid(2e74953987a5b8146b86fd4eb9e83ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_GreenGrapes.png using Guid(2e74953987a5b8146b86fd4eb9e83ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c21c0d2da816221526ffe4703bb97e6') in 0.012541 seconds 
-  Import took 0.015051 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/FreeAsset/InventoryMaster/Textures/I_C_Carrot.png
-  artifactKey: Guid(1c868327c56d1e8468f2f79d64ca793e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FreeAsset/InventoryMaster/Textures/I_C_Carrot.png using Guid(1c868327c56d1e8468f2f79d64ca793e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c16c3c6fb208f8ca5ae3b5af4961d715') in 0.011965 seconds 
-  Import took 0.015073 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_12.png
-  artifactKey: Guid(da057e89f07c4e549bed9df6b99712fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Trousers/Trousers_12.png using Guid(da057e89f07c4e549bed9df6b99712fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c76ad494a702bea6122806173b7071a4') in 0.016324 seconds 
-  Import took 0.019376 seconds .
+  Time since last request: 37.799961 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35b773663f2a8fd7e22409bad6979976') in 0.006308 seconds 
+  Import took 0.008929 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004747 seconds.
+Registered in 0.006672 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.734 seconds
+Domain Reload Profiling:
+	ReloadAssembly (735ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (576ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (175ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (233ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (142ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 180.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2512.
+Total: 2.354400 ms (FindLiveObjects: 0.140000 ms CreateObjectMapping: 0.053100 ms MarkObjects: 2.148900 ms  DeleteObjects: 0.011900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006435 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.746 seconds
+Domain Reload Profiling:
+	ReloadAssembly (747ms)
+		BeginReloadAssembly (113ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (585ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (170ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (237ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (147ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 180.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2514.
+Total: 2.364900 ms (FindLiveObjects: 0.125400 ms CreateObjectMapping: 0.052600 ms MarkObjects: 2.172700 ms  DeleteObjects: 0.013500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1389.762594 seconds.
+  path: Assets/Scripts/UI/Item/Item.cs
+  artifactKey: Guid(31756f8f2d9e25e47a02eb8be67d185d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/Item/Item.cs using Guid(31756f8f2d9e25e47a02eb8be67d185d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4285e526a18494123ce7eba07884a156') in 0.027254 seconds 
+  Import took 0.029964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.046401 seconds.
+  path: Assets/Scripts/UI/Item/ItemData.cs
+  artifactKey: Guid(31756f8f2d9e25e47a02eb8be67d185d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/Item/ItemData.cs using Guid(31756f8f2d9e25e47a02eb8be67d185d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa957ab3a74c420f43a73d9a06dc1425') in 0.006106 seconds 
+  Import took 0.009272 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006423 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.748 seconds
+Domain Reload Profiling:
+	ReloadAssembly (748ms)
+		BeginReloadAssembly (113ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (588ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (172ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (248ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (159ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 180.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2516.
+Total: 2.364100 ms (FindLiveObjects: 0.135900 ms CreateObjectMapping: 0.050800 ms MarkObjects: 2.164500 ms  DeleteObjects: 0.012400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 13.960555 seconds.
+  path: Assets/Scripts/UI/Item/ItemData.cs
+  artifactKey: Guid(31756f8f2d9e25e47a02eb8be67d185d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/Item/ItemData.cs using Guid(31756f8f2d9e25e47a02eb8be67d185d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3912d423b8e7088fdb1cfd32cfd4d23e') in 0.006271 seconds 
+  Import took 0.009411 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006590 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.757 seconds
+Domain Reload Profiling:
+	ReloadAssembly (758ms)
+		BeginReloadAssembly (112ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (598ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (180ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (240ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (148ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 180.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2518.
+Total: 2.457700 ms (FindLiveObjects: 0.153000 ms CreateObjectMapping: 0.069300 ms MarkObjects: 2.220600 ms  DeleteObjects: 0.014000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 9.207227 seconds.
+  path: Assets/Scripts/UI/Item/ItemData.cs
+  artifactKey: Guid(31756f8f2d9e25e47a02eb8be67d185d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/Item/ItemData.cs using Guid(31756f8f2d9e25e47a02eb8be67d185d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae19b267d52af41a0fe23b64a4d86c72') in 0.005242 seconds 
+  Import took 0.007970 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006012 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.718 seconds
+Domain Reload Profiling:
+	ReloadAssembly (719ms)
+		BeginReloadAssembly (107ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (564ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (169ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (233ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (143ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 180.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2520.
+Total: 2.441500 ms (FindLiveObjects: 0.183200 ms CreateObjectMapping: 0.046100 ms MarkObjects: 2.199200 ms  DeleteObjects: 0.012200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 48.204912 seconds.
+  path: Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/1.png
+  artifactKey: Guid(af88e637281e9a548aa31d1cb76a0486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/1.png using Guid(af88e637281e9a548aa31d1cb76a0486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8afffbee43d253087f3539423488bb1') in 0.115235 seconds 
+  Import took 0.118311 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/6.png
+  artifactKey: Guid(06abe4d0d97c03542a9ff7896e156d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/6.png using Guid(06abe4d0d97c03542a9ff7896e156d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba51af02f7fa6e83598ba0c6ccc6738c') in 0.012826 seconds 
+  Import took 0.015510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/FreeAsset/Fantasy Wooden GUI  Free/normal_ui_set A/1_normal_ui_set-free.png
+  artifactKey: Guid(f3e42cb7317f6f14186e2c2267014de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Fantasy Wooden GUI  Free/normal_ui_set A/1_normal_ui_set-free.png using Guid(f3e42cb7317f6f14186e2c2267014de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41bfbd418bc3f0646ad2f9bf7284ceb5') in 0.032295 seconds 
+  Import took 0.034880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/2.png
+  artifactKey: Guid(7d053d3b3746a204bb3be41bbecff78f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/2.png using Guid(7d053d3b3746a204bb3be41bbecff78f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63325ac118c2ffc165c12129b6940301') in 0.013294 seconds 
+  Import took 0.015716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/8.png
+  artifactKey: Guid(26e3aeab4dc4e5343b4b40a99f2b5c0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/8.png using Guid(26e3aeab4dc4e5343b4b40a99f2b5c0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d76dd4db76a8aebb692a36dfbecbbb5') in 0.013558 seconds 
+  Import took 0.016207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/5.png
+  artifactKey: Guid(8ad5b66611fa4b9419df448ff4163468) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/5.png using Guid(8ad5b66611fa4b9419df448ff4163468) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c0d6e7ab6cf9535876c23dc04bfefd7') in 0.013287 seconds 
+  Import took 0.015944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/FreeAsset/Fantasy Wooden GUI  Free/normal_ui_set A/1_normal_ui_set free.psd
+  artifactKey: Guid(1ab331a196bae1046b7a75ed7e3f6b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Fantasy Wooden GUI  Free/normal_ui_set A/1_normal_ui_set free.psd using Guid(1ab331a196bae1046b7a75ed7e3f6b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb00035dd6079a9ec1cffc438a758a77') in 0.034902 seconds 
+  Import took 0.037414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/7.png
+  artifactKey: Guid(0743cb3a5452dda4795dc9431659da6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/7.png using Guid(0743cb3a5452dda4795dc9431659da6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8d4230b7e71ab167bbee67211869c40') in 0.012452 seconds 
+  Import took 0.015266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/4.png
+  artifactKey: Guid(aa9220a4630dfef45adbd0c6f1be9d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/4.png using Guid(aa9220a4630dfef45adbd0c6f1be9d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cd27af04c3127b67c5e9ff5d226ab6c') in 0.012666 seconds 
+  Import took 0.015234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/3.png
+  artifactKey: Guid(eed1ebcab0d6c3743950949d537f1f5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/3.png using Guid(eed1ebcab0d6c3743950949d537f1f5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b68764172e70bc3f3f6a0593801ce4') in 0.012444 seconds 
+  Import took 0.015338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.843276 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_1.png
+  artifactKey: Guid(1948ded5b2f4a884d8a96c91ce0f2d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_1.png using Guid(1948ded5b2f4a884d8a96c91ce0f2d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '382f898475cee663c95c5f2b1aeeb2f5') in 0.023783 seconds 
+  Import took 0.026418 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_9.png
+  artifactKey: Guid(a1ce93aad5f978d409ed1b30559b1b76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_9.png using Guid(a1ce93aad5f978d409ed1b30559b1b76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '603550f9a2929cf00efb44bcdde8952b') in 0.023402 seconds 
+  Import took 0.025945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_7.png
+  artifactKey: Guid(2e7dc4008ccbdb24fb820f914e1e15e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_7.png using Guid(2e7dc4008ccbdb24fb820f914e1e15e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e67de67c82a36915f01bbab035af2995') in 0.011315 seconds 
+  Import took 0.014271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_10.png
+  artifactKey: Guid(f55491700676232409c7167c49dd6923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_10.png using Guid(f55491700676232409c7167c49dd6923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd1ca9a128fea19f66fb1996c15bad00') in 0.011982 seconds 
+  Import took 0.014554 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_4.png
+  artifactKey: Guid(39276a4af6b54bc4085bb6b7c67c4445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_4.png using Guid(39276a4af6b54bc4085bb6b7c67c4445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce7c7fb9a51d2e1c03b0645c24da40d6') in 0.012320 seconds 
+  Import took 0.014987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_5.png
+  artifactKey: Guid(b160da4af1efa214dbdb7b6e887fad38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_5.png using Guid(b160da4af1efa214dbdb7b6e887fad38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e020b2f4123cfe237d6c57f1bca763cb') in 0.011770 seconds 
+  Import took 0.014296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_6.png
+  artifactKey: Guid(f37c41b7309bbb642b6bd18ef1bad1f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_6.png using Guid(f37c41b7309bbb642b6bd18ef1bad1f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e03f55bac1c8e52c12e31d74513c89c') in 0.013560 seconds 
+  Import took 0.016224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_2.png
+  artifactKey: Guid(2676fb4004e0a8348abc36cbc00c553c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_2.png using Guid(2676fb4004e0a8348abc36cbc00c553c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ec0d4c265734a1063ec7fa63c4ec4fd') in 0.011395 seconds 
+  Import took 0.013972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_3.png
+  artifactKey: Guid(b46ebdac70032004d8131d7ab960effd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_3.png using Guid(b46ebdac70032004d8131d7ab960effd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3423347dd3548192c4279ccd5ba7899b') in 0.012138 seconds 
+  Import took 0.014786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_8.png
+  artifactKey: Guid(172377ae6095fdd458e814c2f20954f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_8.png using Guid(172377ae6095fdd458e814c2f20954f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f486af873a0b0114df50ce270d756e5') in 0.012915 seconds 
+  Import took 0.016004 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.640301 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_11.png
+  artifactKey: Guid(c17caeb396acc2d4eb8e47159fa69ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_11.png using Guid(c17caeb396acc2d4eb8e47159fa69ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb26a93c3a9ad25b14caffa8661f905d') in 0.024097 seconds 
+  Import took 0.026858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_12.png
+  artifactKey: Guid(5fb0ac6a36b12854e827c48f27bc2ffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_12.png using Guid(5fb0ac6a36b12854e827c48f27bc2ffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11fd351cdffa838da4920243afbca88e') in 0.012867 seconds 
+  Import took 0.015678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_15.png
+  artifactKey: Guid(7cd2dcea91ea19241b43ed9509bb6a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_15.png using Guid(7cd2dcea91ea19241b43ed9509bb6a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '732c0c47da6992c60a242e31d1f0b350') in 0.011643 seconds 
+  Import took 0.014162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_16.png
+  artifactKey: Guid(2131db6168e704641b9c3a40b83a54db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_16.png using Guid(2131db6168e704641b9c3a40b83a54db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5698ae7379058e268ccbab6d758ece56') in 0.013041 seconds 
+  Import took 0.015755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_23.png
+  artifactKey: Guid(c5e53f5fad250dc42ac65efc5d934e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_23.png using Guid(c5e53f5fad250dc42ac65efc5d934e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5372f4092d847817f0865340ff080518') in 0.013575 seconds 
+  Import took 0.016538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_20.png
+  artifactKey: Guid(bde860e9dc93ec645bd93017b96a134a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_20.png using Guid(bde860e9dc93ec645bd93017b96a134a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af5cf9a50d20767a6a7144e59eceed80') in 0.012968 seconds 
+  Import took 0.015268 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_34.png
+  artifactKey: Guid(fa50c908ae520764f8118ea59d1697b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_34.png using Guid(fa50c908ae520764f8118ea59d1697b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f17773ca7a262b228ee03a25a4c0ae21') in 0.012868 seconds 
+  Import took 0.015397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_29.png
+  artifactKey: Guid(6750d838f0a856c4a9351c278016f873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_29.png using Guid(6750d838f0a856c4a9351c278016f873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b04120c2393b4697cf11c7e8a804d19f') in 0.012200 seconds 
+  Import took 0.015237 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_39.png
+  artifactKey: Guid(74dce427564d51c4e99f43e5fd543978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_39.png using Guid(74dce427564d51c4e99f43e5fd543978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fc6f88bc68d3e4c7f4d168bb924700b') in 0.012417 seconds 
+  Import took 0.015276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_46.png
+  artifactKey: Guid(289493dd7407dc64eb74c01ae76f3225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_46.png using Guid(289493dd7407dc64eb74c01ae76f3225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df25fa8587e46682b5a488aa39a2586d') in 0.012574 seconds 
+  Import took 0.015294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_51.png
+  artifactKey: Guid(2570314d733218d4ab48a059e109584c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_51.png using Guid(2570314d733218d4ab48a059e109584c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd372cc463a68b5ee551a9a0b889d06d6') in 0.013572 seconds 
+  Import took 0.016569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_48.png
+  artifactKey: Guid(4686b2d68d3da6c46b2d021ba031ebdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_48.png using Guid(4686b2d68d3da6c46b2d021ba031ebdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe60bdb3f4cce4a130d577be358583f8') in 0.016531 seconds 
+  Import took 0.019609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_55.png
+  artifactKey: Guid(86810c8cd39e9cb4f86cf9e04ccc11b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_55.png using Guid(86810c8cd39e9cb4f86cf9e04ccc11b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e9c00c4597ff467c75e71fe96ed6b32') in 0.013758 seconds 
+  Import took 0.016541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_52.png
+  artifactKey: Guid(4ddec8f3f0cb0f04bb37acaf6e21123b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_52.png using Guid(4ddec8f3f0cb0f04bb37acaf6e21123b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9429f9207375a15cc5063594b73bdf9') in 0.012727 seconds 
+  Import took 0.015162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_36.png
+  artifactKey: Guid(a390d249534be0548aed571b75d6798e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_36.png using Guid(a390d249534be0548aed571b75d6798e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c43a71e1142217ab05a416899ddced29') in 0.012293 seconds 
+  Import took 0.015215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_17.png
+  artifactKey: Guid(88a06bbc054f0104890091280cf367dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_17.png using Guid(88a06bbc054f0104890091280cf367dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fb2112ef2c8a80da079418b73b994dd') in 0.011650 seconds 
+  Import took 0.014250 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_32.png
+  artifactKey: Guid(ae1273542311c07439c70652fbbe48d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_32.png using Guid(ae1273542311c07439c70652fbbe48d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87356589868e309f921ab10f5d3592f4') in 0.011867 seconds 
+  Import took 0.014598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_30.png
+  artifactKey: Guid(4253eb0ce91be3d449f8ae1b59e3b822) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_30.png using Guid(4253eb0ce91be3d449f8ae1b59e3b822) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76cf2cce911fd7b1d45abde493288048') in 0.012766 seconds 
+  Import took 0.015703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_57.png
+  artifactKey: Guid(e11648bab392bae42a3289bba4c80a89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_57.png using Guid(e11648bab392bae42a3289bba4c80a89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b778686209b9600b0644a4a9eca8603') in 0.013067 seconds 
+  Import took 0.015912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_44.png
+  artifactKey: Guid(034f0de2d6c4463468438cfabd2fd303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_44.png using Guid(034f0de2d6c4463468438cfabd2fd303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e2ce9eea6a9471bff86ee70e26f885') in 0.012438 seconds 
+  Import took 0.014975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_24.png
+  artifactKey: Guid(1648ee8e59fd59a4b9a637cab0f49439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_24.png using Guid(1648ee8e59fd59a4b9a637cab0f49439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd46282a5bda79fba893d5f43c64d9f') in 0.012933 seconds 
+  Import took 0.015539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_61.png
+  artifactKey: Guid(53a7fef75739b5f4f9b57adf788a967b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_61.png using Guid(53a7fef75739b5f4f9b57adf788a967b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee5f179bd30e2058cb971ab430b6888f') in 0.012021 seconds 
+  Import took 0.014638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_63.png
+  artifactKey: Guid(6a62d6f0ce248f84b9d8bdc3d2ff5608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_63.png using Guid(6a62d6f0ce248f84b9d8bdc3d2ff5608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64e701857ff78d65f51617b822b3ab81') in 0.012286 seconds 
+  Import took 0.014588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_28.png
+  artifactKey: Guid(52a82cb5c6cfd08428b3b18bb0b98b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_28.png using Guid(52a82cb5c6cfd08428b3b18bb0b98b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd7dd83523947829b4861b8a08faeb19') in 0.012469 seconds 
+  Import took 0.015064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_68.png
+  artifactKey: Guid(b7cad53b2c380454c841e69ae607f967) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_68.png using Guid(b7cad53b2c380454c841e69ae607f967) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6feb4bedb2253d68505e4b22f8cf687e') in 0.012304 seconds 
+  Import took 0.015140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_74.png
+  artifactKey: Guid(08e39c1dbd183bf4e87fc3cec96c1dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_74.png using Guid(08e39c1dbd183bf4e87fc3cec96c1dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7735400e2bcac3734f522287ee0838f3') in 0.011962 seconds 
+  Import took 0.014484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_70.png
+  artifactKey: Guid(aa51196acd9bc2940a5532bd34c4d952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_70.png using Guid(aa51196acd9bc2940a5532bd34c4d952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c034acbbc67e3d35f173c091e10a6466') in 0.011964 seconds 
+  Import took 0.014630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_76.png
+  artifactKey: Guid(df320a44534d3c44fbe568ad0f90bcfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_76.png using Guid(df320a44534d3c44fbe568ad0f90bcfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b9751e54886a9553caba580753c231f') in 0.012708 seconds 
+  Import took 0.015534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_80.png
+  artifactKey: Guid(5e839aa98e61c824ab33e02ef0c307b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_80.png using Guid(5e839aa98e61c824ab33e02ef0c307b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b05041c4227ab9c05d67ad3e5e17baa') in 0.014561 seconds 
+  Import took 0.017124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_79.png
+  artifactKey: Guid(65aa78900baf32c4883db91a77e80a9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_79.png using Guid(65aa78900baf32c4883db91a77e80a9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c5fe050657fc88336d1a67e0ddbf782') in 0.014456 seconds 
+  Import took 0.017267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_77.png
+  artifactKey: Guid(6299f254b39a81b48bee7fe699f77c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_77.png using Guid(6299f254b39a81b48bee7fe699f77c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd08de1a89fbc679417ab5846eddd1bb') in 0.012886 seconds 
+  Import took 0.015759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_81.png
+  artifactKey: Guid(85bc42f6723eec7469420594ed932772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_81.png using Guid(85bc42f6723eec7469420594ed932772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57e8f72cb4c647264c4ca753744fe8b5') in 0.012417 seconds 
+  Import took 0.014768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_60.png
+  artifactKey: Guid(22dce1466cc8e7343b4ac06b2d3ec67e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_60.png using Guid(22dce1466cc8e7343b4ac06b2d3ec67e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94ba3f01630e797cd88360881725f34f') in 0.011826 seconds 
+  Import took 0.014724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_14.png
+  artifactKey: Guid(1e2fc54023d1ff94bb0918aeba45edc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_14.png using Guid(1e2fc54023d1ff94bb0918aeba45edc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '143e28e04df19c5a8373a027bf19b335') in 0.012436 seconds 
+  Import took 0.015000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_33.png
+  artifactKey: Guid(9584eb051d0c73d4c89e3a90e79abee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_33.png using Guid(9584eb051d0c73d4c89e3a90e79abee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d6d72841ea1e344359ceb02af77b0a') in 0.012289 seconds 
+  Import took 0.015012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_54.png
+  artifactKey: Guid(506d99db528c9dc43a8df53e9ded5af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_54.png using Guid(506d99db528c9dc43a8df53e9ded5af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e581f04cc2c25ae5b9b7bf0365a78c5') in 0.012248 seconds 
+  Import took 0.015071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_71.png
+  artifactKey: Guid(2bcabfce5560a914392950ca2afe1be8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_71.png using Guid(2bcabfce5560a914392950ca2afe1be8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5da282c6d9ccd5c43014fc72d1e9cf9a') in 0.012537 seconds 
+  Import took 0.015491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_67.png
+  artifactKey: Guid(0353ac22584ec5d4d9ca83fdb60b0988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_67.png using Guid(0353ac22584ec5d4d9ca83fdb60b0988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e117819fb63581460ba9507a826cd361') in 0.013645 seconds 
+  Import took 0.016463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_21.png
+  artifactKey: Guid(51e1494222329784192ed59d617996d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_21.png using Guid(51e1494222329784192ed59d617996d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77beff540dc65dc6779aee20b35dfde9') in 0.013163 seconds 
+  Import took 0.015616 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_22.png
+  artifactKey: Guid(88508b58391284f44940e0a67d4769c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_22.png using Guid(88508b58391284f44940e0a67d4769c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92b1ce1b5f9780807e0ce803e1937794') in 0.012927 seconds 
+  Import took 0.015451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_56.png
+  artifactKey: Guid(00fd561157f784e42a687fb1f2b069e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_56.png using Guid(00fd561157f784e42a687fb1f2b069e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '241aa4dd443d8a47cab622b8f9d1de4e') in 0.013172 seconds 
+  Import took 0.015595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_18.png
+  artifactKey: Guid(b64df2a5a0679fb4988380d8a64358db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_18.png using Guid(b64df2a5a0679fb4988380d8a64358db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7191b7b94cf74359cb7f647cea9362a8') in 0.013059 seconds 
+  Import took 0.015727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_27.png
+  artifactKey: Guid(526a9ea5ae4d50b4c8ece2614a1e49c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_27.png using Guid(526a9ea5ae4d50b4c8ece2614a1e49c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '438c861662140a8c66725525d8c8a211') in 0.013529 seconds 
+  Import took 0.016105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_50.png
+  artifactKey: Guid(b330f3d68d3e8924ca86fec12fb21421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_50.png using Guid(b330f3d68d3e8924ca86fec12fb21421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '315c7228503c450734dee93cea9fe3b8') in 0.012426 seconds 
+  Import took 0.015145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_59.png
+  artifactKey: Guid(2786bd68a10f27a49a8f3a225f712da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_59.png using Guid(2786bd68a10f27a49a8f3a225f712da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7f5813f09f81d7db53eae2605d9b661') in 0.011985 seconds 
+  Import took 0.014600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_62.png
+  artifactKey: Guid(45964dcb137058544b7442b802d33e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_62.png using Guid(45964dcb137058544b7442b802d33e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b54da7c9649f00e837e2881f1635bc4') in 0.012363 seconds 
+  Import took 0.015028 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_73.png
+  artifactKey: Guid(ff686670b4eb17e4c9131bb653ea5b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_73.png using Guid(ff686670b4eb17e4c9131bb653ea5b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a7bd2352ae8b17891e6efe5f6f0a3bf') in 0.013162 seconds 
+  Import took 0.015645 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_64.png
+  artifactKey: Guid(b6ada2930976aab4cbca72bc6dbd69c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_64.png using Guid(b6ada2930976aab4cbca72bc6dbd69c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c9e435f08b23d8b003ea9c9edbbe8c0') in 0.011873 seconds 
+  Import took 0.014382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_83.png
+  artifactKey: Guid(f5d5d2b26a40c4d4988bfa0db77ff038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_83.png using Guid(f5d5d2b26a40c4d4988bfa0db77ff038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd496188dcdd555f6c07b148ad18227f1') in 0.012872 seconds 
+  Import took 0.015652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_43.png
+  artifactKey: Guid(8e5a71feb23eab543bdb4e0550545486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_43.png using Guid(8e5a71feb23eab543bdb4e0550545486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33a347359b93a103a9c5505e097bcc54') in 0.012145 seconds 
+  Import took 0.014588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_66.png
+  artifactKey: Guid(8aaaf1f1e414eee429aaa6a4ae05b5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_66.png using Guid(8aaaf1f1e414eee429aaa6a4ae05b5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '798736ffaea1c2d4bd14034b5f97fedd') in 0.011867 seconds 
+  Import took 0.014522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_49.png
+  artifactKey: Guid(6b0c18deb430b5f47a4093f5b31a2da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_49.png using Guid(6b0c18deb430b5f47a4093f5b31a2da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99f7c9c9a4adaa0fe3f81cbd24167696') in 0.013556 seconds 
+  Import took 0.016145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_41.png
+  artifactKey: Guid(068d2d9ed9a4f3f44ad4079f38694552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_41.png using Guid(068d2d9ed9a4f3f44ad4079f38694552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd52b3feba2200db6e126289258c9ea7') in 0.012039 seconds 
+  Import took 0.014690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_47.png
+  artifactKey: Guid(97f62825259c48e4aabccac776af2649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_47.png using Guid(97f62825259c48e4aabccac776af2649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d5fe26d8bbaae8c9cb24acde5ee5142') in 0.012802 seconds 
+  Import took 0.015401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_82.png
+  artifactKey: Guid(07a56695dcb534d4e8d6cd2a85ff1949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_82.png using Guid(07a56695dcb534d4e8d6cd2a85ff1949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0ceb2a7a32f4b1deebd7c2e8a73d913') in 0.013549 seconds 
+  Import took 0.015974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_58.png
+  artifactKey: Guid(7e7da5b23f7f21045a6d38825d9a5879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_58.png using Guid(7e7da5b23f7f21045a6d38825d9a5879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b95f9735f9ac63b9c17e0b4117641d09') in 0.012955 seconds 
+  Import took 0.015522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_38.png
+  artifactKey: Guid(a4a4d2976448d724c9aee94689e3cfd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_38.png using Guid(a4a4d2976448d724c9aee94689e3cfd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '656d7a2dafb52af4d52618e7d2099d74') in 0.012703 seconds 
+  Import took 0.015173 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_53.png
+  artifactKey: Guid(647f2247537543448bbb874fa9c52c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_53.png using Guid(647f2247537543448bbb874fa9c52c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93765121443e206598f6b87ce0476df8') in 0.011980 seconds 
+  Import took 0.014437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_25.png
+  artifactKey: Guid(f0c2bcf5cf2a89740aa93d727b645769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_25.png using Guid(f0c2bcf5cf2a89740aa93d727b645769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b562b8818e1a75997e5173faf355e73') in 0.012275 seconds 
+  Import took 0.014589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_35.png
+  artifactKey: Guid(1dbde001e1a78134e87aa1639f0cf274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_35.png using Guid(1dbde001e1a78134e87aa1639f0cf274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd786452dfa0e9da73f391a341b8b9a99') in 0.012592 seconds 
+  Import took 0.015144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_26.png
+  artifactKey: Guid(91ab4887c7152cd48a7548cf1bab02df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_26.png using Guid(91ab4887c7152cd48a7548cf1bab02df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bcf541b56dc23db0e52145cea5f66aa') in 0.017427 seconds 
+  Import took 0.020025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_19.png
+  artifactKey: Guid(4949f8a199b03ec48ab0390ece70576c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_19.png using Guid(4949f8a199b03ec48ab0390ece70576c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '611e0baa81ea276ea50e6c33ed08d88f') in 0.013361 seconds 
+  Import took 0.016270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_40.png
+  artifactKey: Guid(6706e67537dbb244db8708aca4d1ce80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_40.png using Guid(6706e67537dbb244db8708aca4d1ce80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8277084502415a0a8bdf438c564feea0') in 0.012511 seconds 
+  Import took 0.015310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_72.png
+  artifactKey: Guid(fb79c5a391e54a346a8ac4df39d4a58d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_72.png using Guid(fb79c5a391e54a346a8ac4df39d4a58d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea5314cfe8e3a959b9c7e51275ec1436') in 0.013368 seconds 
+  Import took 0.016204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_45.png
+  artifactKey: Guid(f2b7f40b75d44644ea3340fad8783712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_45.png using Guid(f2b7f40b75d44644ea3340fad8783712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b2de9c58bf543bcd5c4de5d10271019') in 0.012926 seconds 
+  Import took 0.015488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_42.png
+  artifactKey: Guid(026134994efac104c8a7fcdc2db1cf2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_42.png using Guid(026134994efac104c8a7fcdc2db1cf2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '470ae41b9e9ffe4d891c38b171b60ee3') in 0.013434 seconds 
+  Import took 0.016003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_69.png
+  artifactKey: Guid(52207b2aa3c60e44da64074c28d9bc82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_69.png using Guid(52207b2aa3c60e44da64074c28d9bc82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9c2b04bb26e9efa80c46dd3de11486f') in 0.012516 seconds 
+  Import took 0.015781 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_31.png
+  artifactKey: Guid(574544a5779acef4fbc688ac020aec42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_31.png using Guid(574544a5779acef4fbc688ac020aec42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f8a29cbf776cf25faaca5644a6ba43f') in 0.011734 seconds 
+  Import took 0.014306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_13.png
+  artifactKey: Guid(79fef2c40af49b7449589b7aa497c261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_13.png using Guid(79fef2c40af49b7449589b7aa497c261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd97cc3c3f3644ad83ca8c4367aeaa969') in 0.011829 seconds 
+  Import took 0.014469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_37.png
+  artifactKey: Guid(cffbf77782b491d438d224501d9afa13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_37.png using Guid(cffbf77782b491d438d224501d9afa13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c1a4a2ce993d4bbb2aa6be3470a263') in 0.012402 seconds 
+  Import took 0.015127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_78.png
+  artifactKey: Guid(875f18d0c1aeb9b49bf9d0c2c5ba374f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_78.png using Guid(875f18d0c1aeb9b49bf9d0c2c5ba374f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f2b0c4cb0d6c969e1458832480f2dd3') in 0.012484 seconds 
+  Import took 0.015293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_75.png
+  artifactKey: Guid(a3177fcbe317d6640b92e0b0ca6d3ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_75.png using Guid(a3177fcbe317d6640b92e0b0ca6d3ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9130449aa4ffdedcdd8f1d441fcca26b') in 0.012631 seconds 
+  Import took 0.015255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_84.png
+  artifactKey: Guid(4551109833311324e9f2472f204f5d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_84.png using Guid(4551109833311324e9f2472f204f5d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23451b6e288fb6cfefc902e6b9118b4f') in 0.012671 seconds 
+  Import took 0.015137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_65.png
+  artifactKey: Guid(8d2baefd09f79a1499efa4857b0ddd57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/Godomart/Survival Equipment Icons/Cap/Cap_65.png using Guid(8d2baefd09f79a1499efa4857b0ddd57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcd35a1a7b50b158805939d46cd9c486') in 0.011939 seconds 
+  Import took 0.014481 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006209 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.704 seconds
+- Completed reload, in  0.776 seconds
 Domain Reload Profiling:
-	ReloadAssembly (705ms)
-		BeginReloadAssembly (102ms)
+	ReloadAssembly (777ms)
+		BeginReloadAssembly (120ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (559ms)
-			LoadAssemblies (80ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (596ms)
+			LoadAssemblies (96ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (178ms)
+			SetupTypeCache (180ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (224ms)
+			SetupLoadedEditorAssemblies (243ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (62ms)
-				ProcessInitializeOnLoadAttributes (145ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (149ms)
 				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2069 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 184.9 MB.
-System memory in use after: 185.0 MB.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 183.8 MB.
+System memory in use after: 183.9 MB.
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2554.
-Total: 2.298700 ms (FindLiveObjects: 0.148700 ms CreateObjectMapping: 0.061100 ms MarkObjects: 2.076200 ms  DeleteObjects: 0.012100 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2530.
+Total: 2.335200 ms (FindLiveObjects: 0.146800 ms CreateObjectMapping: 0.060800 ms MarkObjects: 2.114800 ms  DeleteObjects: 0.012200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -1224,4 +1512,412 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 560.456173 seconds.
+  path: Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/9.png
+  artifactKey: Guid(1cc885353d9b00542b84756c94858d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Dark_Brown_GUI_kit/icon/full_simple/numbers/9.png using Guid(1cc885353d9b00542b84756c94858d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae8a266ddf729bdfa833a50aa579fee3') in 0.059050 seconds 
+  Import took 0.061846 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Textures/A_Armor04.png
+  artifactKey: Guid(d13012f4abce7b241900001bf716f66e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Textures/A_Armor04.png using Guid(d13012f4abce7b241900001bf716f66e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e4a4a9b6cf9ce3f221d0431cc3d4118') in 0.024411 seconds 
+  Import took 0.026870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.114237 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Textures/A_Armor05.png
+  artifactKey: Guid(fa96832082fe213428b65ad2180b0a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Textures/A_Armor05.png using Guid(fa96832082fe213428b65ad2180b0a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e69569548db66f056791bc8fe05a7ced') in 0.010062 seconds 
+  Import took 0.012873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Textures/A_Armour01.png
+  artifactKey: Guid(fcd8bd2db18e92d42a7d14fc0e395888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Textures/A_Armour01.png using Guid(fcd8bd2db18e92d42a7d14fc0e395888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10e8b8f4dfae1d4605b297c7bb644e5b') in 0.009142 seconds 
+  Import took 0.011716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.035764 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Textures/A_Armour02.png
+  artifactKey: Guid(f5e3bff24c9077445a126833256147bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Textures/A_Armour02.png using Guid(f5e3bff24c9077445a126833256147bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b553c955ca234b13283026f62ea41a62') in 0.009216 seconds 
+  Import took 0.011990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Textures/A_Armour03.png
+  artifactKey: Guid(22012799e7b2d3f41b2c05e0c71541f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Textures/A_Armour03.png using Guid(22012799e7b2d3f41b2c05e0c71541f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd45adbe08830a33b3b54376fef785bfa') in 0.030803 seconds 
+  Import took 0.033258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028097 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Textures/A_Clothing01.png
+  artifactKey: Guid(94feb6ac7e57fb34bb8d8f48f554ff82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Textures/A_Clothing01.png using Guid(94feb6ac7e57fb34bb8d8f48f554ff82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0e1d8c8023cfe9116e9dbd320a867be') in 0.008843 seconds 
+  Import took 0.011397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Textures/A_Clothing02.png
+  artifactKey: Guid(34ce9c8524e37f549bc4de2bbdd96429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Textures/A_Clothing02.png using Guid(34ce9c8524e37f549bc4de2bbdd96429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcd82322f306681b8bce65c5f4e9b4a5') in 0.009357 seconds 
+  Import took 0.012027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 168.649293 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Bold Italic.ttf
+  artifactKey: Guid(6aca2f98d33eb234bb287b9b3a2406c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Bold Italic.ttf using Guid(6aca2f98d33eb234bb287b9b3a2406c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d977b4d2494cb1b969a5bb74f1aba46') in 0.043052 seconds 
+  Import took 0.046219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/FontinSans_Cyrillic_R_46b.otf
+  artifactKey: Guid(72b8737a62ccf674e97cfe524706f948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/FontinSans_Cyrillic_R_46b.otf using Guid(72b8737a62ccf674e97cfe524706f948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '843487e7351d6f16b6deef008b6e1ba2') in 0.014656 seconds 
+  Import took 0.017368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Normal Italic.ttf
+  artifactKey: Guid(078fd6a7a7f2da94c9c57891feaf8adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Normal Italic.ttf using Guid(078fd6a7a7f2da94c9c57891feaf8adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f7fa8ad1443374cb1da072df43f481') in 0.012183 seconds 
+  Import took 0.014850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Normal.ttf
+  artifactKey: Guid(024da2176b6bbd74d8def586930a1233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Normal.ttf using Guid(024da2176b6bbd74d8def586930a1233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99a8b165198015c8c6c9ddb24c85cad7') in 0.012387 seconds 
+  Import took 0.015176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Normal.otf
+  artifactKey: Guid(bbf329630f0c42246b2cf9e13031b8d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Normal.otf using Guid(bbf329630f0c42246b2cf9e13031b8d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '834d8ddf65ac3bba9dfdecd87d9c485a') in 0.009928 seconds 
+  Import took 0.012531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/FreeAsset/Maplestory Bold.ttf
+  artifactKey: Guid(67e14052d0a2dd44d9e3785248c1429c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/Maplestory Bold.ttf using Guid(67e14052d0a2dd44d9e3785248c1429c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e22f8f4d6d282bf8b5744af4e5fd8d2') in 0.012043 seconds 
+  Import took 0.014876 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Normal Italic.otf
+  artifactKey: Guid(3fb4116e675dbeb42bc118526b8af6ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Normal Italic.otf using Guid(3fb4116e675dbeb42bc118526b8af6ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20621486a33a957edd4c6905e4746430') in 0.009372 seconds 
+  Import took 0.011947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.351970 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Bold.ttf
+  artifactKey: Guid(8c6210bd8bdfde34d81615b1694b8655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Bold.ttf using Guid(8c6210bd8bdfde34d81615b1694b8655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7874c4e013815b2577dec6da33167fd6') in 0.022395 seconds 
+  Import took 0.025153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Bold Italic.otf
+  artifactKey: Guid(9b6be309d4c8dc8458e0b693423c5c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Bold Italic.otf using Guid(9b6be309d4c8dc8458e0b693423c5c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc509a73bd51a85092d44d2c4ddd107e') in 0.008943 seconds 
+  Import took 0.011423 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006910 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.805 seconds
+Domain Reload Profiling:
+	ReloadAssembly (806ms)
+		BeginReloadAssembly (112ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (639ms)
+			LoadAssemblies (101ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (191ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (255ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (156ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 184.3 MB.
+System memory in use after: 184.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2575.
+Total: 2.372700 ms (FindLiveObjects: 0.133900 ms CreateObjectMapping: 0.049900 ms MarkObjects: 2.175900 ms  DeleteObjects: 0.012200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 178.999596 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/American Purpose.ttf
+  artifactKey: Guid(1dff1b849d412984484f5e6b05356073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/American Purpose.ttf using Guid(1dff1b849d412984484f5e6b05356073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d7c3d110d7bbb21be29506af488a599') in 0.059871 seconds 
+  Import took 0.062774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Bold.otf
+  artifactKey: Guid(e731e4d8435e7e945936240a1ecf0f56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/American Purpose STRIPE 1 Bold.otf using Guid(e731e4d8435e7e945936240a1ecf0f56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2882c8466c2c21344824a88f5d84bf93') in 0.009286 seconds 
+  Import took 0.011890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.535294 seconds.
+  path: Assets/FreeAsset/InventoryMaster/Fonts/American Purpose.otf
+  artifactKey: Guid(d8bee09f4790983418e364bc88d834d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeAsset/InventoryMaster/Fonts/American Purpose.otf using Guid(d8bee09f4790983418e364bc88d834d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20746627f9fb01d0322e5e4aa66504c9') in 0.019482 seconds 
+  Import took 0.022094 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006678 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.798 seconds
+Domain Reload Profiling:
+	ReloadAssembly (798ms)
+		BeginReloadAssembly (117ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (629ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (186ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (252ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (164ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 184.3 MB.
+System memory in use after: 184.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2579.
+Total: 2.406300 ms (FindLiveObjects: 0.189600 ms CreateObjectMapping: 0.041100 ms MarkObjects: 2.162200 ms  DeleteObjects: 0.012600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008155 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.004 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1008ms)
+		BeginReloadAssembly (224ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (101ms)
+		EndReloadAssembly (728ms)
+			LoadAssemblies (111ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (239ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (271ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (173ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 184.3 MB.
+System memory in use after: 184.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2581.
+Total: 3.119200 ms (FindLiveObjects: 0.262000 ms CreateObjectMapping: 0.046300 ms MarkObjects: 2.778600 ms  DeleteObjects: 0.031200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005958 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.814 seconds
+Domain Reload Profiling:
+	ReloadAssembly (815ms)
+		BeginReloadAssembly (110ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (658ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (204ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (249ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (159ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 184.3 MB.
+System memory in use after: 184.5 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2583.
+Total: 3.230200 ms (FindLiveObjects: 0.209000 ms CreateObjectMapping: 0.098600 ms MarkObjects: 2.906600 ms  DeleteObjects: 0.015000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 9220.217687 seconds.
+  path: Assets/PayAsset/ARPG Effects/Models
+  artifactKey: Guid(d1f1434e3bd0ed2429728280f871f547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/ARPG Effects/Models using Guid(d1f1434e3bd0ed2429728280f871f547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b15406b692472e2482c1902494a8edc') in 0.011891 seconds 
+  Import took 0.015925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.377094 seconds.
+  path: Assets/PayAsset/ARPG Effects/Prefabs
+  artifactKey: Guid(d5be075b51bacfd49ac03208be12c01c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/ARPG Effects/Prefabs using Guid(d5be075b51bacfd49ac03208be12c01c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e7c0e5b54cc716e103a8959cb1ecc7a') in 0.006788 seconds 
+  Import took 0.021478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.287524 seconds.
+  path: Assets/PayAsset/ARPG Effects/Demo/Textures
+  artifactKey: Guid(9c936b9e72fed4e42b89b57c97cb37d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PayAsset/ARPG Effects/Demo/Textures using Guid(9c936b9e72fed4e42b89b57c97cb37d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd369e6fe8c098888323cc0196ddc0c4') in 0.005673 seconds 
+  Import took 0.008711 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

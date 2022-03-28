@@ -12,10 +12,11 @@ public class PlayerUIController : MonoBehaviour
     public GameObject InventoryCanvas;
     public GameObject EquipmentCanvas;
 
-    [SerializeField]
-    private bool isInventoryEnable = false;
-    private bool isEquipmentEnable = false;
 
+    public bool isInventoryEnable = false;
+    public bool isEquipmentEnable = false;
+
+    private PlayerInput playerInput;
     private Slider hpSlider;
     private Slider spSlider;
 
@@ -24,7 +25,7 @@ public class PlayerUIController : MonoBehaviour
     void Start()
     {
         pStatus = GetComponent<PlayerStatus>();
-
+        playerInput = GetComponent<PlayerInput>();
         hpSlider = HPprefab.GetComponent<Slider>();
         spSlider = SPprefab.GetComponent<Slider>();
     }
@@ -32,12 +33,12 @@ public class PlayerUIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Inventory"))
+        if(playerInput.inventory)
         {
             InventoryCanvas.SetActive(isInventoryEnable = !isInventoryEnable);
         }
 
-        if(Input.GetButtonDown("Equipment"))
+        if(playerInput.equipment)
         {
             EquipmentCanvas.SetActive(isEquipmentEnable = !isEquipmentEnable);
         }
