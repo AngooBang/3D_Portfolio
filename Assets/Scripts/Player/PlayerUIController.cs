@@ -9,6 +9,13 @@ public class PlayerUIController : MonoBehaviour
     public GameObject SPprefab;
     public GameObject InteractiveImg;
 
+    public GameObject InventoryCanvas;
+    public GameObject EquipmentCanvas;
+
+    [SerializeField]
+    private bool isInventoryEnable = false;
+    private bool isEquipmentEnable = false;
+
     private Slider hpSlider;
     private Slider spSlider;
 
@@ -25,7 +32,15 @@ public class PlayerUIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetButtonDown("Inventory"))
+        {
+            InventoryCanvas.SetActive(isInventoryEnable = !isInventoryEnable);
+        }
+
+        if(Input.GetButtonDown("Equipment"))
+        {
+            EquipmentCanvas.SetActive(isEquipmentEnable = !isEquipmentEnable);
+        }
     }
 
     public void SetHPBarValue()
