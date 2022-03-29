@@ -6,10 +6,14 @@ using UnityEngine.AI;
 
 public class PlayerDodge : MonoBehaviour
 {
+    public float DodgeCoolTime;
     public LayerMask WorldLayerMask;
+
+    private float dodgeElapsedTime;
 
     private Camera camera;
     private PlayerInput playerInput;
+    private Rigidbody playerRigid;
     private Animator playerAnimator;
     private NavMeshAgent agent;
 
@@ -24,16 +28,23 @@ public class PlayerDodge : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerAnimator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        playerRigid = GetComponent<Rigidbody>();
+
+        dodgeElapsedTime = DodgeCoolTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerInput.dodge)
+        dodgeElapsedTime += Time.deltaTime;
+        if(dodgeElapsedTime > DodgeCoolTime)
         {
-            if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Dodge") == false)
+            if (playerInput.dodge)
             {
-               Dodge();
+                if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Dodge") == false)
+                {
+                    Dodge();
+                }
             }
         }
     }
@@ -43,20 +54,27 @@ public class PlayerDodge : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit, 100f, WorldLayerMask))
         {
-            DodgeDestination(hit.point);
-        }
+            transform.LookAt(hit.point);
 
+            Vector3 forceVec = hit.point - transform.position;
+            //playerRigid.MovePosition(forceVec);
+            //playerRigid.AddForce(forceVec.normalized * 15f, ForceMode.VelocityChange);
+
+            playerRigid.velocity = forceVec.normalized * 15f;
+        }
+        dodgeElapsedTime = 0f;
         playerAnimator.SetTrigger("DoDodge");
     }
     private void DodgeDestination(Vector3 dest)
     {
-        // 경로 입력
-        agent.SetDestination(dest);
-        // 마우스 방향 보기
-        var dir = new Vector3(agent.steeringTarget.x, transform.position.y, agent.steeringTarget.z) - transform.position;
-        if (dir != Vector3.zero)
-            transform.forward = dir;
-        //transform.LookAt(dir);
+
+        //// 경로 입력
+        //agent.SetDestination(dest);
+        //// 마우스 방향 보기
+        //var dir = new Vector3(agent.steeringTarget.x, transform.position.y, agent.steeringTarget.z) - transform.position;
+        //if (dir != Vector3.zero)
+        //    transform.forward = dir;
+        ////transform.LookAt(dir);
     }
 
 }

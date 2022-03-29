@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TurtleShell : MonoBehaviour
 {
+    public GameObject hitEffect;
+
     private Animator animator;
     private EnemyLiving enemyLiving;
 
@@ -35,6 +37,14 @@ public class TurtleShell : MonoBehaviour
             Debug.Log("거북이가 아파요!!!");
             Vector3 reactVec = transform.position - other.transform.position;
             enemyLiving.GetDamage(other.GetComponent<MeleeWeapon>().damage);
+
+            Vector3 colPos = other.GetComponent<Transform>().position;
+
+
+            GameObject curhit = Instantiate(hitEffect);
+            curhit.transform.position = colPos;
+
+
 
             if (enemyLiving.isDead == false)
             {

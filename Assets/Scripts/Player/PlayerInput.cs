@@ -34,7 +34,7 @@ public class PlayerInput : MonoBehaviour
         {
             dodge = Input.GetButtonDown(dodgeButtonName);
             normalAttack = Input.GetButton(normalAtkButton);
-            move = Input.GetButtonDown(moveButton);
+            move = Input.GetButton(moveButton);
             interaction = Input.GetButtonDown(interactionButton);
         }
         inventory = Input.GetButtonDown(inventoryButton);

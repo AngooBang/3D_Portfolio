@@ -9056,6 +9056,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 495171872, guid: 5dbae654774e0554baff753790748584, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 495171872, guid: 5dbae654774e0554baff753790748584, type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
@@ -9639,6 +9643,14 @@ PrefabInstance:
       propertyPath: ClickParticleObject
       value: 
       objectReference: {fileID: 4402378898329825893, guid: 46566d49e31117445af8a8193d32a1dd, type: 3}
+    - target: {fileID: 3602600118298562509, guid: 5dbae654774e0554baff753790748584, type: 3}
+      propertyPath: DodgeCoolTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602600118298562509, guid: 5dbae654774e0554baff753790748584, type: 3}
+      propertyPath: WorldLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3865839652833380770, guid: 5dbae654774e0554baff753790748584, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.13578269
