@@ -21,14 +21,14 @@ public class PlayerDodgeState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //Debug.Log("¥Â¡ˆ¡ﬂ¿”");
-        playerAgent.ResetPath();
+        //playerAgent.ResetPath();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //playerAgent.speed *= 0.5f;
-        playerAgent.ResetPath();
+        //playerAgent.ResetPath();
         //playerRigid.velocity. = Vector3.Lerp(playerRigid.velocity , Vector3.zero, 0.2f);
     }
 

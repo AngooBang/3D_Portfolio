@@ -56,7 +56,7 @@ public class PlayerDodge : MonoBehaviour
         {
             transform.LookAt(hit.point);
 
-            Vector3 forceVec = hit.point - transform.position;
+            Vector3 forceVec = transform.position - hit.point;
             Debug.Log(forceVec);
             //playerRigid.MovePosition(forceVec);
             playerRigid.AddForce(forceVec.normalized * 20f, ForceMode.Impulse);

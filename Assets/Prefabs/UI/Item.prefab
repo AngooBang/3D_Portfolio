@@ -254,7 +254,7 @@ MonoBehaviour:
   itemName: "\uBAA9\uC81C \uD22C\uAD6C"
   itemID: 1
   itemDesc: "\uBAA9\uC81C\uB85C \uC81C\uC791\uB41C \uD22C\uAD6C\uC774\uB2E4."
-  itemIcon: {fileID: 21300000, guid: b7cad53b2c380454c841e69ae607f967, type: 3}
+  itemIcon: {fileID: 0}
   itemValue: 1
   itemType: 4
   maxStack: 1

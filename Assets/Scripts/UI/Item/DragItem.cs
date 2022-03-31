@@ -46,21 +46,37 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         canvasGroup.blocksRaycasts = true;
         GameObject dropSlotObject = null;
 
-        if (eventData.pointerEnter.tag.Equals("Slot"))
+        // 지정한 곳에 드랍이 되지않은 예외상황.
+        if (eventData.pointerEnter == null)
+        {
+            transform.SetParent(startParentObject.transform);
+            transform.localPosition = Vector3.zero;
+            return;
+        }
+
+        if (eventData.pointerEnter.tag.Equals("Slot") || 
+            eventData.pointerEnter.tag.Equals("HelmetSlot") ||
+            eventData.pointerEnter.tag.Equals("BodySlot") || 
+            eventData.pointerEnter.tag.Equals("ShoesSlot") ||
+            eventData.pointerEnter.tag.Equals("WeaponSlot"))
+        {
             dropSlotObject = eventData.pointerEnter.gameObject;
+        }
 
         if (eventData.pointerEnter.tag.Equals("ItemIcon"))
+        {
             dropSlotObject = eventData.pointerEnter.transform.parent.parent.gameObject;
+        }
         
         if (dropSlotObject != null)
         {
 
-            GameObject Inventory = dropSlotObject.transform.parent.parent.gameObject;
+            GameObject slotParentUI = dropSlotObject.transform.parent.parent.gameObject;
 
 
-            if (Inventory.CompareTag("MainInventory") && Inventory.GetComponent<InventorySystem>() != null)
+            // 인벤토리의 슬롯이라면
+            if (slotParentUI.CompareTag("MainInventory") && slotParentUI.GetComponent<InventorySystem>() != null)
             {
-                // 인벤토리의 슬롯이라면
                 ItemData firstItem = rectTransform.GetComponent<ItemObject>().item;
                 ItemData secondItem = dropSlotObject.GetComponentInChildren<ItemData>();
                 if (secondItem == null)
@@ -74,36 +90,99 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
                     // 같은 아이템인지 확인.
                     if(firstItem.itemID == secondItem.itemID)
                     {
-                        // 같은 아이템이면 겹칠수 있는 수량인지 확인.
-                        if(firstItem.itemValue + secondItem.itemValue > secondItem.maxStack)
+                        // 합칠 수 있는 수량 확인
+                        int leftStack = secondItem.maxStack - secondItem.itemValue;
+
+                        if(leftStack >= firstItem.itemValue)
                         {
-                            // 전부 통과하면 합치기.
-                            int leftStack = secondItem.maxStack - secondItem.itemValue;
-                            if(leftStack > firstItem.itemValue)
-                            {
-                                secondItem.itemValue += firstItem.itemValue;
-                                Destroy(firstItem.gameObject);
-                            }
-                            else
-                            {
-                                firstItem.itemValue -= leftStack;
-                                secondItem.itemValue += leftStack;
-                                transform.SetParent(startParentObject.transform);
-                                transform.localPosition = Vector3.zero;
-                            }
+                            secondItem.itemValue += firstItem.itemValue;
+                            Destroy(firstItem.gameObject);
                         }
                         else
                         {
+                            firstItem.itemValue -= leftStack;
+                            secondItem.itemValue += leftStack;
+                            transform.SetParent(startParentObject.transform);
+                            transform.localPosition = Vector3.zero;
+                        }
+                        if(leftStack == 0)
+                        {
                             // 같은 아이템일지라도 수량이 max라면 자리바꾸기.
-                            SwapItemSlot(secondItem.transform.parent);
+                            SwapItemSlot(dropSlotObject.transform);
                         }
                     }
                     else
                     {
                         // 다른 아이템이라면 자리바꾸기.
-                        SwapItemSlot(secondItem.transform.parent);
+                        SwapItemSlot(dropSlotObject.transform);
                     }
                 }
+            }
+
+            if(slotParentUI.CompareTag("EquipmentSystem") && slotParentUI.GetComponent<EquipmentSystem>() != null)
+            {
+                ItemData firstItem = rectTransform.GetComponent<ItemObject>().item;
+                ItemData secondItem = dropSlotObject.GetComponentInChildren<ItemData>();
+
+                if(dropSlotObject.CompareTag("HelmetSlot") && firstItem.itemType == ItemType.Helmet)
+                {
+                    if (secondItem == null)
+                    {
+                        transform.SetParent(dropSlotObject.transform);
+                        transform.localPosition = Vector3.zero;
+                    }
+                    else
+                    {
+                        SwapItemSlot(dropSlotObject.transform);
+                    }
+                    return;
+                }
+
+
+                if (dropSlotObject.CompareTag("BodySlot") && firstItem.itemType == ItemType.Body)
+                {
+                    if (secondItem == null)
+                    {
+                        transform.SetParent(dropSlotObject.transform);
+                        transform.localPosition = Vector3.zero;
+                    }
+                    else
+                    {
+                        SwapItemSlot(dropSlotObject.transform);
+                    }
+                    return;
+                }
+                
+
+                if (dropSlotObject.CompareTag("ShoesSlot") && firstItem.itemType == ItemType.Shoes)
+                {
+                    if (secondItem == null)
+                    {
+                        transform.SetParent(dropSlotObject.transform);
+                        transform.localPosition = Vector3.zero;
+                    }
+                    else
+                    {
+                        SwapItemSlot(dropSlotObject.transform);
+                    }
+                    return;
+                }
+
+                if (dropSlotObject.CompareTag("WeaponSlot") && firstItem.itemType == ItemType.Weapon)
+                {
+                    if (secondItem == null)
+                    {
+                        transform.SetParent(dropSlotObject.transform);
+                        transform.localPosition = Vector3.zero;
+                    }
+                    else
+                    {
+                        SwapItemSlot(dropSlotObject.transform);
+                    }
+                    return;
+                }
+
+                SetDefaultSlot();
             }
 
 
@@ -111,8 +190,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         }
         else
         {
-            transform.SetParent(startParentObject.transform);
-            transform.localPosition = Vector3.zero;
+            SetDefaultSlot();
         }
     }
 
@@ -127,6 +205,11 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         gameObject.transform.localPosition = Vector3.zero;
     }
 
+    void SetDefaultSlot()
+    {
+        transform.SetParent(startParentObject.transform);
+        transform.localPosition = Vector3.zero;
+    }
     // Update is called once per frame
     void Update()
     {

@@ -17,7 +17,14 @@ public class ItemObject : MonoBehaviour
     }
     void Update()
     {
-        text.text = "" + item.itemValue;                     //sets the itemValue         
+        if(item.itemType == ItemType.Consumable || item.itemType == ItemType.Quest)
+        {
+            text.text = "" + item.itemValue;                     //sets the itemValue
+        }
+        else
+        {
+            text.text = "";
+        }
         image.sprite = item.itemIcon;
         //GetComponent<ConsumeItem>().item = item;
     }
