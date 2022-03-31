@@ -12,7 +12,7 @@ public class ItemData : MonoBehaviour
     public int itemValue = 1;                 
     public ItemType itemType;                 
     public int maxStack = 1;
-    public int indexItemInList = 999;
+    public int itemStats;
 
     //[SerializeField]
     //public List<ItemAttribute> itemAttributes = new List<ItemAttribute>();

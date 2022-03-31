@@ -89,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAttack: 0
   isInAtkRange: 0
-  Damage: 5
+  Damage: 15
 --- !u!1 &7245983312318643159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,7 +1304,6 @@ GameObject:
   - component: {fileID: 7245983314390028595}
   - component: {fileID: 7245983314390028594}
   - component: {fileID: 7245983314390028599}
-  - component: {fileID: 7245983314390028596}
   m_Layer: 6
   m_Name: TurtleShell
   m_TagString: Enemy
@@ -1378,16 +1377,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &7245983314390028596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7245983314390028592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ccb9c0f1d5b00b4f83dfe691d69afee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitEffect: {fileID: 2802216702776883865, guid: a7312a157e21031499e8b10241a47d70, type: 3}

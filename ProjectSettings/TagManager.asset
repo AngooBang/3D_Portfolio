@@ -18,10 +18,13 @@ TagManager:
   - DraggingItem
   - ItemIcon
   - Item
-  - ResultSlot
   - Canvas
   - EventSystem
   - MainInventory
+  - HelmetSlot
+  - BodySlot
+  - ShoesSlot
+  - WeaponSlot
   layers:
   - Default
   - TransparentFX

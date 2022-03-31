@@ -4,41 +4,53 @@ using UnityEngine;
 
 public class MeleeWeapon : MonoBehaviour
 {
+    public GameObject hitEffect;
     public enum WeaponType { Sword, GreatSword };
     public WeaponType type;
     public int damage;
-    public float rate;
-    public float attackTerm;
+    public float attackDelay;
     public BoxCollider meleeArea;
     public TrailRenderer trailEffect;
 
+    private float attackDelayElapsed = 0f;
     private PlayerStatus pStatus;
 
     private void Start()
     {
         pStatus = GetComponentInParent<PlayerStatus>();
+        //damage = pStatus.Damage;
+    }
+
+    private void Update()
+    {
+        attackDelayElapsed += Time.deltaTime;
+        damage = pStatus.Damage;
     }
     public void Use(int atkCount)
     {
-        if (type == WeaponType.Sword)
+        if(attackDelayElapsed >= attackDelay)
         {
-            if(atkCount == 1)
+            if (type == WeaponType.Sword)
             {
-                StopCoroutine(Swing(0.1f, 0f, 0.15f, 0.0f));
-                StartCoroutine(Swing(0.1f, 0f, 0.15f, 0.0f));
-            }
-            
-            if(atkCount == 2)
-            {
-                StopCoroutine(Swing(0.25f, 0f, 0.25f, 0.0f));
-                StartCoroutine(Swing(0.25f, 0f, 0.25f, 0.0f));
-            }
+                if (atkCount == 1)
+                {
+                    StopCoroutine(Swing(0.1f, 0f, 0.15f, 0.0f));
+                    StartCoroutine(Swing(0.1f, 0f, 0.15f, 0.0f));
+                }
 
-            if (atkCount == 3)
-            {
-                StopCoroutine(Swing(0.4f, 0.0f, 0.2f, 0.0f));
-                StartCoroutine(Swing(0.4f, 0.0f, 0.2f, 0.0f));
+                if (atkCount == 2)
+                {
+                    StopCoroutine(Swing(0.15f, 0f, 0.15f, 0.0f));
+                    StartCoroutine(Swing(0.15f, 0f, 0.15f, 0.0f));
+                }
+
+                if (atkCount == 3)
+                {
+                    StopCoroutine(Swing(0.4f, 0.0f, 0.2f, 0.0f));
+                    StartCoroutine(Swing(0.4f, 0.0f, 0.2f, 0.0f));
+                }
             }
+            attackDelayElapsed = 0f;
         }
     }
 
@@ -61,6 +73,29 @@ public class MeleeWeapon : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
+
+            EnemyLiving enemyLiving = other.transform.parent.GetComponent<EnemyLiving>();
+            enemyLiving.GetDamage(damage);
+
+            Debug.Log("거북이가 아파요!!!");
+            Vector3 reactVec = transform.position - other.transform.position;
+            //enemyLiving.GetDamage(other.GetComponent<MeleeWeapon>().damage);
+
+            Vector3 colPos = other.GetComponent<Transform>().position;
+
+
+            GameObject curhit = Instantiate(hitEffect);
+            curhit.transform.position = colPos;
+
+
+
+            if (enemyLiving.isDead == false)
+            {
+                other.GetComponent<Animator>().SetTrigger("GetHit");
+            }
+            StartCoroutine(enemyLiving.OnDamage(reactVec));
+
+
             pStatus.HitEnemy();
         }
     }

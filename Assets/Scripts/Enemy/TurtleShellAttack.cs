@@ -54,6 +54,13 @@ public class TurtleShellAttack : MonoBehaviour
     }
 
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerStatus>().GetDamage(Damage);
+        }
+    }
     void CheckTargetDist()
     {
         Vector3 dist = transform.position - target.transform.position;
