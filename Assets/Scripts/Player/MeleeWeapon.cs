@@ -37,7 +37,7 @@ public class MeleeWeapon : MonoBehaviour
                     StopCoroutine(Swing(0.1f, 0f, 0.15f, 0.0f));
                     StartCoroutine(Swing(0.1f, 0f, 0.15f, 0.0f));
                 }
-
+                
                 if (atkCount == 2)
                 {
                     StopCoroutine(Swing(0.15f, 0f, 0.15f, 0.0f));

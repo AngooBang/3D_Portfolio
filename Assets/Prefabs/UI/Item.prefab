@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 4590564946865240656}
   - component: {fileID: 4590564946865240657}
   - component: {fileID: 4590564946865240658}
+  - component: {fileID: 1264181139}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -199,7 +200,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4590564946865240662}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
@@ -254,11 +255,11 @@ MonoBehaviour:
   itemName: "\uBAA9\uC81C \uD22C\uAD6C"
   itemID: 1
   itemDesc: "\uBAA9\uC81C\uB85C \uC81C\uC791\uB41C \uD22C\uAD6C\uC774\uB2E4."
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: b7cad53b2c380454c841e69ae607f967, type: 3}
   itemValue: 1
-  itemType: 4
+  itemType: 3
   maxStack: 1
-  indexItemInList: 999
+  itemStats: 3
 --- !u!114 &4590564946865240658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +272,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aed654e03b1937a4e87e0aa88bafd963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1264181139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590564946865240662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2747b4fffc34f7458b6bee64869b80f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pStatus: {fileID: 0}
+  equipmentSystem: {fileID: 0}
 --- !u!1 &4590564947256501444
 GameObject:
   m_ObjectHideFlags: 0

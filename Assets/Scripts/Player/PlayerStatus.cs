@@ -51,6 +51,18 @@ public class PlayerStatus : LivingEntity
         uiController.SetHPBarValue();
     }
 
+    public void HealthRecovery(int healValue)
+    {
+        // 체력회복 이펙트 생성
+        // 체력회복 플로팅텍스트 생성
+        // 체력회복.
+        CurrentHP += healValue;
+        if (CurrentHP > MaxHP)
+        {
+            CurrentHP = MaxHP;
+        }
+    }
+
     public void SetEquipmentData()
     {
         ItemData weaponData = equipmentSystem.weaponSlotObject.GetComponentInChildren<ItemData>();

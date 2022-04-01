@@ -108,77 +108,45 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
                         if(leftStack == 0)
                         {
                             // 같은 아이템일지라도 수량이 max라면 자리바꾸기.
-                            SwapItemSlot(dropSlotObject.transform);
+                            SwapItemSlot(dropSlotObject.transform, startParentObject);
                         }
                     }
                     else
                     {
                         // 다른 아이템이라면 자리바꾸기.
-                        SwapItemSlot(dropSlotObject.transform);
+                        SwapItemSlot(dropSlotObject.transform, startParentObject);
                     }
                 }
             }
 
             if(slotParentUI.CompareTag("EquipmentSystem") && slotParentUI.GetComponent<EquipmentSystem>() != null)
             {
-                ItemData firstItem = rectTransform.GetComponent<ItemObject>().item;
+                ItemData firstItem = GetComponent<ItemData>();
                 ItemData secondItem = dropSlotObject.GetComponentInChildren<ItemData>();
 
                 if(dropSlotObject.CompareTag("HelmetSlot") && firstItem.itemType == ItemType.Helmet)
                 {
-                    if (secondItem == null)
-                    {
-                        transform.SetParent(dropSlotObject.transform);
-                        transform.localPosition = Vector3.zero;
-                    }
-                    else
-                    {
-                        SwapItemSlot(dropSlotObject.transform);
-                    }
+                    EquipItemUse(dropSlotObject, startParentObject);
                     return;
                 }
 
 
                 if (dropSlotObject.CompareTag("BodySlot") && firstItem.itemType == ItemType.Body)
                 {
-                    if (secondItem == null)
-                    {
-                        transform.SetParent(dropSlotObject.transform);
-                        transform.localPosition = Vector3.zero;
-                    }
-                    else
-                    {
-                        SwapItemSlot(dropSlotObject.transform);
-                    }
+                    EquipItemUse(dropSlotObject, startParentObject);
                     return;
                 }
                 
 
                 if (dropSlotObject.CompareTag("ShoesSlot") && firstItem.itemType == ItemType.Shoes)
                 {
-                    if (secondItem == null)
-                    {
-                        transform.SetParent(dropSlotObject.transform);
-                        transform.localPosition = Vector3.zero;
-                    }
-                    else
-                    {
-                        SwapItemSlot(dropSlotObject.transform);
-                    }
+                    EquipItemUse(dropSlotObject, startParentObject);
                     return;
                 }
 
                 if (dropSlotObject.CompareTag("WeaponSlot") && firstItem.itemType == ItemType.Weapon)
                 {
-                    if (secondItem == null)
-                    {
-                        transform.SetParent(dropSlotObject.transform);
-                        transform.localPosition = Vector3.zero;
-                    }
-                    else
-                    {
-                        SwapItemSlot(dropSlotObject.transform);
-                    }
+                    EquipItemUse(dropSlotObject, startParentObject);
                     return;
                 }
 
@@ -194,15 +162,29 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         }
     }
 
-    void SwapItemSlot(Transform dropSlot)
+    void SwapItemSlot(Transform dropSlot, GameObject parentObject)
     {
         GameObject dropItemObject = dropSlot.GetChild(0).gameObject;
         //자기 위치의 부모(slot)으로 옮겨주고
-        dropItemObject.transform.SetParent(startParentObject.transform);
+        dropItemObject.transform.SetParent(parentObject.transform);
         dropItemObject.transform.localPosition = Vector3.zero;
         // 자신을 대상아이템의 슬롯으로 이동
         gameObject.transform.SetParent(dropSlot);
         gameObject.transform.localPosition = Vector3.zero;
+    }
+
+    public void EquipItemUse(GameObject equipSlotObject, GameObject parentObject)
+    {
+        ItemData equipItem = equipSlotObject.GetComponentInChildren<ItemData>();
+        if (equipItem == null)
+        {
+            transform.SetParent(equipSlotObject.transform);
+            transform.localPosition = Vector3.zero;
+        }
+        else
+        {
+            SwapItemSlot(equipSlotObject.transform, parentObject);
+        }
     }
 
     void SetDefaultSlot()
