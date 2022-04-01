@@ -14,7 +14,7 @@ public class UseItem : MonoBehaviour, IPointerClickHandler
     public PlayerStatus pStatus;
     public EquipmentSystem equipmentSystem;
 
-    private GameObject startParentObject;
+    public GameObject startParentObject;
     private ItemData itemData;
     // Start is called before the first frame update
     void Start()
@@ -39,7 +39,7 @@ public class UseItem : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    void Use()
+    public void Use()
     {
         //아이템 데이터의 아이템타입이
         switch (itemData.itemType)

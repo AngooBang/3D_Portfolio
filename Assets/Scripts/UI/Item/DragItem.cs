@@ -75,7 +75,8 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 
 
             // 인벤토리의 슬롯이라면
-            if (slotParentUI.CompareTag("MainInventory") && slotParentUI.GetComponent<InventorySystem>() != null)
+            if ((slotParentUI.CompareTag("MainInventory") && slotParentUI.GetComponent<InventorySystem>() != null) ||
+                (slotParentUI.CompareTag("Hotbar") && slotParentUI.GetComponent<HotBarSystem>() != null))
             {
                 ItemData firstItem = rectTransform.GetComponent<ItemObject>().item;
                 ItemData secondItem = dropSlotObject.GetComponentInChildren<ItemData>();
