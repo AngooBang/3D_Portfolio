@@ -5,11 +5,6 @@ using UnityEngine.EventSystems;
 
 public class UseItem : MonoBehaviour, IPointerClickHandler
 {
-    // 대영씌 왜부르시나연????
-    // 펄쩍뛰게할! 펄쩍뛰게할! 다이노소ㅓ~ㅓ 우우후ㅜ~우후~ 우후후웅~ㅜ 우후우후우우후~\
-    // 와 ㅅㅂ 어케암?? 지린다;
-    // 나 독서실임ㅋ ㅋㄷ ㅋㄷㄱ  ㄱㄷㅋㄱㄷ  ㄱㄷㅋㄱ  ㄷㅋㄱㄷ ㅋㄱ
-    // 혼자서 죧찐따마냥 디코에서 뭐함ㅋ
 
     public PlayerStatus pStatus;
     public EquipmentSystem equipmentSystem;
@@ -27,7 +22,6 @@ public class UseItem : MonoBehaviour, IPointerClickHandler
         // 아이템정보를 받아온다 
         // 우클릭 입력시 사용되는 함수를 실행
         // 아이템 타입 및 아이디에 따라 다르게 실행되는 함수를 설계
-        // 기모띠
     }
 
     public void OnPointerClick(PointerEventData eventData)
