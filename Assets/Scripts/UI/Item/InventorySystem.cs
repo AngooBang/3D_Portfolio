@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class InventorySystem : MonoBehaviour
 {
@@ -8,17 +9,26 @@ public class InventorySystem : MonoBehaviour
     public GameObject SlotsObject;
 
     public GameObject testItemPrefab;
+
+    public TextMeshProUGUI goldText;
+
+    public int goldValue;
     // Start is called before the first frame update
     void Start()
     {
+        goldText = transform.GetChild(3).GetChild(0).GetComponent<TextMeshProUGUI>();
+        goldValue = 0;
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        goldText.text = goldValue.ToString();
         if(Input.GetKeyDown(KeyCode.Backspace))
         {
-
             AddItem(Instantiate(testItemPrefab));
         }
     }
