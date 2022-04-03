@@ -25,6 +25,7 @@ TagManager:
   - BodySlot
   - ShoesSlot
   - WeaponSlot
+  - InterfaceUI
   layers:
   - Default
   - TransparentFX

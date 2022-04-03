@@ -7,6 +7,7 @@ public class ShowTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 {
     public TooltipSystem tooltipSystem;
 
+
     public Vector3 inventoryTooltipOffset;
     public Vector3 hotbarTooltipOffset;
 
@@ -25,7 +26,6 @@ public class ShowTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     // Update is called once per frame
     void Update()
     {
-        
     }
 
 
@@ -41,12 +41,19 @@ public class ShowTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {
             //인벤토리일때 위치지정
             tooltipSystem.gameObject.transform.position = transform.position + inventoryTooltipOffset;
+            tooltipSystem.isInventoryTooltip = true;
+            tooltipSystem.isHotbarTooltip = false;
+            tooltipSystem.isSkillTooltip = false;
+
         }
 
         if (transform.parent.parent.parent.gameObject.GetComponent<HotBarSystem>() != null)
         {
-            //인벤토리일때 위치지정
+            //핫바일때 위치지정
             tooltipSystem.gameObject.transform.position = transform.position + hotbarTooltipOffset;
+            tooltipSystem.isInventoryTooltip = false;
+            tooltipSystem.isHotbarTooltip = true;
+            tooltipSystem.isSkillTooltip = false;
         }
     }
 

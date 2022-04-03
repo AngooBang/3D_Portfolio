@@ -253,14 +253,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31756f8f2d9e25e47a02eb8be67d185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: "\uBAA9\uC81C \uAC11\uC637"
-  itemID: 3
-  itemDesc: "\uBAA9\uC81C\uB85C \uC81C\uC791\uB41C \uAC11\uC637."
-  itemIcon: {fileID: 21300000, guid: 73ef64f0f8659d34b8e812c738641236, type: 3}
+  itemName: "\uBAA9\uC81C \uD22C\uAD6C"
+  itemID: 1
+  itemDesc: "\uBAA9\uC81C\uB85C \uC81C\uC791\uB41C \uD22C\uAD6C."
+  itemIcon: {fileID: 21300000, guid: b7cad53b2c380454c841e69ae607f967, type: 3}
   itemValue: 1
-  itemType: 4
+  itemType: 3
   maxStack: 1
-  itemStats: 4
+  itemStats: 3
 --- !u!114 &4590564946865240658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +301,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipSystem: {fileID: 0}
+  inventorySystem: {fileID: 0}
+  inventoryTooltipOffset: {x: 0, y: 0, z: 0}
+  hotbarTooltipOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &4590564947256501444
 GameObject:
   m_ObjectHideFlags: 0

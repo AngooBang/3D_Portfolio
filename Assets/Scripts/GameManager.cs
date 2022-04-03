@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public TalkManager talkManager;
     public QuestManager questManager;
     public GameObject playerUI;
+    public GameObject HotBarUI;
     public GameObject talkPanel;
     public Text talkText;                       
     public GameObject interactionObject;
@@ -64,6 +65,7 @@ public class GameManager : MonoBehaviour
     private void UIInteractSetting()
     {
         playerUI.SetActive(!isAction);
+        HotBarUI.SetActive(!isAction);
         talkPanel.SetActive(isAction);
     }
     private void CameraInteractSetting()

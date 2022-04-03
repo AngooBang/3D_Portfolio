@@ -12,6 +12,8 @@ public class PlayerUIController : MonoBehaviour
     public GameObject InventoryCanvas;
     public GameObject EquipmentCanvas;
 
+    public TooltipSystem tooltipSystem;
+
 
     public bool isInventoryEnable = false;
     public bool isEquipmentEnable = false;
@@ -36,11 +38,19 @@ public class PlayerUIController : MonoBehaviour
         if(playerInput.inventory)
         {
             InventoryCanvas.SetActive(isInventoryEnable = !isInventoryEnable);
+            if(tooltipSystem.isInventoryTooltip)
+            {
+                tooltipSystem.isShowTooltip = isInventoryEnable;
+            }
         }
 
         if(playerInput.equipment)
         {
             EquipmentCanvas.SetActive(isEquipmentEnable = !isEquipmentEnable);
+            if (tooltipSystem.isInventoryTooltip)
+            {
+                tooltipSystem.isShowTooltip = isEquipmentEnable;
+            }
         }
     }
 

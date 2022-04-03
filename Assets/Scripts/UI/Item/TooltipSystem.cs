@@ -15,8 +15,15 @@ public class TooltipSystem : MonoBehaviour
     public TextMeshProUGUI TooltipItemDescription;
 
     public GameObject tooltipObject;
+    //public InventorySystem inventorySystem;
+
+
 
     public bool isShowTooltip = false;
+
+    public bool isInventoryTooltip = false;
+    public bool isHotbarTooltip = false;
+    public bool isSkillTooltip = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +36,10 @@ public class TooltipSystem : MonoBehaviour
     void Update()
     {
         tooltipObject.SetActive(isShowTooltip);
+        //if(inventorySystem.gameObject.active == false)
+        //{
+        //    tooltipObject.SetActive(false);
+        //    isShowTooltip = false;
+        //}
     }
 }

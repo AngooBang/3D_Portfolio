@@ -34,6 +34,7 @@ public class ClickMovement : MonoBehaviour
     void Start()
     {
         agent.acceleration = 20;
+
         agent.speed = WalkSpeed;
     }
 
@@ -48,6 +49,8 @@ public class ClickMovement : MonoBehaviour
         {
             if (playerInput.move)
             {
+                agent.ResetPath();
+
                 Ray ray = camera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 100f, WorldLayerMask))
@@ -106,7 +109,11 @@ public class ClickMovement : MonoBehaviour
             }
             var dir = new Vector3(agent.steeringTarget.x, transform.position.y, agent.steeringTarget.z) - transform.position;
             if(dir != Vector3.zero)
+            {
+                //agent.enabled = false;
                 animator.transform.forward = dir;
+                //agent.enabled = true;
+            }
             //transform.position += dir.normalized * Time.deltaTime * WalkSpeed;
         }
     }
