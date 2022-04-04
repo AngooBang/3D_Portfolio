@@ -162,6 +162,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animation: {fileID: 0}
   chestEffectCycler: {fileID: 0}
+  itemData: {fileID: 0}
+  HUDCanvas: {fileID: 0}
+  NameTextPrefab: {fileID: 6302213346056542350, guid: 56fe9b8603fe07249aff25d1c9f8dfaa, type: 3}
+  player: {fileID: 0}
+  NameText: {fileID: 0}
 --- !u!1 &2772585831694356920
 GameObject:
   m_ObjectHideFlags: 0

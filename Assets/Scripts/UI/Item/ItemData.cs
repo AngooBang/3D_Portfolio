@@ -13,25 +13,19 @@ public class ItemData : MonoBehaviour
     public ItemType itemType;                 
     public int maxStack = 1;
     public int itemStats;
+    public GameObject DropItemPrefab;
 
-    //[SerializeField]
-    //public List<ItemAttribute> itemAttributes = new List<ItemAttribute>();
-
-    public ItemData() { }
-
-    public ItemData(string name, int id, string desc, Sprite icon, int maxStack, ItemType type, string sendmessagetext/*, List<ItemAttribute> itemAttributes*/)                 //function to create a instance of the Item
+    public ItemData(ItemData item)
     {
-        itemName = name;
-        itemID = id;
-        itemDesc = desc;
-        itemIcon = icon;
-        itemType = type;
-        this.maxStack = maxStack;
-        //this.itemAttributes = itemAttributes;
+        this.itemName = item.itemName;
+        this.itemID = item.itemID;
+        this.itemDesc = item.itemDesc;
+        this.itemIcon = item.itemIcon;
+        this.itemValue = item.itemValue;
+        this.itemType = item.itemType;
+        this.maxStack = item.maxStack;
+        this.itemStats = item.itemStats;
+        this.DropItemPrefab = item.DropItemPrefab;
     }
 
-    public ItemData getCopy()
-    {
-        return (ItemData)this.MemberwiseClone();
-    }
 }

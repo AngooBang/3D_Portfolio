@@ -7,16 +7,20 @@ using TMPro;
 public class ItemChestController : MonoBehaviour
 {
     [SerializeField]
-    Animation animation;
+    private Animation animation;
     [SerializeField]
-    ChestEffectCycler chestEffectCycler;
+    private ChestEffectCycler chestEffectCycler;
 
+    public InventorySystem inventorySystem;
+
+    public ItemData itemData;
     public Canvas HUDCanvas;
     public GameObject NameTextPrefab;
 
     public GameObject player;
 
     public TextMeshProUGUI NameText;
+    
 
     private void Awake()
     {
@@ -28,9 +32,11 @@ public class ItemChestController : MonoBehaviour
         NameTextPrefab.GetComponent<EnemyHPSlider>().target = transform;
         NameText = NameTextPrefab.GetComponentInChildren<TextMeshProUGUI>();
 
-        NameText.text = "받아올 이름";
 
         player = GameObject.FindGameObjectWithTag("Player");
+
+        inventorySystem = GameObject.FindGameObjectWithTag("MainInventory").GetComponent<InventorySystem>();
+        
 
     }
 
@@ -39,10 +45,15 @@ public class ItemChestController : MonoBehaviour
         Destroy(NameTextPrefab);
     }
 
+    public void SetItemData()
+    {
+        itemData = GetComponentInChildren<ItemData>();
+        NameText.text = itemData.itemName;
+    }
     private void Update()
     {
         Vector3 distVec = player.transform.position - transform.position;
-
+        
         if(distVec.magnitude < 4.0f)
         {
             NameTextPrefab.SetActive(true);
@@ -55,11 +66,14 @@ public class ItemChestController : MonoBehaviour
         {
             NameTextPrefab.SetActive(false);
         }
+
     }
     void PickUpItem()
     {
         animation.Play();
         chestEffectCycler.PlayEffect();
+        GameObject itemObject = transform.GetChild(2).gameObject;
+        inventorySystem.AddItem(itemObject);
 
         Destroy(gameObject, 1.5f);
     }

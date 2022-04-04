@@ -24,12 +24,12 @@ public class TooltipSystem : MonoBehaviour
     public bool isInventoryTooltip = false;
     public bool isHotbarTooltip = false;
     public bool isSkillTooltip = false;
-    // Start is called before the first frame update
-    void Start()
+
+
+    private void Start()
     {
-        TextMeshProUGUI[] textMeshProUGUIs = GetComponentsInChildren<TextMeshProUGUI>();
-        TooltipItemName = textMeshProUGUIs[0];
-        TooltipItemDescription = textMeshProUGUIs[1];
+        TooltipItemName = transform.GetChild(0).transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        TooltipItemDescription = transform.GetChild(0).transform.GetChild(2).GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame

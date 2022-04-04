@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     //public GameObject ItemUICanvas;
+    public LayerMask WorldLayerMask;
 
     private RectTransform rectTransformSlot;
 
@@ -49,11 +50,23 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         // 지정한 곳에 드랍이 되지않은 예외상황.
         if (eventData.pointerEnter == null)
         {
-            transform.SetParent(startParentObject.transform);
-            transform.localPosition = Vector3.zero;
+            Debug.Log("월드에 아이템떨어짐.");
+            //transform.SetParent(startParentObject.transform);
+            //transform.localPosition = Vector3.zero;
+
+            ItemData firstItem = rectTransform.GetComponent<ItemData>();
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            Physics.Raycast(ray, out hit, 100f, WorldLayerMask);
+           
+
+            GameObject dropItemObject = Instantiate(firstItem.DropItemPrefab, hit.point, Quaternion.identity);
+            transform.SetParent(dropItemObject.transform);
+        
+            dropItemObject.GetComponent<ItemChestController>().SetItemData();
             return;
         }
-
         if (eventData.pointerEnter.tag.Equals("Slot") || 
             eventData.pointerEnter.tag.Equals("HelmetSlot") ||
             eventData.pointerEnter.tag.Equals("BodySlot") || 
@@ -193,6 +206,12 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         transform.SetParent(startParentObject.transform);
         transform.localPosition = Vector3.zero;
     }
+
+    void DropItem()
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {

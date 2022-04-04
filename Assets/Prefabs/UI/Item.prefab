@@ -261,6 +261,7 @@ MonoBehaviour:
   itemType: 3
   maxStack: 1
   itemStats: 3
+  DropItemPrefab: {fileID: 2772585831647004906, guid: b256d1b2f9923b04b984bfb83d77666a, type: 3}
 --- !u!114 &4590564946865240658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aed654e03b1937a4e87e0aa88bafd963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WorldLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &1264181139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +305,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipSystem: {fileID: 0}
-  inventorySystem: {fileID: 0}
   inventoryTooltipOffset: {x: 0, y: 0, z: 0}
   hotbarTooltipOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &4590564947256501444

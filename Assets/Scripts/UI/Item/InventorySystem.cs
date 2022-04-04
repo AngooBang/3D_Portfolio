@@ -33,7 +33,7 @@ public class InventorySystem : MonoBehaviour
         }
     }
 
-    void AddItem(GameObject AddItemObject)
+    public void AddItem(GameObject AddItemObject)
     {
         ItemData addItemData = AddItemObject.GetComponent<ItemData>();
 

@@ -28,4 +28,8 @@ public class ChestEffectCycler : MonoBehaviour
         else
             effectIndex = 0;
     }
+    private void OnDestroy()
+    {
+        Destroy(instantiatedEffect);
+    }
 }

@@ -40,7 +40,8 @@ public class PlayerUIController : MonoBehaviour
             InventoryCanvas.SetActive(isInventoryEnable = !isInventoryEnable);
             if(tooltipSystem.isInventoryTooltip)
             {
-                tooltipSystem.isShowTooltip = isInventoryEnable;
+                if(isInventoryEnable == false)
+                    tooltipSystem.isShowTooltip = isInventoryEnable;
             }
         }
 
@@ -49,7 +50,8 @@ public class PlayerUIController : MonoBehaviour
             EquipmentCanvas.SetActive(isEquipmentEnable = !isEquipmentEnable);
             if (tooltipSystem.isInventoryTooltip)
             {
-                tooltipSystem.isShowTooltip = isEquipmentEnable;
+                if (isEquipmentEnable == false)
+                    tooltipSystem.isShowTooltip = isEquipmentEnable;
             }
         }
     }
