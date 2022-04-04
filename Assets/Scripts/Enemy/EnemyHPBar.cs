@@ -18,7 +18,7 @@ public class EnemyHPBar : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        hpCanvas = GameObject.Find("EnemyHPCanvas").GetComponent<Canvas>();
+        hpCanvas = GameObject.FindGameObjectWithTag("HUDCanvas").GetComponent<Canvas>();
 
         
         GameObject enemyHpBar = Instantiate(HpBarPrefab, hpCanvas.transform);

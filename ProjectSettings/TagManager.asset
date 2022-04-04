@@ -26,6 +26,7 @@ TagManager:
   - ShoesSlot
   - WeaponSlot
   - InterfaceUI
+  - HUDCanvas
   layers:
   - Default
   - TransparentFX

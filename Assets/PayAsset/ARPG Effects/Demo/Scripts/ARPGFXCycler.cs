@@ -11,9 +11,7 @@ namespace ARPGFX
 
         [Header("Loop length in seconds")]
         [SerializeField]
-        float loopTimeLength = 5f;
 
-        float timeOfLastInstantiate;
 
         GameObject instantiatedEffect;
 
@@ -24,22 +22,17 @@ namespace ARPGFX
         {
             instantiatedEffect = Instantiate(listOfEffects[effectIndex], transform.position, transform.rotation) as GameObject;
             effectIndex++;
-            timeOfLastInstantiate = Time.time;
         }
 
-        // Update is called once per frame
-        void Update()
+
+        void PlayEffect()
         {
-            if (Time.time >= timeOfLastInstantiate + loopTimeLength)
-            {
-                Destroy(instantiatedEffect);
-                instantiatedEffect = Instantiate(listOfEffects[effectIndex], transform.position, transform.rotation) as GameObject;
-                timeOfLastInstantiate = Time.time;
-                if (effectIndex < listOfEffects.Count - 1)
-                    effectIndex++;
-                else
-                    effectIndex = 0;
-            }
+            Destroy(instantiatedEffect);
+            instantiatedEffect = Instantiate(listOfEffects[effectIndex], transform.position, transform.rotation) as GameObject;
+            if (effectIndex < listOfEffects.Count - 1)
+                effectIndex++;
+            else
+                effectIndex = 0;
         }
     }
 }
