@@ -16,7 +16,7 @@ public class InventorySystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        goldText = transform.GetChild(3).GetChild(0).GetComponent<TextMeshProUGUI>();
+        goldText = transform.GetChild(0).GetChild(3).GetChild(0).GetComponent<TextMeshProUGUI>();
         goldValue = 0;
 
         
@@ -77,5 +77,11 @@ public class InventorySystem : MonoBehaviour
         // 빈 공간이 없어서 여기까지오면. 로그를띄워보자.
         Debug.Log("인벤토리에 빈 공간이 없습니다.");
         Destroy(AddItemObject);
+    }
+
+
+    public void GetCoin(int num)
+    {
+        goldValue += num;
     }
 }

@@ -36,7 +36,7 @@ public class ShowTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         tooltipSystem.TooltipItemName.text = itemData.itemName;
         tooltipSystem.TooltipItemDescription.text = itemData.itemDesc;
 
-        if(transform.parent.parent.parent.gameObject.GetComponent<InventorySystem>() != null ||
+        if(transform.parent.parent.parent.parent.gameObject.GetComponent<InventorySystem>() != null ||
             transform.parent.parent.parent.gameObject.GetComponent<EquipmentSystem>() != null)
         {
             //인벤토리일때 위치지정
