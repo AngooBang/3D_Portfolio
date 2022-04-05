@@ -7,7 +7,7 @@ using System.Text;
 
 public class QuestManager : MonoBehaviour
 {
-    [SerializeField] public Dictionary<int, QuestData> questList;
+    public Dictionary<int, QuestData> questList;
     private QuestUIController questUIController;
 
 

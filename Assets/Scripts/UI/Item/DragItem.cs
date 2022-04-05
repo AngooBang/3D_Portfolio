@@ -7,6 +7,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 {
     //public GameObject ItemUICanvas;
     public LayerMask WorldLayerMask;
+    public GameObject DropItemPrefab;
 
     private RectTransform rectTransformSlot;
 
@@ -21,6 +22,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
         rectTransformSlot = GameObject.FindGameObjectWithTag("DraggingItem").GetComponent<RectTransform>();
+        DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -61,7 +63,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
             Physics.Raycast(ray, out hit, 100f, WorldLayerMask);
            
 
-            GameObject dropItemObject = Instantiate(firstItem.DropItemPrefab, hit.point, Quaternion.identity);
+            GameObject dropItemObject = Instantiate(DropItemPrefab, hit.point, Quaternion.identity);
             transform.SetParent(dropItemObject.transform);
         
             dropItemObject.GetComponent<ItemChestController>().SetItemData();
