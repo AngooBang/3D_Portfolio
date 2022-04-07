@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyLiving : LivingEntity
 {
     public GameObject HudDamageText;
+    public ItemDropManager dropManager;
     public Transform HudPos;
 
     private Animator animator;
@@ -17,6 +18,8 @@ public class EnemyLiving : LivingEntity
         enemyHPBar = gameObject.GetComponent<EnemyHPBar>();
         animator = GetComponentInChildren<Animator>();
         material = GetComponentInChildren<SkinnedMeshRenderer>().material;
+
+        dropManager = GameObject.FindGameObjectWithTag("DropManager").GetComponent<ItemDropManager>();
     }
 
 
@@ -33,6 +36,16 @@ public class EnemyLiving : LivingEntity
         hudText.GetComponent<DamageText>().damage = damage;
 
         enemyHPBar.SetHPBarValue();
+    }
+
+    public override void OnDead()
+    {
+        base.OnDead();
+
+        gameObject.layer = 14;
+        dropManager.MonsterDropItem(101, transform);
+
+
     }
 
     public IEnumerator OnDamage(Vector3 reactVec)

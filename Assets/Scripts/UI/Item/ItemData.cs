@@ -144,6 +144,18 @@ public class ItemData : MonoBehaviour
             itemStats = 30;
             DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
+        if (id == 21)
+        {
+            itemName = "ÆÄ¶û °ÅºÏÀÌ µî²®Áú";
+            itemID = 21;
+            itemDesc = "ÆÄ¶û °ÅºÏÀÌÀÇ µî²®ÁúÀÌ´Ù. \n\n Äù½ºÆ® ¾ÆÀÌÅÛ.";
+            itemIcon = Resources.Load<Sprite>("Textures/Treasure bag_6");
+            itemValue = 1;
+            itemType = ItemType.Quest;
+            maxStack = 3;
+            itemStats = 0;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
+        }
     }
 
 }

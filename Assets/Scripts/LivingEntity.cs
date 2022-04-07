@@ -29,6 +29,15 @@ public class LivingEntity : MonoBehaviour
 
     }
 
+    virtual public void OnDead()
+    {
+        isDead = true;
+        animator.SetTrigger("IsDead");
+        agent.ResetPath();
+        agent.enabled = false;
+
+        Destroy(gameObject, 5);
+    }
     
     virtual public void GetDamage(int damage)
     {
@@ -37,13 +46,7 @@ public class LivingEntity : MonoBehaviour
         CurrentHP -= damage;
         if (CurrentHP <= 0)
         {
-            isDead = true;
-            animator.SetTrigger("IsDead");
-            agent.ResetPath();
-            agent.enabled = false;
-            gameObject.layer = 14;
-
-            Destroy(gameObject, 5);
+            OnDead();
         }
     }
 
