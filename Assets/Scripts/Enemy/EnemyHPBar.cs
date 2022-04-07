@@ -24,7 +24,7 @@ public class EnemyHPBar : MonoBehaviour
         GameObject enemyHpBar = Instantiate(HpBarPrefab, hpCanvas.transform);
         hpSlider = enemyHpBar.GetComponent<Slider>();
         hpSlider.value = 1f;
-        var _hpbar = enemyHpBar.GetComponent<EnemyHPSlider>();
+        var _hpbar = enemyHpBar.GetComponent<HUDObject>();
         _hpbar.target = this.transform;
         _hpbar.offset = hpBarOffset;
 

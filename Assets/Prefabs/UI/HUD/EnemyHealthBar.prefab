@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
+  IsFollow: 1
 --- !u!1 &8745948250703972391
 GameObject:
   m_ObjectHideFlags: 0

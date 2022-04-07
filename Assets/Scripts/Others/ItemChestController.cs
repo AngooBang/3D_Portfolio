@@ -29,7 +29,7 @@ public class ItemChestController : MonoBehaviour
         HUDCanvas = GameObject.FindGameObjectWithTag("HUDCanvas").GetComponent<Canvas>();
 
         NameTextPrefab = Instantiate(NameTextPrefab, HUDCanvas.transform);
-        NameTextPrefab.GetComponent<EnemyHPSlider>().target = transform;
+        NameTextPrefab.GetComponent<HUDObject>().target = transform;
         NameText = NameTextPrefab.GetComponentInChildren<TextMeshProUGUI>();
 
 

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHPSlider : MonoBehaviour
+public class HUDObject : MonoBehaviour
 {
+
     private Canvas canvas;
     private Camera hpCamera;
     private RectTransform rectParent;
@@ -36,7 +37,6 @@ public class EnemyHPSlider : MonoBehaviour
             Vector2 localPos = Vector2.zero;
 
             RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPosition, hpCamera, out localPos);
-
 
             rectHP.localPosition = localPos;
         }

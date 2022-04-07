@@ -6,7 +6,8 @@ public class EnemyLiving : LivingEntity
 {
     public GameObject HudDamageText;
     public ItemDropManager dropManager;
-    public Transform HudPos;
+
+    public Canvas HUDCanvas;
 
     private Animator animator;
     private Material material;
@@ -18,6 +19,7 @@ public class EnemyLiving : LivingEntity
         enemyHPBar = gameObject.GetComponent<EnemyHPBar>();
         animator = GetComponentInChildren<Animator>();
         material = GetComponentInChildren<SkinnedMeshRenderer>().material;
+        HUDCanvas = GameObject.FindGameObjectWithTag("HUDCanvas").GetComponent<Canvas>();
 
         dropManager = GameObject.FindGameObjectWithTag("DropManager").GetComponent<ItemDropManager>();
     }
@@ -31,9 +33,10 @@ public class EnemyLiving : LivingEntity
             animator.SetTrigger("GetHit");
         }
 
-        GameObject hudText = Instantiate(HudDamageText);
-        hudText.transform.position = HudPos.position;
-        hudText.GetComponent<DamageText>().damage = damage;
+        GameObject hudText = Instantiate(HudDamageText, HUDCanvas.transform);
+        hudText.GetComponent<HUDObject>().target = transform;
+        //hudText.transform.position = HudPos.position;
+        hudText.GetComponentInChildren<DamageText>().damage = damage;
 
         enemyHPBar.SetHPBarValue();
     }
