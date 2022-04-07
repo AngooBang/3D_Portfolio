@@ -15,9 +15,9 @@ public class ItemData : MonoBehaviour
     public ItemType itemType;                 
     public int maxStack = 1;
     public int itemStats;
-    //public GameObject DropItemPrefab;
+    public GameObject DropItemPrefab;
 
-    public ItemData(ItemData item)
+    public void SetItemData(ItemData item)
     {
         this.itemName = item.itemName;
         this.itemID = item.itemID;
@@ -27,7 +27,7 @@ public class ItemData : MonoBehaviour
         this.itemType = item.itemType;
         this.maxStack = item.maxStack;
         this.itemStats = item.itemStats;
-        //this.DropItemPrefab = item.DropItemPrefab;
+        this.DropItemPrefab = item.DropItemPrefab;
     }
 
     public ItemData(int id)
@@ -42,7 +42,7 @@ public class ItemData : MonoBehaviour
             itemType = ItemType.Helmet;
             maxStack = 1;
             itemStats = 3;
-            //DropItemPrefab = null;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
         if (id == 2)
         {
@@ -54,7 +54,7 @@ public class ItemData : MonoBehaviour
             itemType = ItemType.Helmet;
             maxStack = 1;
             itemStats = 6;
-            //DropItemPrefab = null;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
 
         if (id == 3)
@@ -67,7 +67,7 @@ public class ItemData : MonoBehaviour
             itemType = ItemType.Body;
             maxStack = 1;
             itemStats = 4;
-            //DropItemPrefab = null;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
         if (id == 4)
         {
@@ -79,7 +79,7 @@ public class ItemData : MonoBehaviour
             itemType = ItemType.Body;
             maxStack = 1;
             itemStats = 8;
-            //DropItemPrefab = null;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
 
         if (id == 5)
@@ -92,7 +92,7 @@ public class ItemData : MonoBehaviour
             itemType = ItemType.Shoes;
             maxStack = 1;
             itemStats = 3;
-            //DropItemPrefab = null;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
         if (id == 6)
         {
@@ -104,7 +104,7 @@ public class ItemData : MonoBehaviour
             itemType = ItemType.Shoes;
             maxStack = 1;
             itemStats = 6;
-            //DropItemPrefab = null;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
 
         if (id == 7)
@@ -117,7 +117,7 @@ public class ItemData : MonoBehaviour
             itemType = ItemType.Weapon;
             maxStack = 1;
             itemStats = 10;
-            //DropItemPrefab = null;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
         if (id == 8)
         {
@@ -129,7 +129,7 @@ public class ItemData : MonoBehaviour
             itemType = ItemType.Weapon;
             maxStack = 1;
             itemStats = 20;
-            //DropItemPrefab = null;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
 
         if (id == 11)
@@ -142,7 +142,7 @@ public class ItemData : MonoBehaviour
             itemType = ItemType.Consumable;
             maxStack = 5;
             itemStats = 30;
-            //DropItemPrefab = null;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
     }
 
