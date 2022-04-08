@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     private void TalkWithObject(int objectID)
     {
         int questTalkIndex = questManager.GetQuestTalkIndex(objectID);
+        Debug.Log(questTalkIndex + ": 현재 퀘스트토크 인덱스");
         string talkData = talkManager.GetTalk(objectID + questTalkIndex, talkIndex);
 
 
@@ -48,11 +49,11 @@ public class GameManager : MonoBehaviour
             // npc에 퀘스트대화가 있을때
             if(questTalkIndex != 0)
             {
-                if (questTalkIndex != 21)
+                if (questTalkIndex != 20001)
                 {
                     questManager.NextQuestProcess(questTalkIndex - (questTalkIndex % 10));
                 }
-                questManager.CheckQuestFinish(questTalkIndex - (questTalkIndex % 10));
+                questManager.QuestFinishAndChainQuest(questTalkIndex - (questTalkIndex % 10));
             }
             return;
         }

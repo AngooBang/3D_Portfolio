@@ -45,7 +45,7 @@ public class ItemDropManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {
-            CreateItemInInventory(11);
+            CreateItemInInventory(21);
         }
     }
 

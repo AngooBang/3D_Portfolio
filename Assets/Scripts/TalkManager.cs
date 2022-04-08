@@ -23,15 +23,16 @@ public class TalkManager : MonoBehaviour
         talkData.Add(2000, new string[] { "허허...", "물건 좀 둘러 보겠나?" });
 
         // Quest Talk
-        talkData.Add(10 + 1000, new string[] { "처음보는 용사님이시네요. 저희 마을에 오신걸 환영해요.", 
+        talkData.Add(10000 + 1000, new string[] { "처음보는 용사님이시네요. 저희 마을에 오신걸 환영해요.", 
                                                 "혹시 바쁘지 않으시다면,\n제 부탁 좀 들어주실 수 있나요?"});
 
 
-        talkData.Add(20 + 1000, new string[] { "고마워요 용사님!!",
+        talkData.Add(20000 + 1000, new string[] { "고마워요 용사님!!",
                                                 "제가 지금 급히 쓸 일이 있어서 그런데...\n 파란 거북이의 등껍질을 3개만 구해줘요.",
                                                   "보수는 두둑히 드릴테니까,, 그럼 부탁해요!"});
-        talkData.Add(21 + 1000, new string[] { "뭘봐? 어서 빨리 구하러 가지 않고??" });
+        talkData.Add(20001 + 1000, new string[] { "뭘봐? 어서 빨리 구하러 가지 않고??" });
 
+        talkData.Add(20002 + 1000, new string[] { "20000퀘스트 완료시에 나오는 텍스트입니다.", "테스트로 스트링 두개 넣어보았습니다." });
         //string jData = JsonConvert.SerializeObject(talkData);
         //Debug.Log(jData);
     }

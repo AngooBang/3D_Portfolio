@@ -7,7 +7,6 @@ public class QuestUIController : MonoBehaviour
 {
     public Text QuestTitle;
     public Text QuestDescription;
-    public int ActiveQuestID;
 
     private QuestManager questManager;
 
@@ -18,22 +17,22 @@ public class QuestUIController : MonoBehaviour
 
     public void SetQuestUIText()
     {
-        if(ActiveQuestID == 0)
+        if(questManager.ActiveQuestID == 0)
         {
             QuestTitle.text = "";
             QuestDescription.text = "";
             return;
         }
-        QuestTitle.text = questManager.questList[ActiveQuestID].QuestName;
-        if (ActiveQuestID == 20)
+        QuestTitle.text = questManager.questList[questManager.ActiveQuestID].QuestName;
+        if (questManager.questList[questManager.ActiveQuestID].questType == QuestType.Collect)
         {
-            QuestDescription.text = questManager.questList[ActiveQuestID].QuestDescription + string.Format(" ({0} / {1})",
-                questManager.questList[ActiveQuestID].qCurrentNum, questManager.questList[ActiveQuestID].qFinishNum);
+            QuestDescription.text = questManager.questList[questManager.ActiveQuestID].QuestDescription + string.Format(" ({0} / {1})",
+                questManager.questList[questManager.ActiveQuestID].qCurrentNum, questManager.questList[questManager.ActiveQuestID].qFinishNum);
 
         }
         else
         {
-            QuestDescription.text = questManager.questList[ActiveQuestID].QuestDescription;
+            QuestDescription.text = questManager.questList[questManager.ActiveQuestID].QuestDescription;
         }
     }
 

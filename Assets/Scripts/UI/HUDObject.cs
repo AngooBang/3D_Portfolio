@@ -27,18 +27,20 @@ public class HUDObject : MonoBehaviour
     {
         if(Camera.main != null)
         {
-
-            var screenPosition = Camera.main.WorldToScreenPoint(target.position + offset);
-            if (screenPosition.z < 0.0f)
+            if(target != null)
             {
-                screenPosition *= -1.0f;
+                var screenPosition = Camera.main.WorldToScreenPoint(target.position + offset);
+                if (screenPosition.z < 0.0f)
+                {
+                    screenPosition *= -1.0f;
+                }
+
+                Vector2 localPos = Vector2.zero;
+
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPosition, hpCamera, out localPos);
+
+                rectHP.localPosition = localPos;
             }
-
-            Vector2 localPos = Vector2.zero;
-
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPosition, hpCamera, out localPos);
-
-            rectHP.localPosition = localPos;
         }
 
     }

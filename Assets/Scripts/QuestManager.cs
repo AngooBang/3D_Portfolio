@@ -1,34 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Newtonsoft.Json;
 using System.IO;
 using System.Text;
 
 public class QuestManager : MonoBehaviour
 {
     public Dictionary<int, QuestData> questList;
+    public int ActiveQuestID;
+
     private QuestUIController questUIController;
+    private InventorySystem inventorySystem;
+
+
 
 
     private void Awake()
     {
-
         questList = new Dictionary<int, QuestData>();
         questUIController = GetComponent<QuestUIController>();
+        inventorySystem = GameObject.FindGameObjectWithTag("MainInventory").GetComponent<InventorySystem>();
     }
     // Start is called before the first frame update
     void Start()
     {
-        GenerateQuestData(10);
-        GenerateQuestData(20);
-        GenerateQuestData(50);
-        QuestDataConvertJson();
+        GenerateQuestData(10000);
+        GenerateQuestData(20000);
+        GenerateQuestData(50000);
 
-        ReceiveQuest(10);
+        ReceiveQuest(10000);
     }
 
-
+    private void LateUpdate()
+    {
+        CheckQuestProgress();
+    }
 
     void GenerateQuestData(int questID)
     {
@@ -40,17 +46,10 @@ public class QuestManager : MonoBehaviour
     public void ReceiveQuest(int questId)
     {
         questList[questId].isReceive = true;
-        questUIController.ActiveQuestID = questId;
+        ActiveQuestID = questId;
         questUIController.SetQuestUIText();
     }
 
-
-    void QuestDataConvertJson()
-    {
-        string questJsonData = ObjectToJson(questList);
-        Debug.Log(questJsonData);
-        CreateJsonFile(Application.dataPath, "QuestData", questJsonData);
-    }
 
     // 해당 npc를 통해 시작될 퀘스트가 있다면, 해당 퀘스트의 id를 return, 없다면 0을 return.
     public int GetQuestStartIndex(int objectID)
@@ -90,18 +89,48 @@ public class QuestManager : MonoBehaviour
         questList[questId].QuestProgressNum++;
     }
 
-
-
-    public void CheckQuestFinish(int questId)
+    public void CheckQuestProgress()
     {
-        if(questId == 10)
+        if (ActiveQuestID == 0)
+            return;
+        if(questList[ActiveQuestID].questType == QuestType.Collect)
+        {
+            // 인벤토리 시스템에서 수집하는 아이템의 개수를 리턴받아 갱신.
+            questList[ActiveQuestID].qCurrentNum = inventorySystem.CheckHaveItemValues(questList[ActiveQuestID].collectItemID);
+            
+            questUIController.SetQuestUIText();
+            CheckQuestFinish();
+        }
+    }
+
+    public void CheckQuestFinish()
+    {
+        if (ActiveQuestID == 20000)
+        {
+            // 조건이 충족되었는지(등껍질 다모았는지)
+            if(questList[ActiveQuestID].qCurrentNum >= questList[ActiveQuestID].qFinishNum)
+            {
+                // ProgressNum을 한번만 증가시키기위해. Finish가 거짓일때만 실행.
+                if (questList[ActiveQuestID].isFinish == false)
+                {
+                    questList[ActiveQuestID].QuestProgressNum++;
+                    questList[ActiveQuestID].isFinish = true;
+                }
+            }
+        }
+    }
+
+
+    public void QuestFinishAndChainQuest(int questId)
+    {
+        if(questId == 10000)
         {
             if (questList[questId].isFinish)
             {
                 questList[questId].isReceive = false;
                 questList[questId].isComplete = true;
-                questList[20].isStartReady = true;
-                questUIController.ActiveQuestID = 0;
+                questList[20000].isStartReady = true;
+                ActiveQuestID = 0;
                 questUIController.SetQuestUIText();
                 // 구조 시..발.ㅜ
                 var girlObject = GameObject.Find("Girl");
@@ -109,34 +138,5 @@ public class QuestManager : MonoBehaviour
                 girlInteract.isQuestStart = true;
             }
         }
-    }
-
-
-
-
-
-
-    string ObjectToJson(object obj)
-    {
-        return JsonConvert.SerializeObject(obj);
-    }
-
-    void CreateJsonFile(string createPath, string fileName, string questJsonData)
-    {
-        FileStream fileStream = new FileStream(string.Format("{0}/{1}.json", createPath, fileName), FileMode.Create);
-        byte[] data = Encoding.UTF8.GetBytes(questJsonData);
-        fileStream.Write(data, 0, data.Length);
-        fileStream.Close();
-    }
-
-    T LoadJsonFile<T>(string loadPath, string fileName)
-    {
-        FileStream fileStream = new FileStream(string.Format("{0}/{1}.json", loadPath, fileName), FileMode.Open);
-        byte[] data = new byte[fileStream.Length];
-        fileStream.Read(data, 0, data.Length);
-        fileStream.Close();
-
-        string questJsonData = Encoding.UTF8.GetString(data);
-        return JsonConvert.DeserializeObject<T>(questJsonData);
     }
 }

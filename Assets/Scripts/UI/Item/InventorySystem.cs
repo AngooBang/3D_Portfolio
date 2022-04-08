@@ -56,6 +56,7 @@ public class InventorySystem : MonoBehaviour
                     else
                     {
                         // 잔여공간 부족? 그냥 빈곳에 넣자.
+                        Debug.Log("가방에 공간이 부족.");
                     }
                 }
             }
@@ -79,6 +80,22 @@ public class InventorySystem : MonoBehaviour
         Destroy(AddItemObject);
     }
 
+    public int CheckHaveItemValues(int itemID)
+    {
+        int totItemValues = 0;
+        foreach (Transform childSlot in SlotsObject.transform)
+        {
+            ItemData childSlotItemData = childSlot.gameObject.GetComponentInChildren<ItemData>();
+            if(childSlotItemData != null)
+            {
+                if(childSlotItemData.itemID == itemID)
+                {
+                    totItemValues += childSlotItemData.itemValue;
+                }
+            }
+        }
+        return totItemValues;
+    }
 
     public void GetCoin(int num)
     {
