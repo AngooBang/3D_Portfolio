@@ -45,7 +45,11 @@ public class EnemyLiving : LivingEntity
     {
         base.OnDead();
 
-        gameObject.layer = 14;
+        gameObject.layer = LayerMask.NameToLayer("EnemyDead");
+        foreach(Transform child in transform)
+        {
+            child.gameObject.layer = LayerMask.NameToLayer("EnemyDead");
+        }
         dropManager.MonsterDropItem(101, transform);
 
 

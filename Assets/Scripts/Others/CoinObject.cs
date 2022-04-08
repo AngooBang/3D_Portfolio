@@ -15,10 +15,10 @@ public class CoinObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float randNum = Random.Range(3f, 7f);
+        float randNum = Random.Range(2f, 4f);
         rigid.AddForce(Vector3.up * randNum, ForceMode.Impulse);
 
-        randNum = Random.Range(1f, 3f);
+        randNum = Random.Range(1f, 2f);
         rigid.AddForce(Random.onUnitSphere.normalized * randNum, ForceMode.Impulse);
     }
 
