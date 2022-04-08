@@ -22,6 +22,7 @@ public class DamageText : MonoBehaviour
         tmPro.text = damage.ToString();
 
         Destroy(gameObject, DestroyTime);
+        Destroy(transform.parent.gameObject, DestroyTime);
     }
 
     // Update is called once per frame

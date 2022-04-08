@@ -77,7 +77,7 @@ public class MeleeWeapon : MonoBehaviour
             EnemyLiving enemyLiving = other.transform.parent.GetComponent<EnemyLiving>();
             enemyLiving.GetDamage(damage);
 
-            Debug.Log("거북이가 아파요!!!");
+            //Debug.Log("거북이가 아파요!!!");
             Vector3 reactVec = transform.position - other.transform.position;
             //enemyLiving.GetDamage(other.GetComponent<MeleeWeapon>().damage);
 
