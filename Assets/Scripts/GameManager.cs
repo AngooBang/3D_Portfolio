@@ -33,12 +33,14 @@ public class GameManager : MonoBehaviour
 
         UIInteractSetting();
         CameraInteractSetting();
+
+        interactionObject.GetComponent<InteractiveNPC>().isInteracting = isAction;
     }
 
     private void TalkWithObject(int objectID)
     {
         int questTalkIndex = questManager.GetQuestTalkIndex(objectID);
-        Debug.Log(questTalkIndex + ": ÇöÀç Äù½ºÆ®ÅäÅ© ÀÎµ¦½º, " + talkIndex + ": ÅäÅ© ÀÎµ¦½º");
+        //Debug.Log(questTalkIndex + ": ÇöÀç Äù½ºÆ®ÅäÅ© ÀÎµ¦½º, " + talkIndex + ": ÅäÅ© ÀÎµ¦½º");
         string talkData = talkManager.GetTalk(objectID + questTalkIndex, talkIndex);
 
 

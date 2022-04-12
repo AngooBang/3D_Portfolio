@@ -70,13 +70,14 @@ public class UseItem : MonoBehaviour, IPointerClickHandler
                 Destroy(gameObject);
             }
         }
-
+        //기력 포션
         if(itemData.itemID == 12)
         {
-            pStatus.CurrentSP += itemData.itemStats;
-            if (pStatus.CurrentSP > pStatus.MaxSP)
+            pStatus.SPRecovery(itemData.itemStats);
+            itemData.itemValue--;
+            if (itemData.itemValue == 0)
             {
-                pStatus.CurrentSP = pStatus.MaxSP;
+                Destroy(gameObject);
             }
         }
     }

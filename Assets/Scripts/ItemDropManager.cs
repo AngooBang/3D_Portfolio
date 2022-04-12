@@ -16,6 +16,8 @@ public class ItemDropManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inventorySystem = GameObject.FindGameObjectWithTag("MainInventory").GetComponent<InventorySystem>();
+
         GenerateItemData(1);
         GenerateItemData(2);
         GenerateItemData(3);
@@ -25,9 +27,8 @@ public class ItemDropManager : MonoBehaviour
         GenerateItemData(7);
         GenerateItemData(8);
         GenerateItemData(11);
+        GenerateItemData(12);
         GenerateItemData(21);
-        inventorySystem = GameObject.FindGameObjectWithTag("MainInventory").GetComponent<InventorySystem>();
-
         CreateItemInInventory(1);
         CreateItemInInventory(3);
         CreateItemInInventory(5);
@@ -82,7 +83,7 @@ public class ItemDropManager : MonoBehaviour
         }
     }
 
-    void CreateItemOnWorld(int itemID, Vector3 worldVec)
+    public void CreateItemOnWorld(int itemID, Vector3 worldVec)
     {
         // itemId를 받아와 해당 아이디에 알맞는 아이템을 해당 transform에 생성시킴.
         if(itemList.ContainsKey(itemID))
@@ -103,7 +104,7 @@ public class ItemDropManager : MonoBehaviour
         }
     }
 
-    void CreateItemInInventory(int itemID)
+    public void CreateItemInInventory(int itemID)
     {
         if (itemList.ContainsKey(itemID))
         {

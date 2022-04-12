@@ -26,6 +26,10 @@ public class InventorySystem : MonoBehaviour
     void Update()
     {
         goldText.text = goldValue.ToString();
+        if(Input.GetKeyDown(KeyCode.F1))
+        {
+            goldValue += 10;
+        }
     }
 
     public void AddItem(GameObject AddItemObject)

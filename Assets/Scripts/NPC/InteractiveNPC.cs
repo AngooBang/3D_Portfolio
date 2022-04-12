@@ -11,6 +11,8 @@ public class InteractiveNPC : MonoBehaviour
 
     public bool isQuestStart = false;
 
+    public bool isInteracting = false;
+
     private PlayerInput playerInput;
     private bool isRangeIn;
     private ObjectData objectData;

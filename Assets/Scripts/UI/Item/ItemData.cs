@@ -144,6 +144,18 @@ public class ItemData : MonoBehaviour
             itemStats = 30;
             DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
         }
+        if (id == 12)
+        {
+            itemName = "기력 포션";
+            itemID = 12;
+            itemDesc = "기력을 회복시켜주는 포션 \n\n 기  력 +30";
+            itemIcon = Resources.Load<Sprite>("Textures/Potion_1");
+            itemValue = 1;
+            itemType = ItemType.Consumable;
+            maxStack = 5;
+            itemStats = 30;
+            DropItemPrefab = Resources.Load<GameObject>("Prefabs/ItemChest");
+        }
         if (id == 21)
         {
             itemName = "파랑 거북이 등껍질";

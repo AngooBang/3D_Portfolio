@@ -61,6 +61,17 @@ public class PlayerStatus : LivingEntity
         {
             CurrentHP = MaxHP;
         }
+        uiController.SetHPBarValue();
+    }
+
+    public void SPRecovery(int recValue)
+    {
+        CurrentSP += recValue;
+        if (CurrentSP > MaxSP)
+        {
+            CurrentSP = MaxSP;
+        }
+        uiController.SetSPBarValue();
     }
 
     public void SetEquipmentData()
