@@ -25,12 +25,7 @@ public class InventorySystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         goldText.text = goldValue.ToString();
-        if(Input.GetKeyDown(KeyCode.Backspace))
-        {
-            AddItem(Instantiate(testItemPrefab));
-        }
     }
 
     public void AddItem(GameObject AddItemObject)

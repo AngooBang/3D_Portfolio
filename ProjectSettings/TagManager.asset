@@ -28,6 +28,7 @@ TagManager:
   - InterfaceUI
   - HUDCanvas
   - DropManager
+  - QuestMarkers
   layers:
   - Default
   - TransparentFX

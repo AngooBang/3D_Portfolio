@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-public enum QuestType { Talk, Collect, Kill };
+public enum QuestType { Talk, Collect, Subject };
 public class QuestData
 {
     public int QuestID { get; }            // 퀘스트 ID
@@ -29,7 +29,6 @@ public class QuestData
             QuestName = "새 마을 방문";
             QuestDescription = "모험의 시작이다.\n마을의 소녀와 대화하라.";
             QuestProgressNum = 0;
-            QuestProgressNum = 0;
 
             qCurrentNum = 0;
             qFinishNum = 0;
@@ -42,7 +41,25 @@ public class QuestData
             objectID = new int[] { 1000 };
         }
 
-        if (questID == 20000)
+        if (questID == 10010)
+        {
+            QuestID = questID;
+            questType = QuestType.Subject;
+            QuestName = "장비 입어보기";
+            QuestDescription = "소녀로부터 장비를 받았다.\n전부 착용해보자.";
+            QuestProgressNum = 0;
+
+            qCurrentNum = 0;
+            qFinishNum = 1;
+
+            isStartReady = false;
+            isReceive = false;
+            isFinish = false;
+            isComplete = false;
+
+            objectID = new int[] { 1000, 1000, 1000 };
+        }
+        if (questID == 10020)
         {
             QuestID = questID;
             questType = QuestType.Collect;
@@ -62,12 +79,12 @@ public class QuestData
             objectID = new int[] { 1000, 1000, 1000 };
         }
 
-        if (questID == 30000)
+        if (questID == 10030)
         {
             QuestID = questID;
-            questType = QuestType.Kill;
+            questType = QuestType.Subject;
             QuestName = "공주 구출하기";
-            QuestDescription = "마을의 위기상황이다 \n 보스 드래곤을 처치하고 마을의 공주룰 구해내라!";
+            QuestDescription = "보스 드래곤을 처치하고 \n마을의 공주룰 구해내라!";
             QuestProgressNum = 0;
 
             qCurrentNum = 0;
@@ -81,7 +98,7 @@ public class QuestData
             objectID = new int[] { 1000, 1000, 3000 };
         }
 
-        if (questID == 50000)
+        if (questID == 10050)
         {
             QuestID = questID;
             QuestName = "테스트 퀘스트";

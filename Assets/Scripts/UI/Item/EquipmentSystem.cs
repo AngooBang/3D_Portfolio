@@ -31,4 +31,16 @@ public class EquipmentSystem : MonoBehaviour
         shieldText.text = $"¹æ¾î·Â : {pStatus.Shield}";
     }
 
+    public bool GetIsFullEquiped()
+    {
+        if(helmetSlotObject.GetComponentInChildren<ItemData>() != null &&
+            bodySlotObject.GetComponentInChildren<ItemData>() != null &&
+            shoesSlotObject.GetComponentInChildren<ItemData>() != null &&
+            weaponSlotObject.GetComponentInChildren<ItemData>() != null)
+        {
+            return true;
+        }
+        return false;
+    }
+
 }

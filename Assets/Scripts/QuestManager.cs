@@ -11,6 +11,7 @@ public class QuestManager : MonoBehaviour
 
     private QuestUIController questUIController;
     private InventorySystem inventorySystem;
+    private EquipmentSystem equipmentSystem;
 
 
 
@@ -20,13 +21,15 @@ public class QuestManager : MonoBehaviour
         questList = new Dictionary<int, QuestData>();
         questUIController = GetComponent<QuestUIController>();
         inventorySystem = GameObject.FindGameObjectWithTag("MainInventory").GetComponent<InventorySystem>();
+        equipmentSystem = GameObject.FindGameObjectWithTag("InterfaceUI").transform.GetChild(2).gameObject.GetComponent<EquipmentSystem>();
     }
     // Start is called before the first frame update
     void Start()
     {
         GenerateQuestData(10000);
-        GenerateQuestData(20000);
-        GenerateQuestData(50000);
+        GenerateQuestData(10010);
+        GenerateQuestData(10020);
+        GenerateQuestData(10030);
 
         ReceiveQuest(10000);
     }
@@ -34,6 +37,7 @@ public class QuestManager : MonoBehaviour
     private void LateUpdate()
     {
         CheckQuestProgress();
+        SetMarkerOfQuest();
     }
 
     void GenerateQuestData(int questID)
@@ -101,11 +105,33 @@ public class QuestManager : MonoBehaviour
             questUIController.SetQuestUIText();
             CheckQuestFinish();
         }
+        if(questList[ActiveQuestID].questType == QuestType.Subject)
+        {
+            if(ActiveQuestID == 10010)
+            {
+                // 장비 착용 퀘스트 체크.
+                if(equipmentSystem.GetIsFullEquiped())
+                {
+                    questList[ActiveQuestID].qCurrentNum = 1;
+                    questUIController.SetQuestUIText();
+                }
+                else
+                {
+                    questList[ActiveQuestID].qCurrentNum = 0;
+                    questUIController.SetQuestUIText();
+                }
+                CheckQuestFinish();
+            }
+            if(ActiveQuestID == 10030)
+            {
+                // 보스 킬 퀘스트 체크.
+            }
+        }
     }
 
     public void CheckQuestFinish()
     {
-        if (ActiveQuestID == 20000)
+        if (ActiveQuestID == 10010 || ActiveQuestID == 10020)
         {
             // 조건이 충족되었는지(등껍질 다모았는지)
             if(questList[ActiveQuestID].qCurrentNum >= questList[ActiveQuestID].qFinishNum)
@@ -116,6 +142,12 @@ public class QuestManager : MonoBehaviour
                     questList[ActiveQuestID].QuestProgressNum++;
                     questList[ActiveQuestID].isFinish = true;
                 }
+            }
+            else
+            {
+                questList[ActiveQuestID].isFinish = false;
+                if(questList[ActiveQuestID].QuestProgressNum == 2)
+                    questList[ActiveQuestID].QuestProgressNum = 1;
             }
         }
     }
@@ -129,14 +161,100 @@ public class QuestManager : MonoBehaviour
             {
                 questList[questId].isReceive = false;
                 questList[questId].isComplete = true;
-                questList[20000].isStartReady = true;
+                questList[10010].isStartReady = true;
                 ActiveQuestID = 0;
                 questUIController.SetQuestUIText();
                 // 구조 시..발.ㅜ
                 var girlObject = GameObject.Find("Girl");
+                girlObject.GetComponent<QuestMarkerController>().ChangeMarker(0);
                 InteractiveNPC girlInteract = girlObject.GetComponent<InteractiveNPC>();
                 girlInteract.isQuestStart = true;
             }
         }
+        if (questId == 10010)
+        {
+            if (questList[questId].isFinish)
+            {
+                questList[questId].isReceive = false;
+                questList[questId].isComplete = true;
+                questList[10020].isStartReady = true;
+                ActiveQuestID = 0;
+                questUIController.SetQuestUIText();
+                // 구조 시..발.ㅜ
+                var girlObject = GameObject.Find("Girl");
+                girlObject.GetComponent<QuestMarkerController>().ChangeMarker(0);
+                InteractiveNPC girlInteract = girlObject.GetComponent<InteractiveNPC>();
+                girlInteract.isQuestStart = true;
+            }
+        }
+        if (questId == 10020)
+        {
+            if (questList[questId].isFinish)
+            {
+                questList[questId].isReceive = false;
+                questList[questId].isComplete = true;
+                questList[10030].isStartReady = true;
+                ActiveQuestID = 0;
+                questUIController.SetQuestUIText();
+                // 구조 시..발.ㅜ
+                var girlObject = GameObject.Find("Girl");
+                girlObject.GetComponent<QuestMarkerController>().ChangeMarker(0);
+                InteractiveNPC girlInteract = girlObject.GetComponent<InteractiveNPC>();
+                girlInteract.isQuestStart = true;
+            }
+        }
+    }
+
+    public void SetMarkerOfQuest()
+    {
+        // 활성화 된 퀘스트가 없고,
+        if(ActiveQuestID == 0)
+        {
+            foreach (var questData in questList.Values)
+            {
+                // 퀘스트를 시작할 준비가 되었고
+                if (questData.isStartReady)
+                {
+                    // 받아져있는 상태가 아니면서
+                    if (questData.isReceive == false)
+                    {
+                        GameObject[] npcObjects = GameObject.FindGameObjectsWithTag("NPC");
+                        foreach (var npc in npcObjects)
+                        {
+                            // 퀘스트 데이터의 처음시작하는 objectID와 일치하는 objectID의 npc라면
+                            if (questData.objectID[0] == npc.GetComponent<ObjectData>().ObjectID)
+                            {
+                                // 느낌표를 띄워준다.
+                                npc.GetComponent<QuestMarkerController>().ChangeMarker(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            GameObject[] npcObjects = GameObject.FindGameObjectsWithTag("NPC");
+            foreach (var npc in npcObjects)
+            {
+                // 퀘스트 데이터의 진행도에 알맞는 오브젝트 아이디와 일치하는 npc를찾아서
+                 if (questList[ActiveQuestID].objectID[questList[ActiveQuestID].QuestProgressNum] == npc.GetComponent<ObjectData>().ObjectID)
+                {
+                    // 완료 상태를 확인하여
+                    if (questList[ActiveQuestID].isFinish == false)
+                    {
+                        // 진행중인 물음표르 ㄹ띄워준다.
+                        npc.GetComponent<QuestMarkerController>().ChangeMarker(2);
+                    }
+                    else
+                    {
+                        // 완료된 물음표르 ㄹ띄워준다.
+                        npc.GetComponent<QuestMarkerController>().ChangeMarker(3);
+
+                    }
+                }
+            }
+        }
+
     }
 }

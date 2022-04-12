@@ -24,7 +24,7 @@ public class QuestUIController : MonoBehaviour
             return;
         }
         QuestTitle.text = questManager.questList[questManager.ActiveQuestID].QuestName;
-        if (questManager.questList[questManager.ActiveQuestID].questType == QuestType.Collect)
+        if (questManager.questList[questManager.ActiveQuestID].questType == QuestType.Collect || questManager.questList[questManager.ActiveQuestID].questType == QuestType.Subject)
         {
             QuestDescription.text = questManager.questList[questManager.ActiveQuestID].QuestDescription + string.Format(" ({0} / {1})",
                 questManager.questList[questManager.ActiveQuestID].qCurrentNum, questManager.questList[questManager.ActiveQuestID].qFinishNum);
