@@ -3646,6 +3646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 501920790}
   - component: {fileID: 501920793}
+  - component: {fileID: 501920791}
   m_Layer: 0
   m_Name: InventoryPanel
   m_TagString: MainInventory
@@ -3673,6 +3674,18 @@ RectTransform:
   m_AnchoredPosition: {x: 350, y: 100}
   m_SizeDelta: {x: 500, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &501920791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501920789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46d43c6a52678c44bcb69cd3ae020aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &501920793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3701,6 +3714,7 @@ GameObject:
   - component: {fileID: 520759273}
   - component: {fileID: 520759272}
   - component: {fileID: 520759274}
+  - component: {fileID: 520759275}
   m_Layer: 0
   m_Name: EquipmentPanel
   m_TagString: EquipmentSystem
@@ -3789,6 +3803,18 @@ MonoBehaviour:
   spText: {fileID: 1268491333}
   damageText: {fileID: 859592806}
   shieldText: {fileID: 694420371}
+--- !u!114 &520759275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520759270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46d43c6a52678c44bcb69cd3ae020aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &529649201
 GameObject:
   m_ObjectHideFlags: 0
