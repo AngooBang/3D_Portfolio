@@ -52,6 +52,13 @@ public class PlayerAttack : MonoBehaviour
             playerAnimator.SetBool("SwordAtk3", false);
             noOfClicks = 0;
         }
+        if(playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+        {
+            noOfClicks = 0;
+            playerAnimator.SetBool("SwordAtk1", false);
+            playerAnimator.SetBool("SwordAtk2", false);
+            playerAnimator.SetBool("SwordAtk3", false);
+        }
 
         if(Time.time - lastClickedTime > maxComboDelay)
         {
