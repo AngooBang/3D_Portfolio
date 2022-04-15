@@ -55,7 +55,7 @@ public class ClickMovement : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 100f, WorldLayerMask))
                 {
-                    Debug.DrawRay(hit.point, Vector3.down, Color.red);
+                    //Debug.DrawRay(hit.point, Vector3.down, Color.red);
                     SetDestination(hit.point);
 
 
@@ -69,16 +69,17 @@ public class ClickMovement : MonoBehaviour
                 isClick = false;
             }
             LookMoveDirection();
+
+            if (isMove)
+            {
+                animator.SetFloat("MoveBlend", 1f, 0.1f, Time.deltaTime);
+            }
+            else
+            {
+                animator.SetFloat("MoveBlend", 0f, 0.1f, Time.deltaTime);
+            }
         }
 
-        if(isMove)
-        {
-            animator.SetFloat("MoveBlend", 1f, 0.1f, Time.deltaTime);
-        }
-        else
-        {
-            animator.SetFloat("MoveBlend", 0f, 0.1f, Time.deltaTime);
-        }
     }
     
 

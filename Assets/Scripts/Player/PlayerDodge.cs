@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class PlayerDodge : MonoBehaviour
 {
     public float DodgeCoolTime;
+    public float DodgeSpeed;
     public LayerMask WorldLayerMask;
 
     private float dodgeElapsedTime;
@@ -46,6 +47,10 @@ public class PlayerDodge : MonoBehaviour
                     Dodge();
                 }
             }
+            else
+            {
+                playerRigid.velocity = Vector3.zero;
+            }
         }
     }
 
@@ -56,12 +61,14 @@ public class PlayerDodge : MonoBehaviour
         {
             transform.LookAt(hit.point);
 
-            Vector3 forceVec = transform.position - hit.point;
+            Vector3 forceVec = hit.point - transform.position;
             Debug.Log(forceVec);
             //playerRigid.MovePosition(forceVec);
-            playerRigid.AddForce(forceVec.normalized * 20f, ForceMode.Impulse);
+            agent.ResetPath();
+            playerRigid.AddForce(forceVec.normalized * DodgeSpeed * Time.deltaTime, ForceMode.Impulse);
 
-            //playerRigid.velocity = forceVec.normalized * 20f;
+            //playerRigid.velocity = forceVec.normalized * DodgeSpeed * Time.deltaTime;
+
         }
         dodgeElapsedTime = 0f;
         playerAnimator.SetTrigger("DoDodge");
