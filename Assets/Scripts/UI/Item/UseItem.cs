@@ -11,6 +11,7 @@ public class UseItem : MonoBehaviour, IPointerClickHandler
 
     public GameObject startParentObject;
     private ItemData itemData;
+    private TooltipSystem tooltipSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class UseItem : MonoBehaviour, IPointerClickHandler
 
         pStatus = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
         equipmentSystem = GameObject.FindGameObjectWithTag("InterfaceUI").transform.GetChild(2).GetComponent<EquipmentSystem>();
+        tooltipSystem = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<TooltipSystem>();
         // 아이템정보를 받아온다 
         // 우클릭 입력시 사용되는 함수를 실행
         // 아이템 타입 및 아이디에 따라 다르게 실행되는 함수를 설계
@@ -56,6 +58,7 @@ public class UseItem : MonoBehaviour, IPointerClickHandler
                 break;
         }
 
+        tooltipSystem.isShowTooltip = false;
     }
 
     void ConsumableItemUse()

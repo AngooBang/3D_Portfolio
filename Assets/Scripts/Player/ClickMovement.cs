@@ -27,7 +27,9 @@ public class ClickMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
         playerInput = GetComponent<PlayerInput>();
+
         agent.updateRotation = false;
+        //agent.updatePosition = false;
 
     }
     // Start is called before the first frame update
@@ -41,10 +43,13 @@ public class ClickMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Dodge") == false &&
+
+        Vector3 worldDeltaPosition = agent.nextPosition - transform.position;
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Dodge") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack01") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack02") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03") == false &&
+            animator.GetCurrentAnimatorStateInfo(0).IsName("CrashSkill") == false &&
             gameManager.isAction == false)
         {
             if (playerInput.move)
@@ -55,7 +60,7 @@ public class ClickMovement : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 100f, WorldLayerMask))
                 {
-                    Debug.DrawRay(hit.point, Vector3.down, Color.red);
+                    //Debug.DrawRay(hit.point, Vector3.down, Color.red);
                     SetDestination(hit.point);
 
 
@@ -69,16 +74,17 @@ public class ClickMovement : MonoBehaviour
                 isClick = false;
             }
             LookMoveDirection();
+
+            if (isMove)
+            {
+                animator.SetFloat("MoveBlend", 1f, 0.1f, Time.deltaTime);
+            }
+            else
+            {
+                animator.SetFloat("MoveBlend", 0f, 0.1f, Time.deltaTime);
+            }
         }
 
-        if(isMove)
-        {
-            animator.SetFloat("MoveBlend", 1f, 0.1f, Time.deltaTime);
-        }
-        else
-        {
-            animator.SetFloat("MoveBlend", 0f, 0.1f, Time.deltaTime);
-        }
     }
     
 

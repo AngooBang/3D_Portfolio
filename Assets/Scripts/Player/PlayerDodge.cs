@@ -7,7 +7,9 @@ using UnityEngine.AI;
 public class PlayerDodge : MonoBehaviour
 {
     public float DodgeCoolTime;
+    public float DodgeSpeed;
     public LayerMask WorldLayerMask;
+    public bool IsDodge;
 
     private float dodgeElapsedTime;
 
@@ -36,15 +38,25 @@ public class PlayerDodge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Dodge"))
+        {
+            if(playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.75f)
+            {
+                IsDodge = false;
+                playerRigid.velocity = Vector3.zero;
+            }
+            //else
+            //{
+            //    transform.position = playerAnimator.rootPosition;
+            //    agent.SetDestination(playerAnimator.rootPosition);
+            //}
+        }
         dodgeElapsedTime += Time.deltaTime;
         if(dodgeElapsedTime > DodgeCoolTime)
         {
             if (playerInput.dodge)
             {
-                if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Dodge") == false)
-                {
-                    Dodge();
-                }
+                Dodge();
             }
         }
     }
@@ -56,26 +68,19 @@ public class PlayerDodge : MonoBehaviour
         {
             transform.LookAt(hit.point);
 
-            Vector3 forceVec = transform.position - hit.point;
+            Vector3 forceVec = hit.point - transform.position;
             Debug.Log(forceVec);
-            //playerRigid.MovePosition(forceVec);
-            playerRigid.AddForce(forceVec.normalized * 20f, ForceMode.Impulse);
 
-            //playerRigid.velocity = forceVec.normalized * 20f;
+            //playerRigid.AddForce(forceVec.normalized * DodgeSpeed * Time.deltaTime, ForceMode.Impulse);
+            agent.ResetPath();
+
+            playerRigid.velocity = forceVec.normalized * DodgeSpeed;
+
         }
         dodgeElapsedTime = 0f;
         playerAnimator.SetTrigger("DoDodge");
+        IsDodge = true;
     }
-    private void DodgeDestination(Vector3 dest)
-    {
 
-        //// 경로 입력
-        //agent.SetDestination(dest);
-        //// 마우스 방향 보기
-        //var dir = new Vector3(agent.steeringTarget.x, transform.position.y, agent.steeringTarget.z) - transform.position;
-        //if (dir != Vector3.zero)
-        //    transform.forward = dir;
-        ////transform.LookAt(dir);
-    }
 
 }
