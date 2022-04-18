@@ -64,7 +64,6 @@ public class PlayerDodge : MonoBehaviour
             Vector3 forceVec = hit.point - transform.position;
             Debug.Log(forceVec);
             //playerRigid.MovePosition(forceVec);
-            agent.ResetPath();
             playerRigid.AddForce(forceVec.normalized * DodgeSpeed * Time.deltaTime, ForceMode.Impulse);
 
             //playerRigid.velocity = forceVec.normalized * DodgeSpeed * Time.deltaTime;

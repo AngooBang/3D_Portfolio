@@ -25,6 +25,7 @@ public class PlayerSkillController : MonoBehaviour
         if(skillID == 1)
         {
             animator.SetTrigger("Skill1");
+            //transform.Translate(transform.forward * 10f);
         }
     }
 }

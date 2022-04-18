@@ -14,6 +14,8 @@ public class PlayerDodgeState : StateMachineBehaviour
         playerAgent = animator.GetComponent<NavMeshAgent>();
         playerRigid = animator.GetComponent<Rigidbody>();
         playerAgent.ResetPath();
+
+        //playerAgent.updatePosition = false;
         //playerAgent.speed *= 2f;
     }
 
@@ -27,6 +29,8 @@ public class PlayerDodgeState : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        
+        //playerAgent.updatePosition = true;
         //playerAgent.speed *= 0.5f;
         //playerAgent.ResetPath();
         //playerRigid.velocity. = Vector3.Lerp(playerRigid.velocity , Vector3.zero, 0.2f);

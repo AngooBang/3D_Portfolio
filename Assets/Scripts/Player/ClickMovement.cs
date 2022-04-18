@@ -28,6 +28,7 @@ public class ClickMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         playerInput = GetComponent<PlayerInput>();
         agent.updateRotation = false;
+        //agent.updatePosition = false;
 
     }
     // Start is called before the first frame update
