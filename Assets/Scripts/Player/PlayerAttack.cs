@@ -7,20 +7,19 @@ public class PlayerAttack : MonoBehaviour
 {
     public MeleeWeapon EquipWeapon;
     public LayerMask WorldLayerMask;
+    public bool IsAttack;
+    public float colldownTime = 2f;
+    public static int noOfClicks = 0;
 
     private PlayerInput playerInput;
     private Animator playerAnimator;
     private NavMeshAgent agent;
     private Camera camera;
-
-    //private float fireDelay;
-    //private bool isFireReady;
-
-    public float colldownTime = 2f;
     private float nextFireTime = 0f;
-    public static int noOfClicks = 0;
     float lastClickedTime = 0;
     float maxComboDelay = 1f;
+
+
 
     
 
@@ -34,23 +33,26 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f &&
+        if(playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.8f &&
             playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack01"))
         {
             playerAnimator.SetBool("SwordAtk1", false);
             noOfClicks = 0;
+            IsAttack = false;
         }
-        if (playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f &&
+        if (playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.8f &&
             playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack02"))
         {
             playerAnimator.SetBool("SwordAtk2", false);
             noOfClicks = 0;
+            IsAttack = false;
         }
         if (playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.6f &&
              playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03"))
         {
             playerAnimator.SetBool("SwordAtk3", false);
             noOfClicks = 0;
+            IsAttack = false;
         }
         if(playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
         {
@@ -58,6 +60,7 @@ public class PlayerAttack : MonoBehaviour
             playerAnimator.SetBool("SwordAtk1", false);
             playerAnimator.SetBool("SwordAtk2", false);
             playerAnimator.SetBool("SwordAtk3", false);
+            IsAttack = false;
         }
 
         if(Time.time - lastClickedTime > maxComboDelay)
@@ -66,6 +69,7 @@ public class PlayerAttack : MonoBehaviour
             playerAnimator.SetBool("SwordAtk1", false);
             playerAnimator.SetBool("SwordAtk2", false);
             playerAnimator.SetBool("SwordAtk3", false);
+            IsAttack = false;
         }
         if(Time.time > nextFireTime)
         {
@@ -94,6 +98,7 @@ public class PlayerAttack : MonoBehaviour
             playerAnimator.SetBool("SwordAtk1", true);
             EquipWeapon.Use(1);
             nextFireTime = Time.time;
+            IsAttack = true;
             return;
         }
 
@@ -105,6 +110,7 @@ public class PlayerAttack : MonoBehaviour
             playerAnimator.SetBool("SwordAtk2", true);
             EquipWeapon.Use(2);
             nextFireTime = Time.time;
+            IsAttack = true;
             return;
         }
         if (noOfClicks >= 3 && playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.6f &&
@@ -115,6 +121,7 @@ public class PlayerAttack : MonoBehaviour
             playerAnimator.SetBool("SwordAtk3", true);
             EquipWeapon.Use(3);
             nextFireTime = Time.time;
+            IsAttack = true;
             return;
         }
     }

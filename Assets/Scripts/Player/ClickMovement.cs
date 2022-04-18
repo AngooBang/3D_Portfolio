@@ -27,6 +27,7 @@ public class ClickMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
         playerInput = GetComponent<PlayerInput>();
+
         agent.updateRotation = false;
         //agent.updatePosition = false;
 
@@ -42,10 +43,13 @@ public class ClickMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Dodge") == false &&
+
+        Vector3 worldDeltaPosition = agent.nextPosition - transform.position;
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Dodge") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack01") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack02") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03") == false &&
+            animator.GetCurrentAnimatorStateInfo(0).IsName("CrashSkill") == false &&
             gameManager.isAction == false)
         {
             if (playerInput.move)
