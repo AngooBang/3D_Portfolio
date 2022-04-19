@@ -9,6 +9,7 @@ public class QuestManager : MonoBehaviour
     public Dictionary<int, QuestData> questList;
     public int ActiveQuestID;
 
+    private ItemDropManager itemDropManager;
     private QuestUIController questUIController;
     private InventorySystem inventorySystem;
     private EquipmentSystem equipmentSystem;
@@ -19,6 +20,8 @@ public class QuestManager : MonoBehaviour
     private void Awake()
     {
         questList = new Dictionary<int, QuestData>();
+
+        itemDropManager = GameObject.FindGameObjectWithTag("DropManager").GetComponent<ItemDropManager>();
         questUIController = GetComponent<QuestUIController>();
         inventorySystem = GameObject.FindGameObjectWithTag("MainInventory").GetComponent<InventorySystem>();
         equipmentSystem = GameObject.FindGameObjectWithTag("InterfaceUI").transform.GetChild(2).gameObject.GetComponent<EquipmentSystem>();
@@ -153,46 +156,48 @@ public class QuestManager : MonoBehaviour
     }
 
 
-    public void QuestFinishAndChainQuest(int questId)
+    public void QuestFinishAndChainQuest(int questID)
     {
-        if(questId == 10000)
+        if(questID == 10000)
         {
-            if (questList[questId].isFinish)
+            if (questList[questID].isFinish)
             {
-                questList[questId].isReceive = false;
-                questList[questId].isComplete = true;
+                questList[questID].isReceive = false;
+                questList[questID].isComplete = true;
                 questList[10010].isStartReady = true;
                 ActiveQuestID = 0;
                 questUIController.SetQuestUIText();
                 // 구조 시..발.ㅜ
-                var girlObject = GameObject.Find("Girl");
+                GameObject girlObject = GameObject.Find("Girl");
                 girlObject.GetComponent<QuestMarkerController>().ChangeMarker(0);
                 InteractiveNPC girlInteract = girlObject.GetComponent<InteractiveNPC>();
                 girlInteract.isQuestStart = true;
+                QuestReward(questID);
             }
         }
-        if (questId == 10010)
+        if (questID == 10010)
         {
-            if (questList[questId].isFinish)
+            if (questList[questID].isFinish)
             {
-                questList[questId].isReceive = false;
-                questList[questId].isComplete = true;
+                questList[questID].isReceive = false;
+                questList[questID].isComplete = true;
                 questList[10020].isStartReady = true;
                 ActiveQuestID = 0;
                 questUIController.SetQuestUIText();
-                // 구조 시..발.ㅜ
-                var girlObject = GameObject.Find("Girl");
+                
+                GameObject girlObject = GameObject.Find("Girl");
                 girlObject.GetComponent<QuestMarkerController>().ChangeMarker(0);
                 InteractiveNPC girlInteract = girlObject.GetComponent<InteractiveNPC>();
                 girlInteract.isQuestStart = true;
+                QuestReward(questID);
             }
         }
-        if (questId == 10020)
+        if (questID == 10020)
         {
-            if (questList[questId].isFinish)
+            if (questList[questID].isFinish)
             {
-                questList[questId].isReceive = false;
-                questList[questId].isComplete = true;
+                questList[questID].isReceive = false;
+                questList[questID].isComplete = true;
                 questList[10030].isStartReady = true;
                 ActiveQuestID = 0;
                 questUIController.SetQuestUIText();
@@ -201,8 +206,35 @@ public class QuestManager : MonoBehaviour
                 girlObject.GetComponent<QuestMarkerController>().ChangeMarker(0);
                 InteractiveNPC girlInteract = girlObject.GetComponent<InteractiveNPC>();
                 girlInteract.isQuestStart = true;
+                QuestReward(questID);
             }
         }
+        // 퀘스트 보상 지급.
+    }
+
+    public void QuestReward(int questID)
+    {
+        if (questID == 10000)
+        {
+            itemDropManager.CreateItemInInventory(1);
+            itemDropManager.CreateItemInInventory(3);
+            itemDropManager.CreateItemInInventory(5);
+            itemDropManager.CreateItemInInventory(7);
+            inventorySystem.GetCoin(5);
+        }
+        if (questID == 10010)
+        {
+            inventorySystem.GetCoin(10);
+        }
+        if (questID == 10020)
+        {
+            itemDropManager.CreateItemInInventory(2);
+            itemDropManager.CreateItemInInventory(4);
+            itemDropManager.CreateItemInInventory(6);
+            itemDropManager.CreateItemInInventory(8);
+            inventorySystem.GetCoin(15);
+        }
+
     }
 
     public void SetMarkerOfQuest()

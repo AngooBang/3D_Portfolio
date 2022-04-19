@@ -29,10 +29,11 @@ public class ItemDropManager : MonoBehaviour
         GenerateItemData(11);
         GenerateItemData(12);
         GenerateItemData(21);
-        CreateItemInInventory(1);
-        CreateItemInInventory(3);
-        CreateItemInInventory(5);
-        CreateItemInInventory(7);
+
+        //CreateItemInInventory(1);
+        //CreateItemInInventory(3);
+        //CreateItemInInventory(5);
+        //CreateItemInInventory(7);
     }
 
     // Update is called once per frame
