@@ -9,7 +9,7 @@ public class TurtleShellMove : MonoBehaviour
     public bool isMove;
 
 
-
+    private Rigidbody rigid;
     private NavMeshAgent agent;
     private Animator animator;
     private LivingEntity livingEntity;
@@ -29,6 +29,7 @@ public class TurtleShellMove : MonoBehaviour
         livingEntity = GetComponent<EnemyLiving>();
         tDetect = GetComponentInChildren<TurtleShellDetect>();
         tAttack = GetComponentInChildren<TurtleShellAttack>();
+        rigid = GetComponentInChildren<Rigidbody>();
 
         target = GameObject.FindGameObjectWithTag("Player");
 
@@ -56,6 +57,9 @@ public class TurtleShellMove : MonoBehaviour
         else
         {
             isMove = false;
+            rigid.velocity = Vector3.zero;
+
+
         }
 
     }

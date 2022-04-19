@@ -65,8 +65,11 @@ public class TurtleShellAttack : MonoBehaviour
     {
         Vector3 dist = transform.position - target.transform.position;
 
-        if (dist.magnitude <= 1.5f)
+        if (dist.magnitude <= 1.8f)
         {
+            agent.ResetPath();
+            //agent.isStopped = true;
+            agent.velocity = Vector3.zero;
             isInAtkRange = true;
         }
         else

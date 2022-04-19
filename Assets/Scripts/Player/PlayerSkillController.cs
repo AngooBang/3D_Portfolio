@@ -7,6 +7,8 @@ public class PlayerSkillController : MonoBehaviour
 {
     public LayerMask WorldLayerMask;
 
+    public GameObject s_crashEffect;
+    public Transform s_crashEffectTransform;
     public float s_crashDashSpeed;
 
 
@@ -48,7 +50,7 @@ public class PlayerSkillController : MonoBehaviour
 
 
             }
-            animator.SetTrigger("Skill1");
+            animator.SetTrigger("CrashSkill");
             //transform.Translate(transform.forward * 10f);
         }
     }
@@ -64,8 +66,13 @@ public class PlayerSkillController : MonoBehaviour
 
         if (s == "Crash")
         {
-            agent.ResetPath();
             playerRigid.velocity = Vector3.zero;
+            agent.ResetPath();
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+
+
+            Instantiate(s_crashEffect, s_crashEffectTransform.position, Quaternion.identity);
             Debug.Log("¶¥¿¡ ÂïÀ½!");
 
             //ÀÌÆåÆ® »ý¼º ¹× ÄÝ¶óÀÌ´õ on
