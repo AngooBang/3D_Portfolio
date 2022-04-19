@@ -74,12 +74,11 @@ public class MeleeWeapon : MonoBehaviour
         if(other.CompareTag("Enemy"))
         {
 
-            EnemyLiving enemyLiving = other.transform.parent.GetComponent<EnemyLiving>();
+            EnemyLiving enemyLiving = other.transform.GetComponent<EnemyLiving>();
             enemyLiving.GetDamage(damage);
 
             //Debug.Log("거북이가 아파요!!!");
-            Vector3 reactVec = transform.position - other.transform.position;
-            //enemyLiving.GetDamage(other.GetComponent<MeleeWeapon>().damage);
+            //Vector3 reactVec = transform.position - other.transform.position;
 
             Vector3 colPos = other.GetComponent<Transform>().position;
 
@@ -91,9 +90,9 @@ public class MeleeWeapon : MonoBehaviour
 
             if (enemyLiving.isDead == false)
             {
-                other.GetComponent<Animator>().SetTrigger("GetHit");
+                other.GetComponentInChildren<Animator>().SetTrigger("GetHit");
             }
-            StartCoroutine(enemyLiving.OnDamage(reactVec));
+            StartCoroutine(enemyLiving.OnDamage());
 
 
             pStatus.HitEnemy();

@@ -22,7 +22,7 @@ public class TurtleShellMove : MonoBehaviour
 
     private void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponentInChildren<NavMeshAgent>();
         agent.updateRotation = false;
         
         animator = GetComponentInChildren<Animator>();
@@ -39,7 +39,7 @@ public class TurtleShellMove : MonoBehaviour
     void Start()
     {
         agent.acceleration = 20;
-        agent.speed = 2f;
+        agent.speed = 1.5f;
         agent.Warp(transform.position);
     }
     // Update is called once per frame
@@ -61,6 +61,8 @@ public class TurtleShellMove : MonoBehaviour
 
 
         }
+
+        
 
     }
 

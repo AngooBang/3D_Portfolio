@@ -9,9 +9,12 @@ public class PlayerSkillController : MonoBehaviour
 
     public GameObject s_crashEffect;
     public Transform s_crashEffectTransform;
+    public BoxCollider s_crashCol;
     public float s_crashDashSpeed;
 
 
+
+    private RaycastHit hit;
     private Vector3 forceVec;
     private Rigidbody playerRigid;
     private Animator animator;
@@ -39,7 +42,6 @@ public class PlayerSkillController : MonoBehaviour
     {
         if(skillID == 1)
         {
-            RaycastHit hit;
             if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit, 100f, WorldLayerMask))
             {
                 transform.LookAt(hit.point);
@@ -60,6 +62,7 @@ public class PlayerSkillController : MonoBehaviour
 
         if(s == "Dash")
         {
+            transform.LookAt(hit.point);
             agent.ResetPath();
             playerRigid.velocity = forceVec.normalized * s_crashDashSpeed;
         }
@@ -72,12 +75,20 @@ public class PlayerSkillController : MonoBehaviour
             agent.velocity = Vector3.zero;
 
 
-            Instantiate(s_crashEffect, s_crashEffectTransform.position, Quaternion.identity);
-            Debug.Log("¶¥¿¡ ÂïÀ½!");
-
             //ÀÌÆåÆ® »ý¼º ¹× ÄÝ¶óÀÌ´õ on
+            Instantiate(s_crashEffect, s_crashEffectTransform.position, Quaternion.identity);
+            StartCoroutine(CrashDown(0.2f));
+
         }
     }
-    
 
+
+    IEnumerator CrashDown(float colEnableTime)
+    {
+        s_crashCol.enabled = true;
+
+        yield return new WaitForSeconds(colEnableTime);
+        s_crashCol.enabled = false;
+
+    }
 }

@@ -8,6 +8,8 @@ public class EnemyLiving : LivingEntity
     public ItemDropManager dropManager;
 
     public Canvas HUDCanvas;
+    public Rigidbody rigid;
+
 
     private Animator animator;
     private Material material;
@@ -22,13 +24,20 @@ public class EnemyLiving : LivingEntity
         HUDCanvas = GameObject.FindGameObjectWithTag("HUDCanvas").GetComponent<Canvas>();
 
         dropManager = GameObject.FindGameObjectWithTag("DropManager").GetComponent<ItemDropManager>();
+        rigid = GetComponent<Rigidbody>();
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+
     }
 
 
     public override void GetDamage(int damage)
     {
         base.GetDamage(damage);
-        if(isDead == false)
+        if (isDead == false)
         {
             animator.SetTrigger("GetHit");
         }
@@ -46,7 +55,7 @@ public class EnemyLiving : LivingEntity
         base.OnDead();
 
         gameObject.layer = LayerMask.NameToLayer("EnemyDead");
-        foreach(Transform child in transform)
+        foreach (Transform child in transform)
         {
             child.gameObject.layer = LayerMask.NameToLayer("EnemyDead");
         }
@@ -55,9 +64,11 @@ public class EnemyLiving : LivingEntity
 
     }
 
-    public IEnumerator OnDamage(Vector3 reactVec)
+    public IEnumerator OnDamage()
     {
         material.color = Color.red;
+        //밀려나는 리액션
+        //rigid.AddForce(reactVec.normalized * speed, ForceMode.Impulse);
         yield return new WaitForSeconds(0.1f);
 
         // 뒤로 밀려나게.. navmesh때문인지 동작x
