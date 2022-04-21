@@ -93,6 +93,12 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
             {
                 ItemData firstItem = rectTransform.GetComponent<ItemObject>().item;
                 ItemData secondItem = dropSlotObject.GetComponentInChildren<ItemData>();
+
+                if (dropSlotObject.GetComponentInChildren<SkillData>() != null)
+                {
+                    SetDefaultSlot();
+                    return;
+                }
                 if (secondItem == null)
                 {
                     transform.SetParent(dropSlotObject.transform);
