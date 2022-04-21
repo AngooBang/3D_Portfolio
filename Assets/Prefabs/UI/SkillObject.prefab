@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5476818233213579221}
   - component: {fileID: 5325321611424015939}
   - component: {fileID: 538433293}
+  - component: {fileID: 5175219295963653536}
   m_Layer: 0
   m_Name: SkillObject
   m_TagString: Skill
@@ -107,4 +108,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5da976b594d9d41b2c3e565eaf6134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillPrefab: {fileID: 7458065538914210808}
+  SkillPrefab: {fileID: 0}
+--- !u!114 &5175219295963653536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7458065538914210808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47ec3beb75dd3d418331addfca2488b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

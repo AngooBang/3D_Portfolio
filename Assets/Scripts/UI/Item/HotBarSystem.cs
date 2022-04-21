@@ -53,5 +53,11 @@ public class HotBarSystem : MonoBehaviour
         }
 
         // 스킬이라면.
+        UseSkill slotSkillUse = hotKeySlot.GetComponentInChildren<UseSkill>();
+
+        if(slotSkillUse != null)
+        {
+            slotSkillUse.Use();
+        }
     }
 }
