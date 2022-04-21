@@ -8,7 +8,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     //public GameObject ItemUICanvas;
     public LayerMask WorldLayerMask;
 
-    private RectTransform rectTransformSlot;
+    private RectTransform draggingItemRect;
 
     private RectTransform rectTransform;
     private Vector2 pointerOffset;
@@ -20,14 +20,14 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     {
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
-        rectTransformSlot = GameObject.FindGameObjectWithTag("MainInventory").transform.GetChild(0).GetChild(2).GetComponent<RectTransform>();
+        draggingItemRect = GameObject.FindGameObjectWithTag("MainInventory").transform.GetChild(0).GetChild(2).GetComponent<RectTransform>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, eventData.position, eventData.pressEventCamera, out pointerOffset);
         startParentObject = transform.parent.gameObject;
-        transform.SetParent(rectTransformSlot);
+        transform.SetParent(draggingItemRect);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -36,7 +36,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         //transform.position = eventData.position;
         canvasGroup.blocksRaycasts = false;
         Vector2 localPointerPosition;
-        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransformSlot, Input.mousePosition, eventData.pressEventCamera, out localPointerPosition))
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(draggingItemRect, Input.mousePosition, eventData.pressEventCamera, out localPointerPosition))
         {
             rectTransform.localPosition = localPointerPosition - pointerOffset;
         }
@@ -207,15 +207,5 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         transform.localPosition = Vector3.zero;
     }
 
-    void DropItem()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 }

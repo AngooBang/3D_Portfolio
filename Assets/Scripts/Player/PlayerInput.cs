@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour
     public bool interaction { get; private set; }
     public bool inventory { get; private set; }
     public bool equipment { get; private set; }
+    public bool skill { get; private set; }
 
     private string dodgeButtonName = "Dodge";
     private string normalAtkButton = "Fire1";
@@ -18,6 +19,7 @@ public class PlayerInput : MonoBehaviour
     private string interactionButton = "Interact";
     private string inventoryButton = "Inventory";
     private string equipmentButton = "Equipment";
+    private string skillButton = "Skill";
 
     private PlayerUIController playerUIController;
 
@@ -30,7 +32,7 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         // 인벤토리나 장비창 켜져있을경우
-        if(playerUIController.isInventoryEnable == false && playerUIController.isEquipmentEnable == false)
+        if(playerUIController.isInventoryEnable == false && playerUIController.isEquipmentEnable == false && playerUIController.isSkillEnable == false)
         {
             dodge = Input.GetButtonDown(dodgeButtonName);
             normalAttack = Input.GetButton(normalAtkButton);
@@ -39,5 +41,6 @@ public class PlayerInput : MonoBehaviour
         }
         inventory = Input.GetButtonDown(inventoryButton);
         equipment = Input.GetButtonDown(equipmentButton);
+        skill = Input.GetButtonDown(skillButton);
     }
 }

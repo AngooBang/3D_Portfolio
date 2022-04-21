@@ -11,12 +11,14 @@ public class PlayerUIController : MonoBehaviour
 
     public GameObject InventoryCanvas;
     public GameObject EquipmentCanvas;
+    public GameObject SkillCanvas;
 
     public TooltipSystem tooltipSystem;
 
 
     public bool isInventoryEnable = false;
     public bool isEquipmentEnable = false;
+    public bool isSkillEnable = false;
 
     private PlayerInput playerInput;
     private Slider hpSlider;
@@ -53,6 +55,16 @@ public class PlayerUIController : MonoBehaviour
                 if (isEquipmentEnable == false)
                     tooltipSystem.isShowTooltip = isEquipmentEnable;
             }
+        }
+
+        if (playerInput.skill)
+        {
+            SkillCanvas.SetActive(isSkillEnable = !isSkillEnable);
+            //if (tooltipSystem.isInventoryTooltip)
+            //{
+            //    if (isSkillEnable == false)
+            //        tooltipSystem.isShowTooltip = isSkillEnable;
+            //}
         }
     }
 
