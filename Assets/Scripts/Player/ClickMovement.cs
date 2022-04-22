@@ -12,6 +12,7 @@ public class ClickMovement : MonoBehaviour
     public GameManager gameManager;
 
     private PlayerInput playerInput;
+    private Rigidbody rigid;
     private Camera camera;
     private Animator animator;
     private NavMeshAgent agent;
@@ -27,6 +28,7 @@ public class ClickMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
         playerInput = GetComponent<PlayerInput>();
+        rigid = GetComponent<Rigidbody>();
 
         agent.updateRotation = false;
         //agent.updatePosition = false;
@@ -110,6 +112,7 @@ public class ClickMovement : MonoBehaviour
             if (dist.magnitude == 0f)
             {
                 isMove = false;
+                rigid.velocity = Vector3.zero;
                 //animator.SetFloat("MoveBlend", 0f);
                 return;
             }

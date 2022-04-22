@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     public float colldownTime = 2f;
     public static int noOfClicks = 0;
 
+    private Rigidbody rigid;
     private PlayerInput playerInput;
     private Animator playerAnimator;
     private NavMeshAgent agent;
@@ -28,6 +29,7 @@ public class PlayerAttack : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerAnimator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        rigid = GetComponent<Rigidbody>();
         camera = Camera.main;
     }
     // Update is called once per frame
@@ -96,6 +98,7 @@ public class PlayerAttack : MonoBehaviour
                 LookMousePosition();
             }
             playerAnimator.SetBool("SwordAtk1", true);
+            //rigid.velocity = Vector3.zero;
             EquipWeapon.Use(1);
             nextFireTime = Time.time;
             IsAttack = true;
@@ -108,6 +111,7 @@ public class PlayerAttack : MonoBehaviour
             LookMousePosition();
             playerAnimator.SetBool("SwordAtk1", false);
             playerAnimator.SetBool("SwordAtk2", true);
+            //rigid.velocity = (transform.forward - transform.position).normalized * 10f;
             EquipWeapon.Use(2);
             nextFireTime = Time.time;
             IsAttack = true;
@@ -119,6 +123,7 @@ public class PlayerAttack : MonoBehaviour
             LookMousePosition();
             playerAnimator.SetBool("SwordAtk2", false);
             playerAnimator.SetBool("SwordAtk3", true);
+            //rigid.velocity = Vector3.zero;
             EquipWeapon.Use(3);
             nextFireTime = Time.time;
             IsAttack = true;

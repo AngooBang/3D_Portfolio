@@ -32,6 +32,7 @@ TagManager:
   - SkillUI
   - Skill
   - DraggingSkill
+  - BossEnemy
   layers:
   - Default
   - TransparentFX
