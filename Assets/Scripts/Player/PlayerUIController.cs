@@ -66,6 +66,9 @@ public class PlayerUIController : MonoBehaviour
             //        tooltipSystem.isShowTooltip = isSkillEnable;
             //}
         }
+
+        SetHPBarValue();
+        SetSPBarValue();
     }
 
     public void SetHPBarValue()

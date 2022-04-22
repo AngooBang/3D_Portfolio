@@ -31,6 +31,15 @@ public class PlayerStatus : LivingEntity
     void Update()
     {
         SetEquipmentData();
+
+        if(Input.GetKeyDown(KeyCode.F3))
+        {
+            CurrentHP += 30;
+        }
+        if (Input.GetKeyDown(KeyCode.F4))
+        {
+            CurrentSP += 30;
+        }
     }
 
     public void HitEnemy()

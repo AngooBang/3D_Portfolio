@@ -11,9 +11,10 @@ public class PlayerSkillController : MonoBehaviour
     public Transform s_crashEffectTransform;
     public BoxCollider s_crashCol;
     public float s_crashDashSpeed;
+    public bool isCrash;
 
 
-
+    private PlayerStatus pStatus;
     private RaycastHit hit;
     private Vector3 forceVec;
     private Rigidbody playerRigid;
@@ -27,6 +28,8 @@ public class PlayerSkillController : MonoBehaviour
         playerRigid = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        pStatus = GetComponent<PlayerStatus>();
+        isCrash = false;
     }
 
     // Update is called once per frame
@@ -40,20 +43,20 @@ public class PlayerSkillController : MonoBehaviour
 
     public void UseSkill(int skillID)
     {
-        if(skillID == 1)
+
+        if(skillID == 1 && isCrash == false)
         {
-            if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit, 100f, WorldLayerMask))
+            if(pStatus.CurrentSP >= 30)
             {
-                transform.LookAt(hit.point);
+                pStatus.CurrentSP -= 30;
+                if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit, 100f, WorldLayerMask))
+                {
+                    transform.LookAt(hit.point);
 
-                forceVec = hit.point - transform.position;
-
-                //playerRigid.AddForce(forceVec.normalized * DodgeSpeed * Time.deltaTime, ForceMode.Impulse);
-
-
+                    forceVec = hit.point - transform.position;
+                }
+                animator.SetTrigger("CrashSkill");
             }
-            animator.SetTrigger("CrashSkill");
-            //transform.Translate(transform.forward * 10f);
         }
     }
 
@@ -62,6 +65,7 @@ public class PlayerSkillController : MonoBehaviour
 
         if(s == "Dash")
         {
+            isCrash = true;
             transform.LookAt(hit.point);
             agent.ResetPath();
             playerRigid.velocity = forceVec.normalized * s_crashDashSpeed;
@@ -79,6 +83,11 @@ public class PlayerSkillController : MonoBehaviour
             Instantiate(s_crashEffect, s_crashEffectTransform.position, Quaternion.identity);
             StartCoroutine(CrashDown(0.2f));
 
+        }
+
+        if (s == "End")
+        {
+            isCrash = false;
         }
     }
 
