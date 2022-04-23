@@ -5,12 +5,14 @@ using UnityEngine;
 public class Boss_DetectPlayer : MonoBehaviour
 {
     public bool IsDetect;
+    public bool IsScream;
     private Animator animator;
     private Transform target;
     // Start is called before the first frame update
     void Start()
     {
         IsDetect = false;
+        IsScream = false;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
         animator = GetComponent<Animator>();
@@ -21,9 +23,11 @@ public class Boss_DetectPlayer : MonoBehaviour
     {
         float dist = Vector3.Distance(transform.position, target.position);
 
-        //Debug.Log(dist + " 만큼의 거리.");
-        if(dist < 11f)
+        Debug.Log(dist + " 만큼의 거리.");
+        if (dist < 11f)
         {
+            if (IsDetect == false)
+                IsScream = true;
             IsDetect = true;
             animator.SetBool("IsDetect", true);
         }
@@ -34,5 +38,13 @@ public class Boss_DetectPlayer : MonoBehaviour
             animator.SetBool("IsDetect", false);
         }
 
+    }
+
+    void ScreamEvent(string s)
+    {
+        if(s == "End")
+        {
+            IsScream = false;
+        }
     }
 }

@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Boss_AttackController : MonoBehaviour
 {
+
+
     private Boss_DetectPlayer detect;
+    private Animator animator;
 
     private Boss_ClawAttack clawAttack;
     private Boss_BasicAttack basicAttack;
@@ -13,6 +16,8 @@ public class Boss_AttackController : MonoBehaviour
     void Start()
     {
         detect = GetComponent<Boss_DetectPlayer>();
+        animator = GetComponent<Animator>();
+
         clawAttack = GetComponent<Boss_ClawAttack>();
         basicAttack = GetComponent<Boss_BasicAttack>();
         flameAttack = GetComponent<Boss_FlameAttack>();
@@ -21,11 +26,12 @@ public class Boss_AttackController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(detect.IsDetect == true && clawAttack.IsAttack == false && basicAttack.IsAttack == false && flameAttack.IsAttack == false)
+        
+        if(detect.IsDetect == true && clawAttack.IsAttack == false && basicAttack.IsAttack == false && flameAttack.IsAttack == false && detect.IsScream == false)
         {
             //감지가 됐을때. 패턴을 랜덤하게 실행.
-            int randNum = Random.Range(1, 4);
-
+            //int randNum = Random.Range(1, 4);
+            int randNum = 1;
             switch (randNum)
             {
                 case 1:
