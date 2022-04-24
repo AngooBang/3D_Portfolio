@@ -25,22 +25,22 @@ public class QuestMarkerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Keypad0))
-        {
-            ChangeMarker(0);
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad1))
-        {
-            ChangeMarker(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            ChangeMarker(2);
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad3))
-        {
-            ChangeMarker(3);
-        }
+        //if(Input.GetKeyDown(KeyCode.Keypad0))
+        //{
+        //    ChangeMarker(0);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Keypad1))
+        //{
+        //    ChangeMarker(1);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Keypad2))
+        //{
+        //    ChangeMarker(2);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Keypad3))
+        //{
+        //    ChangeMarker(3);
+        //}
     }
 
     public void ChangeMarker(int value)

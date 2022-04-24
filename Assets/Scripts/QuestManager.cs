@@ -128,13 +128,25 @@ public class QuestManager : MonoBehaviour
             if(ActiveQuestID == 10030)
             {
                 // 보스 킬 퀘스트 체크.
+                GameObject boss = GameObject.FindGameObjectWithTag("BossEnemy");
+                if(boss == null)
+                {
+                    questList[ActiveQuestID].qCurrentNum = 1;
+                    questUIController.SetQuestUIText();
+                }
+                else
+                {
+                    questList[ActiveQuestID].qCurrentNum = 0;
+                    questUIController.SetQuestUIText();
+                }
+                CheckQuestFinish();
             }
         }
     }
 
     public void CheckQuestFinish()
     {
-        if (ActiveQuestID == 10010 || ActiveQuestID == 10020)
+        if (ActiveQuestID == 10010 || ActiveQuestID == 10020 || ActiveQuestID == 10030)
         {
             // 조건이 충족되었는지(등껍질 다모았는지)
             if(questList[ActiveQuestID].qCurrentNum >= questList[ActiveQuestID].qFinishNum)
@@ -209,7 +221,22 @@ public class QuestManager : MonoBehaviour
                 QuestReward(questID);
             }
         }
-        // 퀘스트 보상 지급.
+
+        if(questID == 10030)
+        {
+
+            if (questList[questID].isFinish)
+            {
+                questList[questID].isReceive = false;
+                questList[questID].isComplete = true;
+                ActiveQuestID = 0;
+                questUIController.SetQuestUIText();
+
+                // 씬 전환 필요
+                Debug.Log("게임 클리어!!!!");
+            }
+
+        }
     }
 
     public void QuestReward(int questID)
