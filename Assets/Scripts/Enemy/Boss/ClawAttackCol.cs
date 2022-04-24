@@ -21,7 +21,10 @@ public class ClawAttackCol : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerStatus>().GetDamage(clawAttack.Damage);
+            PlayerStatus pStatus = other.GetComponent<PlayerStatus>();
+            pStatus.GetDamage(clawAttack.Damage);
+
+            StartCoroutine(pStatus.OnDamage());
         }
     }
 }

@@ -49,6 +49,7 @@ public class LivingEntity : MonoBehaviour
         CurrentHP -= damage;
         if (CurrentHP <= 0)
         {
+            CurrentHP = 0;
             OnDead();
         }
     }

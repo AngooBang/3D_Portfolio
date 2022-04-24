@@ -39,7 +39,7 @@ public class Boss_FlameAttack : MonoBehaviour
             float angle = Mathf.Acos(dot / toTarget.magnitude);
             angle = angle * Mathf.Rad2Deg;
             //Debug.Log(angle + " : ªÁ¿’∞¢");
-            if (dist < 15f && angle < 15f && IsAttackRangeIn == false)
+            if (dist < 12f && angle < 15f && IsAttackRangeIn == false)
             {
                 rigid.velocity = Vector3.zero;
                 agent.ResetPath();
