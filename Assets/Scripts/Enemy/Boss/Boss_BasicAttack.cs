@@ -41,7 +41,7 @@ public class Boss_BasicAttack : MonoBehaviour
             float dot = Vector3.Dot(forward, toTarget);
             float angle = Mathf.Acos(dot / toTarget.magnitude);
             angle = angle * Mathf.Rad2Deg;
-            Debug.Log(angle + " : ªÁ¿’∞¢");
+            //Debug.Log(angle + " : ªÁ¿’∞¢");
             if(dist < 5f && angle < 10f && IsAttackRangeIn == false)
             {
                 rigid.velocity = Vector3.zero;

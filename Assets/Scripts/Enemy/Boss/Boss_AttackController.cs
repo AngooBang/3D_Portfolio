@@ -30,21 +30,29 @@ public class Boss_AttackController : MonoBehaviour
         if(detect.IsDetect == true && clawAttack.IsAttack == false && basicAttack.IsAttack == false && flameAttack.IsAttack == false && detect.IsScream == false)
         {
             //감지가 됐을때. 패턴을 랜덤하게 실행.
-            //int randNum = Random.Range(1, 4);
-            int randNum = 1;
+            int randNum = Random.Range(1, 11);
+            Debug.Log(randNum);
+            //int randNum = 3;
             switch (randNum)
             {
                 case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
                     // 물기
                     basicAttack.PlayAttack();
                     Debug.Log(randNum + "번째 패턴 실행됨.");
                     break;
-                case 2:
+                case 7:
+                case 8:
+                case 9:
                     // 돌진하며 물어뜯기
                     clawAttack.PlayAttack();
                     Debug.Log(randNum + "번째 패턴 실행됨.");
                     break;
-                case 3:
+                case 10:
                     // 화염 브레스
                     flameAttack.PlayAttack();
                     Debug.Log(randNum + "번째 패턴 실행됨.");

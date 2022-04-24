@@ -23,8 +23,8 @@ public class Boss_DetectPlayer : MonoBehaviour
     {
         float dist = Vector3.Distance(transform.position, target.position);
 
-        Debug.Log(dist + " 만큼의 거리.");
-        if (dist < 11f)
+        //Debug.Log(dist + " 만큼의 거리.");
+        if (dist < 15f)
         {
             if (IsDetect == false)
                 IsScream = true;
@@ -32,7 +32,7 @@ public class Boss_DetectPlayer : MonoBehaviour
             animator.SetBool("IsDetect", true);
         }
 
-        if(dist > 15f)
+        if(dist > 20f)
         {
             IsDetect = false;
             animator.SetBool("IsDetect", false);
