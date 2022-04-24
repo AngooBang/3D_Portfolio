@@ -35,9 +35,15 @@ public class Boss_BasicAttack : MonoBehaviour
         if(IsAttack)
         {
             float dist = Vector3.Distance(target.position, transform.position);
-            if(dist < 5f && IsAttackRangeIn == false)
+            Vector3 forward = transform.forward;
+            Vector3 toTarget = target.position - transform.position;
+
+            float dot = Vector3.Dot(forward, toTarget);
+            float angle = Mathf.Acos(dot / toTarget.magnitude);
+            angle = angle * Mathf.Rad2Deg;
+            Debug.Log(angle + " : »çÀÕ°¢");
+            if(dist < 5f && angle < 10f && IsAttackRangeIn == false)
             {
-                animator.SetFloat("MoveBlend", 0f, 0.1f, Time.deltaTime);
                 rigid.velocity = Vector3.zero;
                 agent.ResetPath();
                 //transform.LookAt(target.position);
@@ -47,9 +53,17 @@ public class Boss_BasicAttack : MonoBehaviour
             }
             else
             {
-                animator.SetFloat("MoveBlend", 1f, 0.1f, Time.deltaTime);
                 if (IsAttackRangeIn == false)
                     agent.destination = target.position;
+            }
+
+            if(dist < 5f)
+            {
+                animator.SetFloat("MoveBlend", 0f, 0.1f, Time.deltaTime);
+            }
+            else
+            {
+                animator.SetFloat("MoveBlend", 1f, 0.1f, Time.deltaTime);
             }
         }
     }
