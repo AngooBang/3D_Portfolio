@@ -21,7 +21,10 @@ public class FlameAttackCol : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerStatus>().GetDamage(flameAttack.Damage);
+            PlayerStatus pStatus = other.GetComponent<PlayerStatus>();
+            pStatus.GetDamage(flameAttack.Damage);
+
+            StartCoroutine(pStatus.OnDamage());
         }
     }
 }

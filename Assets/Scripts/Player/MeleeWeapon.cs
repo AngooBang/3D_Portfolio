@@ -80,11 +80,11 @@ public class MeleeWeapon : MonoBehaviour
             //Debug.Log("거북이가 아파요!!!");
             //Vector3 reactVec = transform.position - other.transform.position;
 
-            Vector3 colPos = other.GetComponent<Transform>().position;
+            //Vector3 colPos = other.GetComponent<Transform>().position;
 
 
             GameObject curhit = Instantiate(hitEffect);
-            curhit.transform.position = colPos;
+            curhit.transform.position = other.bounds.ClosestPoint(transform.position);
 
 
 
@@ -95,6 +95,19 @@ public class MeleeWeapon : MonoBehaviour
             StartCoroutine(enemyLiving.OnDamage());
 
 
+            pStatus.HitEnemy();
+        }
+
+        if(other.CompareTag("BossEnemy"))
+        {
+            LivingEntity bossLiving = other.GetComponentInParent<LivingEntity>();
+            bossLiving.GetDamage(damage);
+
+            GameObject curhit = Instantiate(hitEffect);
+            curhit.transform.position = other.bounds.ClosestPoint(transform.position);
+
+
+            StartCoroutine(bossLiving.OnDamage());
             pStatus.HitEnemy();
         }
     }

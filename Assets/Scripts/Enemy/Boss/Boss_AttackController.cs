@@ -8,6 +8,7 @@ public class Boss_AttackController : MonoBehaviour
 
     private Boss_DetectPlayer detect;
     private Animator animator;
+    private LivingEntity bossLiving;
 
     private Boss_ClawAttack clawAttack;
     private Boss_BasicAttack basicAttack;
@@ -17,6 +18,7 @@ public class Boss_AttackController : MonoBehaviour
     {
         detect = GetComponent<Boss_DetectPlayer>();
         animator = GetComponent<Animator>();
+        bossLiving  = GetComponent<LivingEntity>();
 
         clawAttack = GetComponent<Boss_ClawAttack>();
         basicAttack = GetComponent<Boss_BasicAttack>();
@@ -25,8 +27,7 @@ public class Boss_AttackController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {        
         if(detect.IsDetect == true && clawAttack.IsAttack == false && basicAttack.IsAttack == false && flameAttack.IsAttack == false && detect.IsScream == false)
         {
             //감지가 됐을때. 패턴을 랜덤하게 실행.
@@ -57,8 +58,14 @@ public class Boss_AttackController : MonoBehaviour
                     flameAttack.PlayAttack();
                     Debug.Log(randNum + "번째 패턴 실행됨.");
                     break;
-            }
-            
+            }            
+        }
+
+        if(bossLiving.isDead)
+        {
+            basicAttack.AttackBox.SetActive(false);
+            clawAttack.AttackBox.SetActive(false);
+            flameAttack.AttackBox.SetActive(false);
         }
     }
 }

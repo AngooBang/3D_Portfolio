@@ -12,6 +12,8 @@ public class LivingEntity : MonoBehaviour
     public bool isDead = false;
     private Animator animator;
 
+    private Material material;
+
 
 
     private NavMeshAgent agent;
@@ -20,6 +22,7 @@ public class LivingEntity : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
+        material = GetComponentInChildren<SkinnedMeshRenderer>().material;
         CurrentHP = MaxHP;
     }
 
@@ -48,6 +51,23 @@ public class LivingEntity : MonoBehaviour
         {
             OnDead();
         }
+    }
+
+    virtual public IEnumerator OnDamage()
+    {
+        material.color = Color.red;
+        //밀려나는 리액션
+        //rigid.AddForce(reactVec.normalized * speed, ForceMode.Impulse);
+        yield return new WaitForSeconds(0.1f);
+
+        // 뒤로 밀려나게.. navmesh때문인지 동작x
+        //agent.enabled = false;
+        //reactVec = reactVec.normalized;
+        //reactVec += Vector3.up;
+        //rigid.AddForce(reactVec * 5, ForceMode.Impulse);
+        //agent.enabled = true;
+
+        material.color = Color.white;
     }
 
 

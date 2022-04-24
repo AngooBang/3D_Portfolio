@@ -5286,6 +5286,23 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &712874551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712874542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521cb447e505fb043bff9407f5aaef52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHP: 300
+  CurrentHP: 0
+  isDead: 0
+  HudDamageText: {fileID: 4684299760332914340, guid: fa25896f83f17ef4cb41a3502f121fa5, type: 3}
+  HUDCanvas: {fileID: 0}
 --- !u!1001 &714198200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12896,6 +12913,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1758311865}
     - target: {fileID: 1932530127001098204, guid: 5dbae654774e0554baff753790748584, type: 3}
+      propertyPath: HudDamageText
+      value: 
+      objectReference: {fileID: 4684299760332914340, guid: fa25896f83f17ef4cb41a3502f121fa5, type: 3}
+    - target: {fileID: 1932530127001098204, guid: 5dbae654774e0554baff753790748584, type: 3}
       propertyPath: equipmentSystem
       value: 
       objectReference: {fileID: 520759274}
@@ -13092,6 +13113,10 @@ PrefabInstance:
     - target: {fileID: 7743339701920648265, guid: ebd59dcc5f1dfee4d9d9073465fc669e, type: 3}
       propertyPath: m_Name
       value: BossDragon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743339701920660237, guid: ebd59dcc5f1dfee4d9d9073465fc669e, type: 3}
+      propertyPath: m_TagString
+      value: BossEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 7743339701920858487, guid: ebd59dcc5f1dfee4d9d9073465fc669e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -11,6 +11,9 @@ public class PlayerStatus : LivingEntity
     public int Shield;
     public EquipmentSystem equipmentSystem;
 
+    public GameObject HudDamageText;
+    public Canvas HUDCanvas;
+
     private Animator animator;
     private PlayerUIController uiController;
 
@@ -22,6 +25,8 @@ public class PlayerStatus : LivingEntity
 
         animator = GetComponent<Animator>();
         uiController = GetComponent<PlayerUIController>();
+
+        HUDCanvas = GameObject.FindGameObjectWithTag("HUDCanvas").GetComponent<Canvas>();
 
         uiController.SetHPBarValue();
         uiController.SetSPBarValue();
@@ -40,6 +45,10 @@ public class PlayerStatus : LivingEntity
         {
             CurrentSP += 30;
         }
+        if (Input.GetKeyDown(KeyCode.F6))
+        {
+            Damage += 10;
+        }
     }
 
     public void HitEnemy()
@@ -57,6 +66,12 @@ public class PlayerStatus : LivingEntity
         damage -= Shield;
         base.GetDamage(damage);
         animator.SetTrigger("GetHit");
+
+        GameObject hudText = Instantiate(HudDamageText, HUDCanvas.transform);
+        hudText.GetComponent<HUDObject>().target = transform;
+        hudText.GetComponentInChildren<DamageText>().damage = damage;
+
+
         uiController.SetHPBarValue();
     }
 
@@ -90,10 +105,6 @@ public class PlayerStatus : LivingEntity
         if(weaponData != null)
         {
             Damage = weaponData.itemStats;
-        }
-        else
-        {
-            Damage = 0;
         }
 
         int totShield = 0;

@@ -21,7 +21,10 @@ public class BasicAttackCol : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerStatus>().GetDamage(basicAttack.Damage);
+            PlayerStatus pStatus = other.GetComponent<PlayerStatus>();
+            pStatus.GetDamage(basicAttack.Damage);
+
+            StartCoroutine(pStatus.OnDamage());
         }
     }
 }

@@ -58,7 +58,10 @@ public class TurtleShellAttack : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerStatus>().GetDamage(Damage);
+            PlayerStatus pStatus = other.GetComponent<PlayerStatus>();
+            pStatus.GetDamage(Damage);
+
+            StartCoroutine(pStatus.OnDamage());
         }
     }
     void CheckTargetDist()
