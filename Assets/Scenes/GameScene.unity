@@ -15062,6 +15062,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1530223538}
+    - target: {fileID: 338990340, guid: 5dbae654774e0554baff753790748584, type: 3}
+      propertyPath: s_buffEffect
+      value: 
+      objectReference: {fileID: 2553300971727939374, guid: c1a97b76d7be4124eac22d544e11eee9, type: 3}
     - target: {fileID: 495171872, guid: 5dbae654774e0554baff753790748584, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -15112,7 +15116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5599940958479862344, guid: 5dbae654774e0554baff753790748584, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5599940958479862344, guid: 5dbae654774e0554baff753790748584, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15120,7 +15124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5599940958479862344, guid: 5dbae654774e0554baff753790748584, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5599940958479862344, guid: 5dbae654774e0554baff753790748584, type: 3}
       propertyPath: m_LocalRotation.w

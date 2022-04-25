@@ -9,9 +9,15 @@ public class PlayerSkillController : MonoBehaviour
 
     public GameObject s_crashEffect;
     public Transform s_crashEffectTransform;
+
     public BoxCollider s_crashCol;
+
+    public GameObject s_buffEffect;
+
+
     public float s_crashDashSpeed;
     public bool isCrash;
+    public bool isBuff;
 
 
     private PlayerStatus pStatus;
@@ -35,15 +41,18 @@ public class PlayerSkillController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F5))
+        if(Input.GetKeyDown(KeyCode.F9))
         {
             UseSkill(1);
+        }
+        if (Input.GetKeyDown(KeyCode.F10))
+        {
+            UseSkill(2);
         }
     }
 
     public void UseSkill(int skillID)
     {
-
         if(skillID == 1 && isCrash == false)
         {
             if(pStatus.CurrentSP >= 30)
@@ -56,6 +65,21 @@ public class PlayerSkillController : MonoBehaviour
                     forceVec = hit.point - transform.position;
                 }
                 animator.SetTrigger("CrashSkill");
+            }
+        }
+        if (skillID == 2 && isBuff == false)
+        {
+            if (pStatus.CurrentSP >= 30)
+            {
+                pStatus.CurrentSP -= 30;
+                if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit, 100f, WorldLayerMask))
+                {
+                    transform.LookAt(hit.point);
+
+                    //forceVec = hit.point - transform.position;
+                }
+                Instantiate(s_buffEffect, transform);
+                animator.SetTrigger("BuffSkill");
             }
         }
     }
@@ -91,6 +115,19 @@ public class PlayerSkillController : MonoBehaviour
         }
     }
 
+    public void BuffSkillEvent(string s)
+    {
+        if (s == "Start")
+        {
+            isBuff = true;
+            StartCoroutine(BuffDamage(10f));
+        }
+        if (s == "End")
+        {
+            isBuff = false;
+        }
+    }
+
 
     IEnumerator CrashDown(float colEnableTime)
     {
@@ -99,5 +136,12 @@ public class PlayerSkillController : MonoBehaviour
         yield return new WaitForSeconds(colEnableTime);
         s_crashCol.enabled = false;
 
+    }
+
+    IEnumerator BuffDamage(float buffDurationTime)
+    {
+        pStatus.Damage *= 2;
+        yield return new WaitForSeconds(buffDurationTime);
+        pStatus.Damage /= 2;
     }
 }

@@ -52,6 +52,7 @@ public class ClickMovement : MonoBehaviour
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack02") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponComboAttack.NormalAttack03") == false &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("CrashSkill") == false &&
+            animator.GetCurrentAnimatorStateInfo(0).IsName("BuffSkill") == false &&
             gameManager.isAction == false)
         {
             if (playerInput.move)
