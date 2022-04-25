@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Text;
+using UnityEngine.SceneManagement;
 
 public class QuestManager : MonoBehaviour
 {
@@ -233,7 +234,7 @@ public class QuestManager : MonoBehaviour
                 questUIController.SetQuestUIText();
 
                 // 씬 전환 필요
-                Debug.Log("게임 클리어!!!!");
+                SceneManager.LoadScene("EndingScene");
             }
 
         }

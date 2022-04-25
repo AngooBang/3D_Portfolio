@@ -11,6 +11,9 @@ public class Boss_FlameAttack : MonoBehaviour
     public GameObject AttackBox;
     public CapsuleCollider collider;
 
+    public Transform BressSpot;
+    public GameObject BressEffect;
+
     private Transform target;
     private NavMeshAgent agent;
     private Animator animator;
@@ -85,6 +88,7 @@ public class Boss_FlameAttack : MonoBehaviour
         {
             AttackBox.SetActive(false);
             collider.enabled = true;
+            Instantiate(BressEffect, BressSpot);
         }
 
         if (s == "End")

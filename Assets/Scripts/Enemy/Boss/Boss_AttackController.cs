@@ -40,7 +40,7 @@ public class Boss_AttackController : MonoBehaviour
             //감지가 됐을때. 패턴을 랜덤하게 실행.
             int randNum = Random.Range(1, 11);
             //Debug.Log(randNum);
-            //int randNum = 3;
+            //int randNum = 10;
             switch (randNum)
             {
                 case 1:

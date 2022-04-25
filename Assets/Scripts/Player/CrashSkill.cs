@@ -52,7 +52,19 @@ public class CrashSkill : MonoBehaviour
             StartCoroutine(enemyLiving.OnDamage());
 
 
-            pStatus.HitEnemy();
+            //pStatus.HitEnemy();
+        }
+        if (other.CompareTag("BossEnemy"))
+        {
+            LivingEntity bossLiving = other.GetComponentInParent<LivingEntity>();
+            bossLiving.GetDamage(damage);
+
+            GameObject curhit = Instantiate(hitEffect);
+            curhit.transform.position = other.bounds.ClosestPoint(transform.position);
+
+
+            StartCoroutine(bossLiving.OnDamage());
+            //pStatus.HitEnemy();
         }
     }
 }
