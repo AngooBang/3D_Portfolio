@@ -6112,7 +6112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521cb447e505fb043bff9407f5aaef52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 300
+  MaxHP: 800
   CurrentHP: 0
   isDead: 0
   HudDamageText: {fileID: 4684299760332914340, guid: fa25896f83f17ef4cb41a3502f121fa5, type: 3}
@@ -6138,7 +6138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1659183109222899251, guid: 967ba19e6557b6746823dbc7d037cb47, type: 3}
       propertyPath: skillDescription
-      value: "\uBC84\uD504\uB2E4. (\uBBF8\uAD6C\uD604)"
+      value: "10\uCD08\uAC04 \uACF5\uACA9\uB825\uC744 200% \uC99D\uAC00\uC2DC\uD0A8\uB2E4."
       objectReference: {fileID: 0}
     - target: {fileID: 5325321611424015939, guid: 967ba19e6557b6746823dbc7d037cb47, type: 3}
       propertyPath: m_Sprite

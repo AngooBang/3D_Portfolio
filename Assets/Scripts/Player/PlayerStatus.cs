@@ -35,7 +35,7 @@ public class PlayerStatus : LivingEntity
     // Update is called once per frame
     void Update()
     {
-        SetEquipmentData();
+        //SetEquipmentData();
 
         if(Input.GetKeyDown(KeyCode.F3))
         {
@@ -104,7 +104,7 @@ public class PlayerStatus : LivingEntity
 
         if(weaponData != null)
         {
-            Damage = weaponData.itemStats;
+            Damage += weaponData.itemStats;
         }
 
         int totShield = 0;

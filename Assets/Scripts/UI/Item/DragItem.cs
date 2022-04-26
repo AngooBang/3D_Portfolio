@@ -205,6 +205,9 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         {
             SwapItemSlot(equipSlotObject.transform, parentObject);
         }
+
+        PlayerStatus pStatus = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
+        pStatus.SetEquipmentData();
     }
 
     void SetDefaultSlot()
