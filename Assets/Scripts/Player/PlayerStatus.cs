@@ -104,7 +104,7 @@ public class PlayerStatus : LivingEntity
 
         if(weaponData != null)
         {
-            Damage += weaponData.itemStats;
+            Damage = weaponData.itemStats;
         }
 
         int totShield = 0;

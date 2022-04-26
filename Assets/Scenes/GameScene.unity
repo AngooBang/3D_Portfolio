@@ -15574,6 +15574,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 712874543, guid: ebd59dcc5f1dfee4d9d9073465fc669e, type: 3}
+      propertyPath: Damage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 712874547, guid: ebd59dcc5f1dfee4d9d9073465fc669e, type: 3}
+      propertyPath: Damage
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 712874549, guid: ebd59dcc5f1dfee4d9d9073465fc669e, type: 3}
+      propertyPath: Damage
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 712874549, guid: ebd59dcc5f1dfee4d9d9073465fc669e, type: 3}
       propertyPath: BressSpot
       value: 
